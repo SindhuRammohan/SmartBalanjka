@@ -18,6 +18,7 @@
 
     <string name="forgetpassword">Forget Password?</string>
     <string name="mailid">Mail ID</string>
+    <string name="mailpassword">Mail Password</string>
     <string name="sendmil">Send Me Mail</string>
 
     <string name="mailsecurity">Are We Secure?</string>
