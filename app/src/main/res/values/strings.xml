@@ -62,12 +62,13 @@
     <string name="Reset_content">We have just received a password reset request for </string>
     <string name="Reset_subcontent">Your secure password is:  </string>
     <string name="Reset_toast">Mail send success.\nCheck your mail. The Passowrd has send to your mail</string>
-    <string name="NotReset_toast">Your mail id is not registered. Please check your mail id is corrct and if correct please register your mail is first</string>
+    <string name="NotReset_toast">Your mail id is not registered. Please check your mail id is corrct and if correct please register your mail first</string>
 
 
     <string name="newaccount_header">Welcome SmartBalanjika</string>
     <string name="newaccount_content">I would like to create a new account. Please add my mail id is: </string>
     <string name="newaccount_toast">Please enter correct username and password</string>
+    <string name="alreadyaccount_toast">This mailid is already registered. Please use new MailId or enter Login page to login</string>
 
 
     <string name="samepassword_toast">Please enter same password</string>
@@ -96,7 +97,6 @@
     <string name="Select_Country">Select Country</string>
     <string name="Select_Status">Select Status</string>
     <string name="married">married</string>
-    <string name="Select_BloodGroup">Select BloodGroup</string>
 
 
 </resources>

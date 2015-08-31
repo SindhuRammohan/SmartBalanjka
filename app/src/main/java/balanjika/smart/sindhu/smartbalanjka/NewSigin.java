@@ -21,7 +21,7 @@ public class NewSigin extends Activity {
     private String gmail_username_text;
     private SharPref sharpref;
     Cursor c=null;
-    boolean isEqual;
+    int count;
     public NewSigin() {
     }
 
@@ -33,7 +33,7 @@ public class NewSigin extends Activity {
         gmail_password = (EditText) this.findViewById(R.id.editPassword_newsignin);
         gmail_username = (EditText) this.findViewById(R.id.editusername_newsignin);
         sharpref = SharPref.getInstance(this);
-
+        count = 0;
         send.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -54,19 +54,19 @@ public class NewSigin extends Activity {
                     myDbHelper.openDataBase();
                 }catch(Exception sqle){
                 }
-
-                isEqual = false;
+                count = 0;
                 c=myDbHelper.query("Profile", null, null, null, null, null, null);
                 if(c.moveToFirst())
                 {
                     do {
-                        if (!(c.getString(1).equalsIgnoreCase(gmail_username_text))) {
-                            isEqual = true;
+                        if ((c.getString(1).equalsIgnoreCase(gmail_username_text))) {
+                            count = count + 1;
+                            Toast.makeText(NewSigin.this,count + "",Toast.LENGTH_LONG).show();
                         }
                     } while (c.moveToNext()) ;
                 }
-
-                if(!isEqual){
+                Toast.makeText(NewSigin.this,count + gmail_username_text,Toast.LENGTH_LONG).show();
+                if(count == 0){
                     new SendMailTask(NewSigin.this).execute(gmail_username_text,
                             gmail_password_text, toEmailList,
                             getResources().getString(R.string.newaccount_header),
@@ -81,9 +81,10 @@ public class NewSigin extends Activity {
                     } else {
                         Toast.makeText(NewSigin.this,getResources().getString(R.string.newaccount_toast),Toast.LENGTH_LONG).show();
                     }
-
-
+                } else {
+                    Toast.makeText(NewSigin.this,getResources().getString(R.string.alreadyaccount_toast),Toast.LENGTH_LONG).show();
                 }
+
             }
         });
     }
