@@ -42,7 +42,7 @@ public class HomeScreen extends Activity {
                 password_again_text = password_again.getText().toString();
 
                 if(password_text.equalsIgnoreCase(password_again_text)) {
-                    if(password_text.length() > 6) {
+                    if(password_text.length() >= 6) {
                         username.setText("");
                         password.setText("");
                         password_again.setText("");

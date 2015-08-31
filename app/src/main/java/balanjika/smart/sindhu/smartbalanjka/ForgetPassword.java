@@ -24,6 +24,7 @@ public class ForgetPassword extends Activity {
     private String gmail_username_text;
     private String username_text;
     Cursor c=null;
+    boolean isMailSend;
     public ForgetPassword() {
     }
 
@@ -72,7 +73,7 @@ public class ForgetPassword extends Activity {
                 }
 
 
-
+                isMailSend = false;
                 c=myDbHelper.query("Profile", null, null, null, null, null, null);
                 if(c.moveToFirst())
                 {
@@ -91,6 +92,7 @@ public class ForgetPassword extends Activity {
                                     username.setText("");
                                     gmail_username.setText("");
                                     gmail_password.setText("");
+                                    isMailSend = true;
                                     Toast.makeText(ForgetPassword.this,getResources().getString(R.string.Reset_toast),Toast.LENGTH_LONG).show();
                                     Intent in = new Intent(ForgetPassword.this , LogIn.class);
                                     startActivity(in);
@@ -103,7 +105,9 @@ public class ForgetPassword extends Activity {
 
 
 
-
+                if(!isMailSend) {
+                    Toast.makeText(ForgetPassword.this,getResources().getString(R.string.NotReset_toast),Toast.LENGTH_LONG).show();
+                }
 
 
                 }

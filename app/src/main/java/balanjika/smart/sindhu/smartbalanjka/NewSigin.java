@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import DBHelper.DBHelper;
 import Mail.SendMailTask;
 
 public class NewSigin extends Activity {
@@ -22,7 +23,9 @@ public class NewSigin extends Activity {
     private EditText gmail_username;
     private String gmail_password_text;
     private String gmail_username_text;
-    private SharPref sharpref;;
+    private SharPref sharpref;
+    Cursor c=null;
+    boolean isEqual;
     public NewSigin() {
     }
 
@@ -43,20 +46,60 @@ public class NewSigin extends Activity {
 
                 List<String> toEmailList = Arrays.asList(toEmails
                         .split("\\s*,\\s*"));
-                new SendMailTask(NewSigin.this).execute(gmail_username_text,
-                        gmail_password_text, toEmailList,
-                        getResources().getString(R.string.newaccount_header),
-                        getResources().getString(R.string.newaccount_content) + " " + gmail_username_text + ".");
-               if (SendMailTask.isMailSend) {
-                   gmail_username.setText("");
-                   gmail_password.setText("");
-                    sharpref.setMailUsername(gmail_username_text);
-                   sharpref.setMailPassword(gmail_password_text);
-                   Intent in = new Intent(NewSigin.this, HomeScreen.class);
-                   startActivity(in);
-                } else {
-                   Toast.makeText(NewSigin.this,getResources().getString(R.string.newaccount_toast),Toast.LENGTH_LONG).show();
-               }
+                DBHelper myDbHelper = new DBHelper(NewSigin.this);
+                try {
+
+                    myDbHelper.createDataBase();
+
+                } catch (IOException ioe) {
+
+                    throw new Error("Unable to create database");
+
+                }
+
+                try {
+
+                    myDbHelper.openDataBase();
+
+                }catch(Exception sqle){
+
+
+                }
+                isEqual = false;
+                c=myDbHelper.query("Profile", null, null, null, null, null, null);
+                if(c.moveToFirst())
+                {
+                    do {
+
+                        if (!(c.getString(1).equalsIgnoreCase(gmail_username_text))) {
+                            isEqual = true;
+                        }
+                    } while (c.moveToNext()) ;
+
+
+                }
+
+                if(!isEqual){
+                    new SendMailTask(NewSigin.this).execute(gmail_username_text,
+                            gmail_password_text, toEmailList,
+                            getResources().getString(R.string.newaccount_header),
+                            getResources().getString(R.string.newaccount_content) + " " + gmail_username_text + ".");
+                    if (SendMailTask.isMailSend) {
+                        gmail_username.setText("");
+                        gmail_password.setText("");
+                        sharpref.setMailUsername(gmail_username_text);
+                        sharpref.setMailPassword(gmail_password_text);
+                        Intent in = new Intent(NewSigin.this, HomeScreen.class);
+                        startActivity(in);
+                    } else {
+                        Toast.makeText(NewSigin.this,getResources().getString(R.string.newaccount_toast),Toast.LENGTH_LONG).show();
+                    }
+
+
+                }
+
+
+
 
             }
         });

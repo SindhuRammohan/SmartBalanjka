@@ -21,7 +21,7 @@
     <string name="mailpassword">Mail Password</string>
     <string name="sendmil">Send Me Mail</string>
 
-    <string name="mailsecurity">Are We Secure?</string>
+    <string name="mailsecurity">Are We Secure?\n Enter the mail details to Login</string>
     <string name="maillogin">Login using MailID</string>
 
 
@@ -62,6 +62,7 @@
     <string name="Reset_content">We have just received a password reset request for </string>
     <string name="Reset_subcontent">Your secure password is:  </string>
     <string name="Reset_toast">Mail send success.\nCheck your mail. The Passowrd has send to your mail</string>
+    <string name="NotReset_toast">Your mail id is not registered. Please check your mail id is corrct and if correct please register your mail is first</string>
 
 
     <string name="newaccount_header">Welcome SmartBalanjika</string>
@@ -83,4 +84,5 @@
 
     <string name="addaccount_header">New User for SmartBalanjika</string>
     <string name="addaccount_content">I would like to add my account dtails in SmartBalanjika. Can u plase add my details.\nMy account details are\n</string>
+    <string name="blank_toast">Please enter all details. Should not be blank</string>
 </resources>

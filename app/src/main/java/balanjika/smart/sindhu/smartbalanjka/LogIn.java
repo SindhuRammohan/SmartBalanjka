@@ -5,11 +5,20 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
+import DBHelper.DBHelper;
+import Mail.SendMailTask;
 
 public class LogIn extends Activity {
 
@@ -19,7 +28,8 @@ public class LogIn extends Activity {
     private EditText editpassword;
     private TextView forget;
     private TextView new_signin;
-
+    Cursor c=null;
+    boolean isSend;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +62,46 @@ public class LogIn extends Activity {
     public void existinglogin(View view){
         str = editusername.getText().toString();
         password = editpassword.getText().toString();
-//        Intent in = new Intent(getBaseContext(), HomeScreen.class);
-//        startActivity(in);
+        DBHelper myDbHelper = new DBHelper(LogIn.this);
+        try {
+
+            myDbHelper.createDataBase();
+
+        } catch (IOException ioe) {
+
+            throw new Error("Unable to create database");
+
+        }
+
+        try {
+
+            myDbHelper.openDataBase();
+
+        }catch(Exception sqle){
+
+
+        }
+
+        isSend = false;
+        c=myDbHelper.query("Profile", null, null, null, null, null, null);
+        if(c.moveToFirst())
+        {
+            do {
+                if (c.getString(1).equalsIgnoreCase(str)) {
+                    if (c.getString(2).equalsIgnoreCase(password)) {
+                        isSend = true;
+                        Intent in = new Intent(getBaseContext(), HomeScreen.class);
+                        startActivity(in);
+                        }
+                    }
+
+            } while (c.moveToNext()) ;
+        }
+        if(isSend) {
+            
+        }
+
+
     }
 
 

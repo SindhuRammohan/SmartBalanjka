@@ -23,6 +23,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import Mail.SendMailTask;
 
@@ -507,7 +508,9 @@ public class MyProfile extends Activity implements View.OnClickListener {
                                     + type);
                     Intent in = new Intent(MyProfile.this, LogIn.class);
                     startActivity(in);
-            }
+            }else {
+                    Toast.makeText(MyProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
+                }
             }
 
 
@@ -557,7 +560,6 @@ public class MyProfile extends Activity implements View.OnClickListener {
                                     +textview_countries.getText().toString()
                                     +editText8.getText().toString()
                                     +status.getText().toString()
-                                    +statusdate.getText().toString()
                                     + Mail.getText().toString()
                                     +About.getText().toString()
                                     +question.getText().toString()
@@ -576,6 +578,8 @@ public class MyProfile extends Activity implements View.OnClickListener {
                                     + type);
                     Intent in = new Intent(MyProfile.this, LogIn.class);
                     startActivity(in);
+                } else {
+                    Toast.makeText(MyProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
                 }
             }
 
