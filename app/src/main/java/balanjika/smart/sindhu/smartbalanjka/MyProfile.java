@@ -12,7 +12,6 @@ import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -24,7 +23,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import Mail.SendMailTask;
 
 public class MyProfile extends Activity implements View.OnClickListener {
@@ -294,15 +292,13 @@ public class MyProfile extends Activity implements View.OnClickListener {
             "Zambia",
             "Zimbabwe"
     };
-    private String[] blood_list = { "A+", "A-", "B+", "B-", "O+", "O-",
-            "AB+", "AB-" };
+    private String[] blood_list = { "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" };
     private String[] rashi_list = {
             "Mesha-Aries",
             "Vrishabha-Taurus",
             "Mithuna-Gemini",
             "Karka-Cancer",
             "Simha-Leo",
-
             "Kanya-Virgo",
             "Tula-Libra",
             "Vrishchika-Scorpio",
@@ -356,9 +352,9 @@ public class MyProfile extends Activity implements View.OnClickListener {
     private EditText Qualification;
     private EditText Mail;
     private EditText address;
-    private EditText my;
-    private EditText textview_countries;
-    private EditText editText8;
+    private EditText gender;
+    private EditText textview_blood;
+    private EditText dob;
     private EditText status;
     private EditText question;
     private EditText answer;
@@ -367,14 +363,10 @@ public class MyProfile extends Activity implements View.OnClickListener {
     private TextView myName;
     private TextView MailId;
     private Button save;
-    private String mailid;
-    private int temp;
 
     private ProgressDialog pDialog;
     private String gmail_username_text;
     private String gmail_password_text;
-    private String username_text;
-    private String password_text;
 
     private SharPref sharpref;
 
@@ -387,48 +379,28 @@ public class MyProfile extends Activity implements View.OnClickListener {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.account_details);
-
         sharpref = SharPref.getInstance(this);
-//
+
 //        ActionBar bar = getActionBar();
 //        getActionBar();
-//
-//
 //        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#81BEF7")));
 //        bar.setHomeButtonEnabled(true);
-        mailid = getResources().getString(R.string.mailid);
-
 
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            Intent intent = getIntent();
-            gmail_username_text = intent.getStringExtra("gmail_username_text");
-            gmail_password_text = intent.getStringExtra("gmail_password_text");
-            username_text = intent.getStringExtra("username_text");
-            password_text = intent.getStringExtra("password_text");
         }
 
-
-
-
-
-
-        my = (EditText) findViewById(R.id.name);
-
+        gender = (EditText) findViewById(R.id.gender);
         address = (EditText) findViewById(R.id.address);
         linear = (LinearLayout) findViewById(R.id.layoutunregister);
         linear.setVisibility(View.GONE);
         matrimony = (Button) findViewById(R.id.matrimony);
-
         save = (Button) findViewById(R.id.save);
         Button nothanks = (Button) findViewById(R.id.nothanks);
         Button unregister = (Button) findViewById(R.id.unregister);
-
-
         myName = (TextView) findViewById(R.id.myNameText);
         MailId = (TextView) findViewById(R.id.mailidText);
-
         myName.setText(sharpref.getUsername());
         MailId.setText(sharpref.getMailUsername());
 
@@ -450,15 +422,13 @@ public class MyProfile extends Activity implements View.OnClickListener {
                 matrimony.setVisibility(View.VISIBLE);
                 save.setVisibility(View.VISIBLE);
                 Rashi.setText("");
-                        Nakthara.setText("");
-                        Qualification.setText("");
-                        Work.setText("");
+                Nakthara.setText("");
+                Qualification.setText("");
+                Work.setText("");
                 Height.setText("");
-                        Weight.setText("");
-                        Notes.setText("");
+                Weight.setText("");
+                Notes.setText("");
             }
-
-
         });
 
 
@@ -466,67 +436,64 @@ public class MyProfile extends Activity implements View.OnClickListener {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!(my.getText().toString().equalsIgnoreCase("") ||
-                        address.getText().toString().equalsIgnoreCase("")||
-                        City.getText().toString().equalsIgnoreCase("")||
-                        District.getText().toString().equalsIgnoreCase("")||
-                        Country.getText().toString().equalsIgnoreCase("")||
-                        phone.getText().toString().equalsIgnoreCase("")||
-                        textview_countries.getText().toString().equalsIgnoreCase("")||
-                        editText8.getText().toString().equalsIgnoreCase("")||
-                        status.getText().toString().equalsIgnoreCase("")||
-                        statusdate.getText().toString().equalsIgnoreCase("")||
-                         Mail.getText().toString().equalsIgnoreCase("")||
-                        About.getText().toString().equalsIgnoreCase("")||
-                        question.getText().toString().equalsIgnoreCase("")||
-                         answer.getText().toString().equalsIgnoreCase(""))) {
+                if(!(gender.getText().toString().equalsIgnoreCase("") ||
+                address.getText().toString().equalsIgnoreCase("")||
+                City.getText().toString().equalsIgnoreCase("")||
+                District.getText().toString().equalsIgnoreCase("")||
+                Country.getText().toString().equalsIgnoreCase("")||
+                phone.getText().toString().equalsIgnoreCase("")||
+                textview_blood.getText().toString().equalsIgnoreCase("")||
+                dob.getText().toString().equalsIgnoreCase("")||
+                status.getText().toString().equalsIgnoreCase("")||
+                statusdate.getText().toString().equalsIgnoreCase("")||
+                Mail.getText().toString().equalsIgnoreCase("")||
+                About.getText().toString().equalsIgnoreCase("")||
+                question.getText().toString().equalsIgnoreCase("")||
+                answer.getText().toString().equalsIgnoreCase(""))) {
                     type = 1;
                     gmail_username_text = sharpref.getMailUsername();
                     gmail_password_text = sharpref.getMailPassword();
                     String toEmails = getResources().getString(R.string.my_username);
-
                     List<String> toEmailList = Arrays.asList(toEmails
                             .split("\\s*,\\s*"));
                     new SendMailTask(MyProfile.this).execute(gmail_username_text,
                             gmail_password_text, toEmailList,
                             getResources().getString(R.string.addaccount_header),
                             getResources().getString(R.string.addaccount_content) + " " +
-                                    my.getText().toString() +
-                                    address.getText().toString()
-                                    +City.getText().toString()
-                                    +District.getText().toString()
-                                    +Country.getText().toString()
-                                    +phone.getText().toString()
-                                    +textview_countries.getText().toString()
-                                    +editText8.getText().toString()
-                                    +status.getText().toString()
-                                    +statusdate.getText().toString()
-                                    + Mail.getText().toString()
-                                    +About.getText().toString()
-                                    +question.getText().toString()
-                                    + answer.getText().toString()
-                                    + type);
+                            gender.getText().toString() +
+                            address.getText().toString()
+                            +City.getText().toString()
+                            +District.getText().toString()
+                            +Country.getText().toString()
+                            +phone.getText().toString()
+                            +textview_blood.getText().toString()
+                            +dob.getText().toString()
+                            +status.getText().toString()
+                            +statusdate.getText().toString()
+                            + Mail.getText().toString()
+                            +About.getText().toString()
+                            +question.getText().toString()
+                            + answer.getText().toString()
+                            + type);
                     Intent in = new Intent(MyProfile.this, LogIn.class);
                     startActivity(in);
-            }else {
+                }else {
                     Toast.makeText(MyProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
                 }
             }
-
-
         });
 
         unregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!(my.getText().toString().equalsIgnoreCase("") ||
+                if(!(gender.getText().toString().equalsIgnoreCase("") ||
                         address.getText().toString().equalsIgnoreCase("")||
                         City.getText().toString().equalsIgnoreCase("")||
                         District.getText().toString().equalsIgnoreCase("")||
                         Country.getText().toString().equalsIgnoreCase("")||
                         phone.getText().toString().equalsIgnoreCase("")||
-                        textview_countries.getText().toString().equalsIgnoreCase("")||
-                        editText8.getText().toString().equalsIgnoreCase("")||
+                        textview_blood.getText().toString().equalsIgnoreCase("")||
+                        dob.getText().toString().equalsIgnoreCase("")||
                         status.getText().toString().equalsIgnoreCase("")||
                         statusdate.getText().toString().equalsIgnoreCase("")||
                         Mail.getText().toString().equalsIgnoreCase("")||
@@ -548,42 +515,36 @@ public class MyProfile extends Activity implements View.OnClickListener {
                     List<String> toEmailList = Arrays.asList(toEmails
                             .split("\\s*,\\s*"));
                     new SendMailTask(MyProfile.this).execute(gmail_username_text,
-                            gmail_password_text, toEmailList,
-                            getResources().getString(R.string.addaccount_header),
-                            getResources().getString(R.string.addaccount_content) + " " +
-                                    my.getText().toString() +
-                                    address.getText().toString()
-                                    +City.getText().toString()
-                                    +District.getText().toString()
-                                    +Country.getText().toString()
-                                    +phone.getText().toString()
-                                    +textview_countries.getText().toString()
-                                    +editText8.getText().toString()
-                                    +status.getText().toString()
-                                    + Mail.getText().toString()
-                                    +About.getText().toString()
-                                    +question.getText().toString()
-                                    + answer.getText().toString()
-                                    + Rashi.getText().toString()
-                                    +Nakthara.getText().toString()
-                                    +Qualification.getText().toString()
-
-                                    + Work.getText().toString()
-                                    +Height.getText().toString()
-                                    + Weight.getText().toString()
-
-
-
-                                    + Notes.getText().toString()
-                                    + type);
+                        gmail_password_text, toEmailList,
+                        getResources().getString(R.string.addaccount_header),
+                        getResources().getString(R.string.addaccount_content) + " " +
+                        gender.getText().toString() +
+                        address.getText().toString()
+                        +City.getText().toString()
+                        +District.getText().toString()
+                        +Country.getText().toString()
+                        +phone.getText().toString()
+                        +textview_blood.getText().toString()
+                        +dob.getText().toString()
+                        +status.getText().toString()
+                        + Mail.getText().toString()
+                        +About.getText().toString()
+                        +question.getText().toString()
+                        + answer.getText().toString()
+                        + Rashi.getText().toString()
+                        +Nakthara.getText().toString()
+                        +Qualification.getText().toString()
+                        + Work.getText().toString()
+                        +Height.getText().toString()
+                        + Weight.getText().toString()
+                        + Notes.getText().toString()
+                        + type);
                     Intent in = new Intent(MyProfile.this, LogIn.class);
                     startActivity(in);
                 } else {
                     Toast.makeText(MyProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
                 }
             }
-
-
         });
 
         Mail= (EditText) findViewById(R.id.Mail);
@@ -601,17 +562,13 @@ public class MyProfile extends Activity implements View.OnClickListener {
         Notes = (EditText) findViewById(R.id.Notes);
         question = (EditText) findViewById(R.id.question);
         answer = (EditText) findViewById(R.id.answer);
-
         status = (EditText) findViewById(R.id.status);
         statusdate = (EditText) findViewById(R.id.statusdate);
-
         statusdate.setVisibility(View.GONE);
-
-        textview_countries = (EditText) findViewById(R.id.Blood);
-        editText8 = (EditText) findViewById(R.id.DOB);
-        textview_countries.setInputType(InputType.TYPE_NULL); // To hide the
+        textview_blood = (EditText) findViewById(R.id.Blood);
+        dob = (EditText) findViewById(R.id.DOB);
+        textview_blood.setInputType(InputType.TYPE_NULL); // To hide the
         // softkeyboard
-
         final ArrayAdapter<String> spinner_countries = new ArrayAdapter<String>(
                 MyProfile.this, android.R.layout.simple_spinner_dropdown_item,
                 countries_list);
@@ -627,225 +584,110 @@ public class MyProfile extends Activity implements View.OnClickListener {
         final ArrayAdapter<String> spinner_Gender = new ArrayAdapter<String>(
                 MyProfile.this, android.R.layout.simple_spinner_dropdown_item,
                 gender_list);
-        my.setOnClickListener(new OnClickListener() {
 
+        gender.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                new AlertDialog.Builder(MyProfile.this)
-
-                        .setTitle("Select Gender")
-
-                        .setAdapter(spinner_Gender,
-                                new DialogInterface.OnClickListener() {
-
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
-
-                                        my
-                                                .setText(gender_list[which]
-                                                        .toString());
-
-                                        dialog.dismiss();
-
-                                    }
-
-                                }).create().show();
-
+                new AlertDialog.Builder(MyProfile.this).setTitle(getResources().getString(R.string.Select_Gender)).setAdapter(spinner_Gender,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        gender.setText(gender_list[which].toString());
+                        dialog.dismiss();
+                    }
+                }).create().show();
             }
-
         });
         Nakthara.setOnClickListener(new OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
-                new AlertDialog.Builder(MyProfile.this)
-
-                        .setTitle("Select Nakthara")
-
-                        .setAdapter(spinner_nakthara,
-                                new DialogInterface.OnClickListener() {
-
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
-
-                                        Nakthara
-                                                .setText(nakthara_list[which]
-                                                        .toString());
-
-                                        dialog.dismiss();
-
-                                    }
-
-                                }).create().show();
-
+                new AlertDialog.Builder(MyProfile.this).setTitle(getResources().getString(R.string.Select_Nakthara)).setAdapter(spinner_nakthara,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Nakthara.setText(nakthara_list[which].toString());
+                        dialog.dismiss();
+                    }
+                }).create().show();
             }
-
         });
         Rashi.setOnClickListener(new OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
-                new AlertDialog.Builder(MyProfile.this)
-
-                        .setTitle("Select Rashi")
-
-                        .setAdapter(spinner_rashi,
-                                new DialogInterface.OnClickListener() {
-
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
-
-                                        Rashi
-                                                .setText(rashi_list[which]
-                                                        .toString());
-
-                                        dialog.dismiss();
-
-                                    }
-
-                                }).create().show();
-
+                new AlertDialog.Builder(MyProfile.this).setTitle(getResources().getString(R.string.Select_Rashi)).setAdapter(spinner_rashi,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Rashi.setText(rashi_list[which].toString());
+                                dialog.dismiss();
+                            }
+                        }).create().show();
             }
-
         });
-        textview_countries.setOnClickListener(new OnClickListener() {
-
+        textview_blood.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                new AlertDialog.Builder(MyProfile.this)
-
-                        .setTitle("Select BloodGroup")
-
-                        .setAdapter(spinner_blood,
-                                new DialogInterface.OnClickListener() {
-
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
-
-                                        textview_countries
-                                                .setText(blood_list[which]
-                                                        .toString());
-
-                                        dialog.dismiss();
-
-                                    }
-
-                                }).create().show();
-
+                new AlertDialog.Builder(MyProfile.this).setTitle(getResources().getString(R.string.Select_BloodGroup)).setAdapter(spinner_blood,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                textview_blood.setText(blood_list[which].toString());
+                                dialog.dismiss();
+                            }
+                        }).create().show();
             }
-
         });
-
-
-
 
         Country.setOnClickListener(new OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
-                new AlertDialog.Builder(MyProfile.this)
-
-                        .setTitle("Select Country")
-
-                        .setAdapter(spinner_countries,
-                                new DialogInterface.OnClickListener() {
-
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
-
-                                        Country
-                                                .setText(countries_list[which]
-                                                        .toString());
-
-                                        dialog.dismiss();
-
-                                    }
-
-                                }).create().show();
-
+                new AlertDialog.Builder(MyProfile.this).setTitle(getResources().getString(R.string.Select_Country)).setAdapter(spinner_countries,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Country.setText(countries_list[which].toString());
+                                dialog.dismiss();
+                            }
+                        }).create().show();
             }
-
         });
-
-
 
         final ArrayAdapter<String> date_spinner = new ArrayAdapter<String>(
                 MyProfile.this, android.R.layout.simple_spinner_dropdown_item,
                 spinner_list);
-
         status.setOnClickListener(new OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
-                new AlertDialog.Builder(MyProfile.this)
-
-                        .setTitle("Select Status")
-
-                        .setAdapter(date_spinner,
-                                new DialogInterface.OnClickListener() {
-
-
-
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
-
-                                        status
-                                                .setText(spinner_list[which]
-                                                        .toString());
-                                        String text = MyProfile.this.status.getText().toString().toLowerCase();
-
-//										Toast.makeText(newprofile.this,"blood"+text,Toast.LENGTH_SHORT).show();
-                                        if(text.compareTo("married")==0)
-
-                                        {
-                                            statusdate.setVisibility(View.VISIBLE);
-                                        }
-                                        else
-                                        {
-                                            statusdate.setVisibility(View.GONE);
-                                        }
-                                        dialog.dismiss();
-
-                                    }
-
-                                }).create().show();
-
+                new AlertDialog.Builder(MyProfile.this).setTitle(getResources().getString(R.string.Select_Status)).setAdapter(date_spinner,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                status.setText(spinner_list[which].toString());
+                                String text = MyProfile.this.status.getText().toString().toLowerCase();
+                                if (text.compareTo(getResources().getString(R.string.married)) == 0) {
+                                    statusdate.setVisibility(View.VISIBLE);
+                                } else {
+                                    statusdate.setVisibility(View.GONE);
+                                }
+                                dialog.dismiss();
+                            }
+                        }).create().show();
             }
-
         });
 
 
-
-
-
-
-        editText8.setOnClickListener(new OnClickListener() {
-
+        dob.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 new DatePickerDialog(MyProfile.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
-        statusdate.setOnClickListener(new OnClickListener() {
 
+        statusdate.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 new DatePickerDialog(MyProfile.this, marriagedate, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
@@ -853,9 +695,8 @@ public class MyProfile extends Activity implements View.OnClickListener {
         });
 
 
-        List<String[]> list = new ArrayList<String[]>();
-        String next[] = {};
-
+//        List<String[]> list = new ArrayList<String[]>();
+//        String next[] = {};
 //        try {
 //            InputStreamReader csvStreamReader = new InputStreamReader(
 //                    this.getAssets().open(
@@ -875,54 +716,46 @@ public class MyProfile extends Activity implements View.OnClickListener {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
-
-        if(temp>0)
-        {
-            my.setText(list.get(temp)[1]);
-
-            address.setText(list.get(temp)[3]);
-            City.setText(list.get(temp)[4]);
-            District.setText(list.get(temp)[5]);
-            Country.setText(list.get(temp)[6]);
-            phone.setText(list.get(temp)[8]);
-            textview_countries.setText(list.get(temp)[9]);
-            editText8.setText(list.get(temp)[2]);
-            status.setText(list.get(temp)[21]);
-            statusdate.setText(list.get(temp)[22]);
-            Mail.setText(list.get(temp)[10]);
-            About.setText(list.get(temp)[11]);
-            if(list.get(temp)[13]!="")
-            {
-                linear.setVisibility(View.VISIBLE);
-                matrimony.setVisibility(View.GONE);
-                save.setVisibility(View.GONE);
-            }
-            Rashi.setText(list.get(temp)[12]);
-            Nakthara.setText(list.get(temp)[13]);
-            Qualification.setText(list.get(temp)[17]);
-
-            Work.setText(list.get(temp)[16]);
-            Height.setText(list.get(temp)[14]);
-            Weight.setText(list.get(temp)[15]);
-
-
-
-            Notes.setText(list.get(temp)[18]);
-
-        }
-
-
-
-
+//        if(temp>0)
+//        {
+//            gender.setText(list.get(temp)[1]);
+//
+//            address.setText(list.get(temp)[3]);
+//            City.setText(list.get(temp)[4]);
+//            District.setText(list.get(temp)[5]);
+//            Country.setText(list.get(temp)[6]);
+//            phone.setText(list.get(temp)[8]);
+//            textview_blood.setText(list.get(temp)[9]);
+//            dob.setText(list.get(temp)[2]);
+//            status.setText(list.get(temp)[21]);
+//            statusdate.setText(list.get(temp)[22]);
+//            Mail.setText(list.get(temp)[10]);
+//            About.setText(list.get(temp)[11]);
+//            if(list.get(temp)[13]!="")
+//            {
+//                linear.setVisibility(View.VISIBLE);
+//                matrimony.setVisibility(View.GONE);
+//                save.setVisibility(View.GONE);
+//            }
+//            Rashi.setText(list.get(temp)[12]);
+//            Nakthara.setText(list.get(temp)[13]);
+//            Qualification.setText(list.get(temp)[17]);
+//
+//            Work.setText(list.get(temp)[16]);
+//            Height.setText(list.get(temp)[14]);
+//            Weight.setText(list.get(temp)[15]);
+//
+//
+//
+//            Notes.setText(list.get(temp)[18]);
+//
+//        }
     }
 
     DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
-
         @Override
         public void onDateSet(DatePicker view, int year, int monthOfYear,
                               int dayOfMonth) {
-            // TODO Auto-generated method stub
             myCalendar.set(Calendar.YEAR, year);
             myCalendar.set(Calendar.MONTH, monthOfYear);
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
@@ -932,38 +765,28 @@ public class MyProfile extends Activity implements View.OnClickListener {
     };
 
     private void updateLabel() {
-
         String myFormat = "MM/dd/yy"; // In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-
-        editText8.setText(sdf.format(myCalendar.getTime()));
+        dob.setText(sdf.format(myCalendar.getTime()));
     }
     DatePickerDialog.OnDateSetListener marriagedate = new DatePickerDialog.OnDateSetListener() {
-
         @Override
         public void onDateSet(DatePicker view, int year, int monthOfYear,
                               int dayOfMonth) {
-            // TODO Auto-generated method stub
             myCalendar.set(Calendar.YEAR, year);
             myCalendar.set(Calendar.MONTH, monthOfYear);
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             marriageupdateLabel();
         }
-
     };
 
     private void marriageupdateLabel() {
-
         String myFormat = "MM/dd/yy"; // In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-
         statusdate.setText(sdf.format(myCalendar.getTime()));
     }
     @Override
     public void onClick(View arg0) {
-
-        // TODO Auto-generated method stub
-
     }
 //    private class save_content extends AsyncTask<Void, Void, Void> {
 //        @Override

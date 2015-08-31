@@ -38,40 +38,23 @@ public class ForgetPassword extends Activity {
         username = (EditText) this.findViewById(R.id.editusername_forgetpassword);
         gmail_username = (EditText) this.findViewById(R.id.editMailID_forgetpassword);
 
-
-
-
-
         send.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 username_text       = username.getText().toString();
                 gmail_username_text = gmail_username.getText().toString();
                 gmail_password_text = gmail_password.getText().toString();
 
-
-
-
                 DBHelper myDbHelper = new DBHelper(ForgetPassword.this);
                 try {
-
                     myDbHelper.createDataBase();
-
                 } catch (IOException ioe) {
-
                     throw new Error("Unable to create database");
-
                 }
 
                 try {
-
                     myDbHelper.openDataBase();
-
                 }catch(Exception sqle){
-
-
                 }
-
 
                 isMailSend = false;
                 c=myDbHelper.query("Profile", null, null, null, null, null, null);
@@ -103,17 +86,10 @@ public class ForgetPassword extends Activity {
                     } while (c.moveToNext()) ;
                 }
 
-
-
                 if(!isMailSend) {
                     Toast.makeText(ForgetPassword.this,getResources().getString(R.string.NotReset_toast),Toast.LENGTH_LONG).show();
                 }
-
-
-                }
-
-
+            }
         });
     }
-
 }

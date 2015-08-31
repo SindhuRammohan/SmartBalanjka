@@ -76,7 +76,9 @@
     <string name="Exit">Do you want to Exit?</string>
     <string name="Yes">Yes</string>
     <string name="No">No</string>
-
+    <string name="correct_toast">Please enter correct Username and Password</string>
+    <string name="usernameblank_toast">Username should not be blank</string>
+    <string name="passwordblank_toast">Password should not be blank</string>
 
     <string name="ur_mailid">Mail Id :</string>
     <string name="ur_name">Name    : </string>
@@ -85,4 +87,16 @@
     <string name="addaccount_header">New User for SmartBalanjika</string>
     <string name="addaccount_content">I would like to add my account dtails in SmartBalanjika. Can u plase add my details.\nMy account details are\n</string>
     <string name="blank_toast">Please enter all details. Should not be blank</string>
+
+
+    <string name="Select_Gender">Select Gender</string>
+    <string name="Select_Nakthara">Select Nakthara</string>
+    <string name="Select_Rashi">Select Rashi</string>
+    <string name="Select_BloodGroup">Select BloodGroup</string>
+    <string name="Select_Country">Select Country</string>
+    <string name="Select_Status">Select Status</string>
+    <string name="married">married</string>
+    <string name="Select_BloodGroup">Select BloodGroup</string>
+
+
 </resources>
