@@ -11,7 +11,7 @@ public class SendMailTask extends AsyncTask {
 
     private ProgressDialog statusDialog;
     private Activity sendMailActivity;
-
+    public static boolean isMailSend = false;
     public SendMailTask(Activity activity) {
         sendMailActivity = activity;
 
@@ -28,6 +28,7 @@ public class SendMailTask extends AsyncTask {
     @Override
     protected Object doInBackground(Object... args) {
         try {
+            isMailSend = false;
             Log.i("SendMailTask", "About to instantiate GMail...");
             publishProgress("Processing input....");
             GMail androidEmail = new GMail(args[0].toString(),
@@ -36,10 +37,14 @@ public class SendMailTask extends AsyncTask {
             publishProgress("Preparing mail message....");
             androidEmail.createEmailMessage();
             publishProgress("Sending email....");
+            isMailSend = false;
             androidEmail.sendEmail();
+            isMailSend = true;
             publishProgress("Email Sent.");
             Log.i("SendMailTask", "Mail Sent.");
+            isMailSend = true;
         } catch (Exception e) {
+            isMailSend = false;
             publishProgress(e.getMessage());
             Log.e("SendMailTask", e.getMessage(), e);
         }
@@ -48,8 +53,11 @@ public class SendMailTask extends AsyncTask {
 
     @Override
     public void onProgressUpdate(Object... values) {
-        statusDialog.setMessage(values[0].toString());
-
+        try {
+            statusDialog.setMessage(values[0].toString());
+        } catch (Exception e) {
+            isMailSend = false;
+        }
     }
 
     @Override
