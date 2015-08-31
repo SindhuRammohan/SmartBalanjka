@@ -37,19 +37,23 @@ public class HomeScreen extends Activity {
             password_again_text = password_again.getText().toString();
 
             if(password_text.equalsIgnoreCase(password_again_text)) {
-                if(password_text.length() >= 6) {
-                    username.setText("");
-                    password.setText("");
-                    password_again.setText("");
-                    sharpref.setUsername(username_text);
-                    sharpref.setPassword(password_text);
-                    Intent in = new Intent(HomeScreen.this, MyProfile.class);
-                    startActivity(in);
+                if (!username_text.equalsIgnoreCase("")) {
+                    if (password_text.length() >= 6) {
+                        username.setText("");
+                        password.setText("");
+                        password_again.setText("");
+                        sharpref.setUsername(username_text);
+                        sharpref.setPassword(password_text);
+                        Intent in = new Intent(HomeScreen.this, MyProfile.class);
+                        startActivity(in);
+                    } else {
+                        Toast.makeText(HomeScreen.this, getResources().getString(R.string.weekpassword_toast), Toast.LENGTH_LONG).show();
+                    }
                 } else {
-                    Toast.makeText(HomeScreen.this, getResources().getString(R.string.weekpassword_toast), Toast.LENGTH_LONG).show();
+                    Toast.makeText(HomeScreen.this, getResources().getString(R.string.samepassword_toast), Toast.LENGTH_LONG).show();
                 }
             } else {
-                Toast.makeText(HomeScreen.this, getResources().getString(R.string.samepassword_toast), Toast.LENGTH_LONG).show();
+                Toast.makeText(HomeScreen.this, getResources().getString(R.string.usernameblank_toast), Toast.LENGTH_LONG).show();
             }
 
             }

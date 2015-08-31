@@ -1,8 +1,10 @@
 package balanjika.smart.sindhu.smartbalanjka;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +24,7 @@ public class NewSigin extends Activity {
     private SharPref sharpref;
     Cursor c=null;
     int count;
+    private ProgressDialog pdia;
     public NewSigin() {
     }
 
@@ -52,40 +55,76 @@ public class NewSigin extends Activity {
 
                 try {
                     myDbHelper.openDataBase();
-                }catch(Exception sqle){
+                } catch (Exception sqle) {
                 }
                 count = 0;
-                c=myDbHelper.query("Profile", null, null, null, null, null, null);
-                if(c.moveToFirst())
-                {
+                c = myDbHelper.query("Profile", null, null, null, null, null, null);
+                if (c.moveToFirst()) {
                     do {
                         if ((c.getString(1).equalsIgnoreCase(gmail_username_text))) {
                             count = count + 1;
-                            Toast.makeText(NewSigin.this,count + "",Toast.LENGTH_LONG).show();
+                            Toast.makeText(NewSigin.this, count + "", Toast.LENGTH_LONG).show();
                         }
-                    } while (c.moveToNext()) ;
+                    } while (c.moveToNext());
                 }
-                Toast.makeText(NewSigin.this,count + gmail_username_text,Toast.LENGTH_LONG).show();
-                if(count == 0){
+                Toast.makeText(NewSigin.this, count + gmail_username_text, Toast.LENGTH_LONG).show();
+                if (count == 0) {
                     new SendMailTask(NewSigin.this).execute(gmail_username_text,
                             gmail_password_text, toEmailList,
                             getResources().getString(R.string.newaccount_header),
                             getResources().getString(R.string.newaccount_content) + " " + gmail_username_text + ".");
-                    if (SendMailTask.isMailSend) {
-                        gmail_username.setText("");
-                        gmail_password.setText("");
-                        sharpref.setMailUsername(gmail_username_text);
-                        sharpref.setMailPassword(gmail_password_text);
-                        Intent in = new Intent(NewSigin.this, HomeScreen.class);
-                        startActivity(in);
-                    } else {
-                        Toast.makeText(NewSigin.this,getResources().getString(R.string.newaccount_toast),Toast.LENGTH_LONG).show();
-                    }
+                    new LongOperation(NewSigin.this).execute("");
                 } else {
-                    Toast.makeText(NewSigin.this,getResources().getString(R.string.alreadyaccount_toast),Toast.LENGTH_LONG).show();
+                    Toast.makeText(NewSigin.this, getResources().getString(R.string.alreadyaccount_toast), Toast.LENGTH_LONG).show();
                 }
 
             }
         });
+    }
+
+    private class LongOperation extends AsyncTask<String, Void, String> {
+        private Activity sendMailActivity;
+        public LongOperation(Activity activity) {
+            sendMailActivity = activity;
+
+        }
+        @Override
+        protected String doInBackground(String... params) {
+            for (int i = 0; i < 5; i++) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    Thread.interrupted();
+                }
+            }
+            return "Executed";
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            pdia.dismiss();
+            if (SendMailTask.isMailSend) {
+                gmail_username.setText("");
+                gmail_password.setText("");
+                sharpref.setMailUsername(gmail_username_text);
+                sharpref.setMailPassword(gmail_password_text);
+                Intent in = new Intent(NewSigin.this, HomeScreen.class);
+                startActivity(in);
+            } else {
+                Toast.makeText(NewSigin.this, getResources().getString(R.string.newaccount_toast), Toast.LENGTH_LONG).show();
+            }
+        }
+
+        @Override
+        protected void onPreExecute() {
+            pdia = new ProgressDialog(sendMailActivity);
+            pdia.setMessage("Loading...");
+            pdia.show();
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+
+        }
     }
 }
