@@ -2,8 +2,6 @@ package balanjika.smart.sindhu.smartbalanjka;
 
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -14,6 +12,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import DBHelper.DBHelper;
+import balanjika.smart.sindhu.Detailed.Homescreen;
 
 public class LogIn extends Activity {
 
@@ -84,7 +83,7 @@ public class LogIn extends Activity {
                             isSend = true;
                             editusername.setText("");
                             editpassword.setText("");
-                            Intent in = new Intent(getBaseContext(), HomeScreen.class);
+                            Intent in = new Intent(getBaseContext(), Homescreen.class);
                             startActivity(in);
                         }
                     }
@@ -98,7 +97,7 @@ public class LogIn extends Activity {
                     isSend = true;
                     editusername.setText("");
                     editpassword.setText("");
-                    Intent in = new Intent(getBaseContext(), HomeScreen.class);
+                    Intent in = new Intent(getBaseContext(), Homescreen.class);
                     startActivity(in);
                 }
             }
@@ -113,26 +112,7 @@ public class LogIn extends Activity {
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(false);
-        builder.setMessage(getResources().getString(R.string.Exit));
-        builder.setPositiveButton(getResources().getString(R.string.Yes), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                moveTaskToBack(true);
-                android.os.Process.killProcess(android.os.Process.myPid());
-                System.exit(0);
-                finish();
-                return;
-            }
-        });
-        builder.setNegativeButton(getResources().getString(R.string.No), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
-        AlertDialog alert = builder.create();
-        alert.show();
+        CustomDialogClass cdd = new CustomDialogClass(LogIn.this);
+        cdd.show();
     }
 }

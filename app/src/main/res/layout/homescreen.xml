@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/roundrectanglewhite" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:weightSum="3"
+        android:background="@drawable/white1"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/history"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/home"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/history_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="@string/History" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/lin1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/Contacts"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/contacts_new"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/Contacts_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="@string/Contacts" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/blood"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/blood_new"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/blood_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="@string/Donar" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/kd"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/knowledge"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/kdtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="@string/KD" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/birthday"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/calender_new"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/birthday_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="@string/Events" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/matrimony"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/matrimony_new"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/matrimony_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:gravity="left"
+                    android:text="@string/Matrimonys" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/roundrectanglewhite"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/book"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/book"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/bookname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="@string/Books" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+
+                android:background="@drawable/roundrectanglewhite"
+
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/health"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/doctor"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/healthtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="@string/Health" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/contactus"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/contactus"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/contactus_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="@string/Help" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageButton
+                android:id="@+id/myphoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/woman_face"
+                />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="left|center"
+                android:layout_gravity="left"
+                >
+                <TextView
+                    android:id="@+id/myname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="10dp"
+                    android:text="hi"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:id="@+id/logout"
+                    android:layout_weight="1.5"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/black"
+                    android:text="@string/Logout" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

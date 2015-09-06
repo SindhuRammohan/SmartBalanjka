@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical" >
+        <TextView
+            android:id="@+id/problemifany"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/dark_blue"
+            android:text="@string/problemifany"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center"
+            android:background="@drawable/roundrectanglewhite"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/Name"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Name" />
+                <TextView
+                    android:id="@+id/name_full"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/India"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/india" />
+                <TextView
+                    android:id="@+id/ind_number"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/india_no" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/Malaysia"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/malatsia" />
+                <TextView
+                    android:id="@+id/malaysia_number"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/malatsia_no" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/Mail"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mailid" />
+
+                <TextView
+                    android:id="@+id/mail_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_username" />
+            </LinearLayout>
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/mail_feedback"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/dark_blue"
+                android:text="@string/mail_feedback"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <EditText
+                    android:id="@+id/subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:background="@null"
+                    android:hint="@string/feedback_title" />
+
+                <EditText
+                    android:id="@+id/body"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="top|left"
+                    android:ems="10"
+                    android:maxLines="10"
+                    android:background="@null"
+                    android:hint="@string/feedback_content"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/sendEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:text="@string/feedback_Compose"
+                android:textSize="20dp"
+                android:background="@drawable/buttonshape"
+                android:gravity="center" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>

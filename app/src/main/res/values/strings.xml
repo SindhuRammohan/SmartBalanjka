@@ -74,7 +74,7 @@
     <string name="samepassword_toast">Please enter same password</string>
     <string name="weekpassword_toast">Your Password is week. Please enter more than 6 char</string>
 
-    <string name="Exit">Do you want to Exit?</string>
+    <string name="Exit">Do you really want to Exit?</string>
     <string name="Yes">Yes</string>
     <string name="No">No</string>
     <string name="correct_toast">Please enter correct Username and Password</string>
@@ -98,5 +98,61 @@
     <string name="Select_Status">Select Status</string>
     <string name="married">married</string>
 
+    <string name="Loading">Loading...</string>
 
+
+
+    <string name="History">History</string>
+    <string name="Contacts">Contacts</string>
+    <string name="Donar">Donar</string>
+    <string name="KD">K D</string>
+    <string name="Events">Events</string>
+    <string name="Matrimonys">Matrimony</string>
+    <string name="Books">Books</string>
+    <string name="Health">Health</string>
+    <string name="Help">Help</string>
+
+    <string name="Logout">Logout</string>
+
+
+
+
+    <string name="history_content">Dasabalanjikans realise that all the men including children wear a “Nama” on their forehead . This represents that they are the followers of Lord Vishnu. When we look at the castism in the Hindu community during that time in Karnataka , there were 2 sects of people. One were the follower of Lord Shiva  called “Sharanaru”  and the other were the followers of Lord Vishnu called “Dasaru“. These two group of people were devoted their lives to religious activities towards their respective gods. Since our community people were followers of Lord Vishnu we fall under the group of dasaru. They were not only just religious followers but also were leading merchants during their time and these merchants were called Banajigaru / Balijigaru by the locals in that period.  Since they were Dasaru and Banajigaru / Balijigaru  the name Dasabanajigaru / Dasabalijigaru came into existence. These name over a period of time became Dasabalanjiga when our community people moved from Karnataka into Tamil Nadu during the 1780′s.
+    \n\n Now general look at what speciality in this app is?</string>
+    <string name="Contacts_content">There is a list of contacts under this option. you can make use o fit and know the entire details about the particular persion.</string>
+    <string name="Donar_content">There is a list of contacts who wish to donate their blood. It will be more use on the emergency.
+    \n\nThere is also a list of doctors contacts who wish to give the emergency guide and suggesion at the critical stage.
+    \n\nWe also provide some contacts of hospitals which can be use at the time of emergency</string>
+    <string name="KD_content">Here are some tips for the school students,College students,also for working persons about the future</string>
+    <string name="Events_content">We Privide all important dates to be noted as Birthday, Marriage, House warming cerimony, baby naming function, temple function, meeting on Dasabalinjika, condelence etc</string>
+    <string name="Matrimony_content">Useful for one whe seraching for their partner. Here we list of all contacts and details who searching for their partner</string>
+    <string name="Books_content">You can read and download the Youth balanjika Book</string>
+    <string name="Health_content">General tips for the heath and also some details about health recepipe tips</string>
+    <string name="Help_content">One who wish to improve this service can send some valuable tips and feedback. So thus it will be very helpful to improve this smart balanjika service</string>
+    <string name="KDrive">Knowledge Drive</string>
+    <string name="More">More>></string>
+
+
+
+    <string name="problemifany">If any problem or any suggessions feel free to contact us</string>
+    <string name="Name">Name</string>
+    <string name="my_name">Sindhu.R</string>
+    <string name="india">India Number</string>
+    <string name="india_no">+91 9790659680</string>
+    <string name="malatsia">Malaysia Number</string>
+    <string name="malatsia_no">+60 146250626</string>
+    <string name="mail_feedback">Sending your valuable Feedback through email is always welcome. \n Please include screenshots of particulars if necessary</string>
+    <string name="feedback_title">Title(About)</string>
+    <string name="feedback_content">Type in your Feedback</string>
+    <string name="feedback_Compose">Compose</string>
+
+
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Create</item>
+        <item>Read</item>
+        <item>Help</item>
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>

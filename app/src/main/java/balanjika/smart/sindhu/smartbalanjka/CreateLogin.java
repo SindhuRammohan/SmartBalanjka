@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class HomeScreen extends Activity {
+public class CreateLogin extends Activity {
 
     private EditText password;
     private EditText password_again;
@@ -17,7 +17,7 @@ public class HomeScreen extends Activity {
     private String password_again_text;
     private String username_text;
     private SharPref sharpref;
-    public HomeScreen() {
+    public CreateLogin() {
     }
 
 
@@ -44,16 +44,16 @@ public class HomeScreen extends Activity {
                         password_again.setText("");
                         sharpref.setUsername(username_text);
                         sharpref.setPassword(password_text);
-                        Intent in = new Intent(HomeScreen.this, MyProfile.class);
+                        Intent in = new Intent(CreateLogin.this, MyProfile.class);
                         startActivity(in);
                     } else {
-                        Toast.makeText(HomeScreen.this, getResources().getString(R.string.weekpassword_toast), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CreateLogin.this, getResources().getString(R.string.weekpassword_toast), Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(HomeScreen.this, getResources().getString(R.string.samepassword_toast), Toast.LENGTH_LONG).show();
+                    Toast.makeText(CreateLogin.this, getResources().getString(R.string.samepassword_toast), Toast.LENGTH_LONG).show();
                 }
             } else {
-                Toast.makeText(HomeScreen.this, getResources().getString(R.string.usernameblank_toast), Toast.LENGTH_LONG).show();
+                Toast.makeText(CreateLogin.this, getResources().getString(R.string.usernameblank_toast), Toast.LENGTH_LONG).show();
             }
 
             }

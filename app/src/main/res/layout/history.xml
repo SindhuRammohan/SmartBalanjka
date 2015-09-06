@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/History"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/History" />
+                <TextView
+                    android:id="@+id/history_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/history_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/Contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/Contacts" />
+                <TextView
+                    android:id="@+id/Contacts_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/Contacts_content" />
+                <TextView
+                    android:id="@+id/history_contactsmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:textSize="9dp"
+                    android:text="@string/More" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/Donar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/Donar" />
+                <TextView
+                    android:id="@+id/Donar_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/Donar_content" />
+                <TextView
+                    android:id="@+id/Donar_contentmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:textSize="9dp"
+                    android:text="@string/More" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/history_kd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/KDrive" />
+                <TextView
+                    android:id="@+id/KD_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/KD_content" />
+                <TextView
+                    android:id="@+id/history_kdmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:textSize="9dp"
+                    android:text="@string/More" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/history_events"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/Events" />
+                <TextView
+                    android:id="@+id/Events_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/Events_content" />
+                <TextView
+                    android:id="@+id/history_eventsmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:textSize="9dp"
+                    android:text="@string/More" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/history_matrimony"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/Matrimony" />
+                <TextView
+                    android:id="@+id/Matrimony_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/Matrimony_content" />
+                <TextView
+                    android:id="@+id/history_matrimonymore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:textSize="9dp"
+                    android:text="@string/More" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/history_book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/Books" />
+                <TextView
+                    android:id="@+id/Books_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/Books_content" />
+                <TextView
+                    android:id="@+id/history_bookmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:textSize="9dp"
+                    android:text="@string/More" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/history_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/Health" />
+                <TextView
+                    android:id="@+id/Health_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/Health_content" />
+                <TextView
+                    android:id="@+id/history_healthmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:layout_gravity="right"
+                    android:textSize="9dp"
+                    android:layout_margin="10dp"
+                    android:text="@string/More" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundrectanglewhite"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/history_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/Help" />
+                <TextView
+                    android:id="@+id/Help_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/Help_content" />
+                <TextView
+                    android:id="@+id/history_helpmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:textSize="9dp"
+                    android:text="@string/More" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

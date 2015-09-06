@@ -108,7 +108,7 @@ public class NewSigin extends Activity {
                 gmail_password.setText("");
                 sharpref.setMailUsername(gmail_username_text);
                 sharpref.setMailPassword(gmail_password_text);
-                Intent in = new Intent(NewSigin.this, HomeScreen.class);
+                Intent in = new Intent(NewSigin.this, CreateLogin.class);
                 startActivity(in);
             } else {
                 Toast.makeText(NewSigin.this, getResources().getString(R.string.newaccount_toast), Toast.LENGTH_LONG).show();
@@ -118,8 +118,10 @@ public class NewSigin extends Activity {
         @Override
         protected void onPreExecute() {
             pdia = new ProgressDialog(sendMailActivity);
-            pdia.setMessage("Loading...");
+            pdia.setMessage(getResources().getString(R.string.Loading));
             pdia.show();
+            pdia.setCancelable(false);
+            pdia.setCanceledOnTouchOutside(false);
         }
 
         @Override
