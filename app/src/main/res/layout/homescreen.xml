@@ -18,6 +18,7 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
             <LinearLayout
+                android:id="@+id/history_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -44,9 +45,9 @@
                     android:text="@string/History" />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/Contacts_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:id="@+id/lin1"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:background="@drawable/roundrectanglewhite"
@@ -70,6 +71,7 @@
                     android:text="@string/Contacts" />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/blood_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -102,6 +104,7 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
             <LinearLayout
+                android:id="@+id/kd_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -127,6 +130,7 @@
                     android:text="@string/KD" />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/birthday_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -152,6 +156,7 @@
                     android:text="@string/Events" />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/matrimony_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -184,6 +189,7 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
             <LinearLayout
+                android:id="@+id/book_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -209,13 +215,12 @@
                     android:text="@string/Books" />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/health_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-
                 android:background="@drawable/roundrectanglewhite"
-
                 android:orientation="vertical" >
                 <Button
                     android:id="@+id/health"
@@ -236,6 +241,7 @@
                     android:text="@string/Health" />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/contactus_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<balanjika.smart.sindhu.Detailed.InterceptionRL xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebe9ea"
+    android:orientation="vertical" >
+
+    <com.joanzapata.pdfview.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/pdfback" />
+
+    <RelativeLayout
+        android:id="@+id/divi"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="#ebe9ea"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/main_listboxlink"
+            android:contentDescription="link" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/main_listboxlink"
+            android:contentDescription="link" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divi"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/main_listbox"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/thanks"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="no_equipment_to_view"
+            android:textColor="#3d3d3d"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/page"
+        android:layout_width="53dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/page_back"
+        android:gravity="center"
+        android:text="one_of_four"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+</balanjika.smart.sindhu.Detailed.InterceptionRL>

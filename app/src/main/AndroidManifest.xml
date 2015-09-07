@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="balanjika.smart.sindhu.smartbalanjka" >
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
@@ -17,8 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:configChanges="keyboardHidden|orientation"
-            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name=".LogIn" android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name=".ForgetPassword" android:configChanges="keyboardHidden|orientation"
@@ -31,7 +30,16 @@
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.Detailed.Homescreen" android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-
+        <activity android:name="balanjika.smart.sindhu.Detailed.History" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.Detailed.Contactus" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.Detailed.book" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.Detailed.BookPdf" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.Detailed.PdfView" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -155,4 +155,35 @@
     </string-array>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+
+
+    <array name="bookArray">
+        <item>YouthBalanjika_08Aug2015.pdf</item>
+        <item>YouthBalanjika_07jul2015.pdf</item>
+        <item>YouthBalanjika_06Jun2015.pdf</item>
+        <item>YouthBalanjika_05May2015.pdf</item>
+        <item>YouthBalanjika_04Apr2015.pdf</item>
+        <item>YouthBalanjika_03Mar2015.pdf</item>
+        <item>YouthBalanjika_02Feb2015.pdf</item>
+        <item>YouthBalanjika_01Jan2015.pdf</item>
+
+        <item>YouthBalanjika_12Dec2014.pdf</item>
+        <item>YouthBalanjika_11Nov2014.pdf</item>
+        <item>YouthBalanjika_10Oct2014.pdf</item>
+        <item>YouthBalanjika_09Sep2014.pdf</item>
+        <item>YouthBalanjika_08Aug2014.pdf</item>
+        <item>YouthBalanjika_07Jul2014.pdf</item>
+        <item>YouthBalanjika_06Jun2014.pdf</item>
+        <item>YouthBalanjika_05May2014.pdf</item>
+        <item>YouthBalanjika_04Apr2014.pdf</item>
+        <item>YouthBalanjika_01Jan2014.pdf</item>
+
+        <item>YouthBalanjika_11Nov2013.pdf</item>
+    </array>
+
+
+    <string name="please_wait">please wait</string>
+    <string name="one_of">1 of</string>
+    <string name="of">of</string>
+
 </resources>
