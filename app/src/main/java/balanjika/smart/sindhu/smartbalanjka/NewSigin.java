@@ -111,7 +111,7 @@ public class NewSigin extends Activity {
                 Intent in = new Intent(NewSigin.this, CreateLogin.class);
                 startActivity(in);
             } else {
-                Toast.makeText(NewSigin.this, getResources().getString(R.string.newaccount_toast), Toast.LENGTH_LONG).show();
+                Toast.makeText(NewSigin.this, getResources().getString(R.string.correct_toast), Toast.LENGTH_LONG).show();
             }
         }
 

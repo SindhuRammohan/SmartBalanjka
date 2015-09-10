@@ -93,12 +93,14 @@ public class LogIn extends Activity {
             if (!isSend) {
                 username_text = sharpref.getUsername();
                 password_text = sharpref.getPassword();
-                if ((username_text.equalsIgnoreCase(str)) && (password_text.equalsIgnoreCase(password))) {
-                    isSend = true;
-                    editusername.setText("");
-                    editpassword.setText("");
-                    Intent in = new Intent(getBaseContext(), Homescreen.class);
-                    startActivity(in);
+                if(username_text != null  && password_text != null) {
+                    if ((username_text.equalsIgnoreCase(str)) && (password_text.equalsIgnoreCase(password))) {
+                        isSend = true;
+                        editusername.setText("");
+                        editpassword.setText("");
+                        Intent in = new Intent(getBaseContext(), Homescreen.class);
+                        startActivity(in);
+                    }
                 }
             }
             if (!isSend) {

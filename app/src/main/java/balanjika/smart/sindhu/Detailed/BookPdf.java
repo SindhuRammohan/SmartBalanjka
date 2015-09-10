@@ -79,6 +79,7 @@ public class BookPdf extends Activity {
         if(extras !=null) {
             fileName = extras.getString("KEY");
         }
+        fileName = fileName + ".pdf";
         interceptionRl.r = new Runnable() {
             public void run() {
                 if (tvPage.getVisibility() == View.INVISIBLE) {
@@ -152,7 +153,6 @@ public class BookPdf extends Activity {
                 // Demo Offline
                 if ( true) {
                     f = new File(getFilesDir(), fileName);
-                    ;
                     handler.post(new Runnable() {
                         public void run() {
                             loaddone = true;

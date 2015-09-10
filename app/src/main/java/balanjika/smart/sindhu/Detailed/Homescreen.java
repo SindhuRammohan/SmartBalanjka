@@ -3,6 +3,7 @@ package balanjika.smart.sindhu.Detailed;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -22,6 +23,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import balanjika.smart.sindhu.smartbalanjka.CustomDialogClass;
+import balanjika.smart.sindhu.smartbalanjka.LogIn;
 import balanjika.smart.sindhu.smartbalanjka.R;
 
 
@@ -205,7 +207,7 @@ public class Homescreen extends ActionBarActivity{
 
     @Override
     public void onBackPressed() {
-        CustomDialogClass cdd = new CustomDialogClass(Homescreen.this);
-        cdd.show();
+        Intent in = new Intent(getBaseContext(), LogIn.class);
+        startActivity(in);
     }
 }
