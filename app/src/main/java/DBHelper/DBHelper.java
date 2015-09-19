@@ -1,4 +1,4 @@
-package DBHelper;
+package dbhelper;
 
 import android.content.Context;
 import android.database.Cursor;

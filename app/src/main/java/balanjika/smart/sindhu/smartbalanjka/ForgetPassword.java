@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import Mail.SendMailTask;
-import DBHelper.DBHelper;
+import dbhelper.DBHelper;
 
 
 public class ForgetPassword extends Activity {

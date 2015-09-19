@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">SmartBalanjka</string>
 
+
+    <string name="crash_report">Crash Report</string>
+
     <string name="action_settings">Settings</string>
 
     <string name="my_username">smartbalanjika@gmail.com</string>
@@ -156,6 +159,7 @@
 
 
     <array name="bookArray">
+        <item>youthbalanjika_09Sep2015</item>
         <item>YouthBalanjika_08Aug2015</item>
         <item>YouthBalanjika_07jul2015</item>
         <item>YouthBalanjika_06Jun2015</item>
@@ -179,6 +183,7 @@
         <item>YouthBalanjika_11Nov2013</item>
     </array>
     <array name="bookArrayString">
+        <item>youthbalanjika_09sep2015</item>
         <item>youthbalanjika_08aug2015</item>
         <item>youthbalanjika_07jul2015</item>
         <item>youthbalanjika_06jun2015</item>

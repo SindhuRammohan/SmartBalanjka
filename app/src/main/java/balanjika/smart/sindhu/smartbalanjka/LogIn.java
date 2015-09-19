@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
-import DBHelper.DBHelper;
+import dbhelper.DBHelper;
 import balanjika.smart.sindhu.Detailed.Homescreen;
 
 public class LogIn extends Activity {
