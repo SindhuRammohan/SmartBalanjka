@@ -47,6 +47,12 @@ public class SharPref  {
     public String getMailPassword(){
         return prefs.getString("mailpassword", null);
     }
+    public String getTempMailUsername(){
+        return prefs.getString("mailusername", null);
+    }
+    public String getTempMailPassword(){
+        return prefs.getString("mailpassword", null);
+    }
 
     public void setUsername(String username){
         prefsEditor.putString("username", username);
@@ -61,6 +67,15 @@ public class SharPref  {
         prefsEditor.commit();
     }
     public void setMailPassword(String mailpassword){
+        prefsEditor.putString("mailpassword", mailpassword);
+        prefsEditor.commit();
+    }
+
+    public void setTempMailUsername(String mailusername){
+        prefsEditor.putString("mailusername", mailusername);
+        prefsEditor.commit();
+    }
+    public void setTempMailPassword(String mailpassword){
         prefsEditor.putString("mailpassword", mailpassword);
         prefsEditor.commit();
     }

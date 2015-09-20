@@ -1,10 +1,10 @@
 package balanjika.smart.sindhu.smartbalanjka;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import dbhelper.DBHelper;
 import balanjika.smart.sindhu.Detailed.Homescreen;
 
-public class LogIn extends Activity {
+public class LogIn extends ActionBarActivity {
 
     private EditText editusername;
     private String str;
@@ -31,6 +31,9 @@ public class LogIn extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.logo);
         editusername = (EditText)findViewById(R.id.editusername);
         editpassword = (EditText)findViewById(R.id.editPassword);
         forget = (TextView)findViewById(R.id.forget);
@@ -83,6 +86,8 @@ public class LogIn extends Activity {
                             isSend = true;
                             editusername.setText("");
                             editpassword.setText("");
+                            sharpref.setTempMailUsername(c.getString(1));
+                            sharpref.setTempMailPassword(c.getString(2));
                             Intent in = new Intent(getBaseContext(), Homescreen.class);
                             startActivity(in);
                         }
@@ -98,6 +103,8 @@ public class LogIn extends Activity {
                         isSend = true;
                         editusername.setText("");
                         editpassword.setText("");
+                        sharpref.setTempMailUsername(sharpref.getMailUsername());
+                        sharpref.setTempMailPassword(sharpref.getMailPassword());
                         Intent in = new Intent(getBaseContext(), Homescreen.class);
                         startActivity(in);
                     }

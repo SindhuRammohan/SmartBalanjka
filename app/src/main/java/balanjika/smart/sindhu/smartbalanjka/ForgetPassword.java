@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,7 +16,7 @@ import Mail.SendMailTask;
 import dbhelper.DBHelper;
 
 
-public class ForgetPassword extends Activity {
+public class ForgetPassword extends ActionBarActivity {
 
     private EditText gmail_password;
     private EditText gmail_username;
@@ -33,6 +34,8 @@ public class ForgetPassword extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forget_password);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         Button send = (Button) this.findViewById(R.id.Login_forgetpassword);
         gmail_password = (EditText) this.findViewById(R.id.editmailPassword_forgetpassword);
         username = (EditText) this.findViewById(R.id.editusername_forgetpassword);

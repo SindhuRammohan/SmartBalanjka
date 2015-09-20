@@ -142,7 +142,7 @@
     <string name="india_no">+91 9790659680</string>
     <string name="malatsia">Malaysia Number</string>
     <string name="malatsia_no">+60 146250626</string>
-    <string name="mail_feedback">Sending your valuable Feedback through email is always welcome. \n Please include screenshots of particulars if necessary</string>
+    <string name="mail_feedback">Sending your valuable Feedback through email is always welcome. \nPlease include screenshots of particulars if necessary</string>
     <string name="feedback_title">Title(About)</string>
     <string name="feedback_content">Type in your Feedback</string>
     <string name="feedback_Compose">Compose</string>
@@ -211,5 +211,8 @@
     <string name="please_wait">please wait</string>
     <string name="one_of">1 of</string>
     <string name="of">of</string>
+
+
+    <string name="contactus_toast">Enter valuable commands. Fields should not be empty</string>
 
 </resources>

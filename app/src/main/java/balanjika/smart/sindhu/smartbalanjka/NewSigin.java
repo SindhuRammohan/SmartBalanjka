@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,7 +17,7 @@ import java.util.List;
 import dbhelper.DBHelper;
 import Mail.SendMailTask;
 
-public class NewSigin extends Activity {
+public class NewSigin extends ActionBarActivity {
     private EditText gmail_password;
     private EditText gmail_username;
     private String gmail_password_text;
@@ -32,6 +33,8 @@ public class NewSigin extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_signin);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         Button send = (Button) this.findViewById(R.id.Login_newsignin);
         gmail_password = (EditText) this.findViewById(R.id.editPassword_newsignin);
         gmail_username = (EditText) this.findViewById(R.id.editusername_newsignin);
@@ -63,7 +66,6 @@ public class NewSigin extends Activity {
                     do {
                         if ((c.getString(1).equalsIgnoreCase(gmail_username_text))) {
                             count = count + 1;
-                            Toast.makeText(NewSigin.this, count + "", Toast.LENGTH_LONG).show();
                         }
                     } while (c.moveToNext());
                 }

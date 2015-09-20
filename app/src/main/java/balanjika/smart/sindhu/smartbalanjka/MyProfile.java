@@ -13,6 +13,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.text.InputType;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,7 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import Mail.SendMailTask;
 
-public class MyProfile extends Activity implements View.OnClickListener {
+public class MyProfile extends ActionBarActivity implements View.OnClickListener {
 
 
 
@@ -381,11 +382,8 @@ public class MyProfile extends Activity implements View.OnClickListener {
         setContentView(R.layout.account_details);
         sharpref = SharPref.getInstance(this);
 
-//        ActionBar bar = getActionBar();
-//        getActionBar();
-//        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#81BEF7")));
-//        bar.setHomeButtonEnabled(true);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -695,61 +693,7 @@ public class MyProfile extends Activity implements View.OnClickListener {
         });
 
 
-//        List<String[]> list = new ArrayList<String[]>();
-//        String next[] = {};
-//        try {
-//            InputStreamReader csvStreamReader = new InputStreamReader(
-//                    this.getAssets().open(
-//                            "Category.csv"));
-//
-//            @SuppressWarnings("resource")
-//            CSVReader reader = new CSVReader(csvStreamReader);
-//            for (;;) {
-//                next = reader.readNext();
-//                if (next != null) {
-//                    list.add(next);
-//                } else {
-//                    break;
-//                }
-//            }
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        if(temp>0)
-//        {
-//            gender.setText(list.get(temp)[1]);
-//
-//            address.setText(list.get(temp)[3]);
-//            City.setText(list.get(temp)[4]);
-//            District.setText(list.get(temp)[5]);
-//            Country.setText(list.get(temp)[6]);
-//            phone.setText(list.get(temp)[8]);
-//            textview_blood.setText(list.get(temp)[9]);
-//            dob.setText(list.get(temp)[2]);
-//            status.setText(list.get(temp)[21]);
-//            statusdate.setText(list.get(temp)[22]);
-//            Mail.setText(list.get(temp)[10]);
-//            About.setText(list.get(temp)[11]);
-//            if(list.get(temp)[13]!="")
-//            {
-//                linear.setVisibility(View.VISIBLE);
-//                matrimony.setVisibility(View.GONE);
-//                save.setVisibility(View.GONE);
-//            }
-//            Rashi.setText(list.get(temp)[12]);
-//            Nakthara.setText(list.get(temp)[13]);
-//            Qualification.setText(list.get(temp)[17]);
-//
-//            Work.setText(list.get(temp)[16]);
-//            Height.setText(list.get(temp)[14]);
-//            Weight.setText(list.get(temp)[15]);
-//
-//
-//
-//            Notes.setText(list.get(temp)[18]);
-//
-//        }
+
     }
 
     DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
@@ -788,71 +732,5 @@ public class MyProfile extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View arg0) {
     }
-//    private class save_content extends AsyncTask<Void, Void, Void> {
-//        @Override
-//        protected void onPreExecute() {
-//            super.onPreExecute();
-//            pDialog = new ProgressDialog(MyProfile.this);
-//            pDialog.setMessage("Please wait...");
-//            pDialog.setCancelable(false);
-//            pDialog.show();
-//        }
-//
-////        @Override
-////        protected Void doInBackground(Void... arg0) {
-////            ServiceHandler sh = new ServiceHandler();
-////            String jsonStr = sh.makeServiceCall(categoty_url_insert, ServiceHandler.GET);
-////            Log.d("Response: ", "> " + jsonStr);
-//////			if (jsonStr != null) {
-//////				try {
-//////					contacts = new JSONArray(jsonStr);
-//////					for (int i = 0; i < contacts.length(); i++) {
-//////						JSONObject c = contacts.getJSONObject(i);
-//////						String id = c.getString(TAG_ID);
-//////						Log.d("TAG_ID: ", "> " + c.getString(TAG_NAME));
-//////						String name = c.getString(TAG_NAME);
-//////						HashMap<String, String> contact = new HashMap<String, String>();
-//////						contact.put(TAG_ID, id);
-//////						contact.put(TAG_NAME, name);
-//////						contactList.add(contact);
-//////					}
-//////				} catch (JSONException e) {
-//////					e.printStackTrace();
-//////				}
-//////			} else {
-//////				Log.e("ServiceHandler", "Couldn't get any data from the url");
-//////			}
-////            return null;
-////        }
-//
-//        @Override
-//        protected void onPostExecute(Void result) {
-//            super.onPostExecute(result);
-//            if (pDialog.isShowing())
-//                pDialog.dismiss();
-//
-//        }
-//    }
-//
-////	@Override
-////	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-////
-////		int itemId = item.getItemId();
-////		switch (itemId) {
-////		case android.R.id.home:
-////			super.onBackPressed();
-////			break;
-////
-////
-////		}
-////
-////		return true;
-////	}
-//
-//
-//
-////	@Override
-////	public void onBackPressed() {
-////		super.onBackPressed();
-//	}
+
 }

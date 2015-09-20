@@ -207,10 +207,7 @@ public class Homescreen extends ActionBarActivity{
 
     @Override
     public void onBackPressed() {
-//        Intent in = new Intent(getBaseContext(), LogIn.class);
-//        startActivity(in);
-
-        CustomDialogClass cdd = new CustomDialogClass(Homescreen.this);
-        cdd.show();
+        Intent in = new Intent(getBaseContext(), LogIn.class);
+        startActivity(in);
     }
 }

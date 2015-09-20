@@ -3,12 +3,13 @@ package balanjika.smart.sindhu.smartbalanjka;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class CreateLogin extends Activity {
+public class CreateLogin extends ActionBarActivity {
 
     private EditText password;
     private EditText password_again;
@@ -25,6 +26,8 @@ public class CreateLogin extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_username);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         Button send = (Button) this.findViewById(R.id.Login_create);
         password = (EditText) this.findViewById(R.id.editPassword_create);
         password_again = (EditText) this.findViewById(R.id.editagainPassword_create);
