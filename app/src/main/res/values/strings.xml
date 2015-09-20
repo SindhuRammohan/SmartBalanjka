@@ -215,4 +215,10 @@
 
     <string name="contactus_toast">Enter valuable commands. Fields should not be empty</string>
 
+
+    <string name="Personal_Details">Personal Details</string>
+    <string name="Age">Age</string>
+    <string name="HeightAndWeight">Height And Weight</string>
+    <string name="Age">Age</string>
+    <string name="Age">Age</string>
 </resources>

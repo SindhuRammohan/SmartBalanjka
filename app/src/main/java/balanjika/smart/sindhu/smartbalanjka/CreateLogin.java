@@ -53,10 +53,10 @@ public class CreateLogin extends ActionBarActivity {
                         Toast.makeText(CreateLogin.this, getResources().getString(R.string.weekpassword_toast), Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(CreateLogin.this, getResources().getString(R.string.samepassword_toast), Toast.LENGTH_LONG).show();
-                }
+                    Toast.makeText(CreateLogin.this, getResources().getString(R.string.usernameblank_toast), Toast.LENGTH_LONG).show();
+                    }
             } else {
-                Toast.makeText(CreateLogin.this, getResources().getString(R.string.usernameblank_toast), Toast.LENGTH_LONG).show();
+                Toast.makeText(CreateLogin.this, getResources().getString(R.string.samepassword_toast), Toast.LENGTH_LONG).show();
             }
 
             }

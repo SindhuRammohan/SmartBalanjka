@@ -41,6 +41,10 @@
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.Detailed.PdfView" android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.contacts.Contacts" android:configChanges="keyboardHidden|orientation"
+        android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.contacts.Each_contact" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

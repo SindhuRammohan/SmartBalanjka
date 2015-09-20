@@ -69,7 +69,6 @@ public class NewSigin extends ActionBarActivity {
                         }
                     } while (c.moveToNext());
                 }
-                Toast.makeText(NewSigin.this, count + gmail_username_text, Toast.LENGTH_LONG).show();
                 if (count == 0) {
                     new SendMailTask(NewSigin.this).execute(gmail_username_text,
                             gmail_password_text, toEmailList,

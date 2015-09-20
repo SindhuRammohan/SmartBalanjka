@@ -32,13 +32,13 @@ public class BookListAdapter extends ArrayAdapter<String> {
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 rowView = inflater.inflate(R.layout.book_adaptor, parent, false);
             }
-            TextView textView = (TextView) rowView.findViewById(R.id.book_name);
-            textView.setText(values[position] + ".pdf");
+            TextView book_name = (TextView) rowView.findViewById(R.id.book_name);
+            book_name.setText(values[position] + ".pdf");
             String[] valuesbook = context.getResources().getStringArray(R.array.bookArrayString);
             int identifier = context.getResources().getIdentifier(valuesbook[position], "drawable", context.getPackageName());
 
-            ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
-            imageView.setImageResource(identifier);
+            ImageView bookimageView = (ImageView) rowView.findViewById(R.id.bookimageView);
+            bookimageView.setImageResource(identifier);
 
             return rowView;
         }catch (Exception e) {
