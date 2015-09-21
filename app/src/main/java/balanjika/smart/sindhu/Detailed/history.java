@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import balanjika.smart.sindhu.contacts.Contacts;
 import balanjika.smart.sindhu.smartbalanjka.R;
 
 /**
@@ -65,6 +67,15 @@ public class History extends ActionBarActivity {
                 startActivity(myWebLink);
             }
         });
+
+
+        history_contactsmore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent nextScreen = new Intent(getApplicationContext(), Contacts.class);
+        startActivity(nextScreen);
+    }
+});
         
     }
 }
