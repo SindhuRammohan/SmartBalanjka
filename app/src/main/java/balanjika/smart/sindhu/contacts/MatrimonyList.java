@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
-public class Contacts extends ActionBarActivity {
+public class MatrimonyList extends ActionBarActivity {
     private ListView lv;
     Cursor c=null;
     private ContactsListAdapter adapter;
@@ -30,7 +30,7 @@ public class Contacts extends ActionBarActivity {
 
         ArrayList<ContactListItems> contactList = new ArrayList<ContactListItems>();
         contactList.clear();
-        DBHelper myDbHelper = new DBHelper(Contacts.this);
+        DBHelper myDbHelper = new DBHelper(MatrimonyList.this);
         try {
             myDbHelper.createDataBase();
         } catch (IOException ioe) {
@@ -44,27 +44,28 @@ public class Contacts extends ActionBarActivity {
         c = myDbHelper.query("Profile", null, null, null, null, null, null);
         if (c.moveToFirst()) {
             do {
-                ContactListItems contactListItems = new ContactListItems();
-                contactListItems.setName(c.getString(3));
-                contactListItems.setNo(c.getString(0));
-                contactListItems.setPhone(c.getString(10));
-                contactList.add(contactListItems);
+                if(c.getString(19).equalsIgnoreCase("yes")) {
+                    ContactListItems contactListItems = new ContactListItems();
+                    contactListItems.setName(c.getString(3));
+                    contactListItems.setNo(c.getString(0));
+                    contactListItems.setPhone(c.getString(10));
+                    contactList.add(contactListItems);
+                }
             } while (c.moveToNext());
         }
 
-        adapter = new ContactsListAdapter(Contacts.this, contactList);
+        adapter = new ContactsListAdapter(MatrimonyList.this, contactList);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,long arg3) {
                 // TODO Auto-generated method stub
-                Intent nextScreen = new Intent(Contacts.this,Each_contact.class);
+                Intent nextScreen = new Intent(MatrimonyList.this,Each_contact.class);
                 TextView defaultID = (TextView) arg1.findViewById(R.id.defaultID);
                 int id = Integer.parseInt(defaultID.getText().toString());
                 nextScreen.putExtra("new_variable_name",id );
                 startActivity(nextScreen);
             }
         });
-
     }
 }

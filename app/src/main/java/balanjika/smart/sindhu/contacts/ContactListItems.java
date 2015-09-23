@@ -1,13 +1,17 @@
 package balanjika.smart.sindhu.contacts;
 
-/**
- * Created by rajesh on 20-09-2015.
- */
 public class ContactListItems {
     String name;
+    String no;
     String phone;
 
+    public String getNo() {
+        return no;
+    }
 
+    public void setNo(String no) {
+        this.no = no;
+    }
 
     public String getName() {
         return name;

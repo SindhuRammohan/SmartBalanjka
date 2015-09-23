@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import balanjika.smart.sindhu.contacts.BloodList;
 import balanjika.smart.sindhu.contacts.Contacts;
+import balanjika.smart.sindhu.contacts.MatrimonyList;
 import balanjika.smart.sindhu.smartbalanjka.R;
 
 public class CreateFragment extends Fragment {
@@ -132,6 +133,60 @@ public class CreateFragment extends Fragment {
             }
         });
 
+        LinearLayout matrimony_layout = (LinearLayout) rootView.findViewById(R.id.matrimony_layout);
+        Button matrimony_Button = (Button) rootView.findViewById(R.id.matrimony);
+        TextView matrimony_text = (TextView) rootView.findViewById(R.id.matrimony_text);
+        // Listening to button event
+        matrimony_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),MatrimonyList.class);
+                startActivity(nextScreen);
+            }
+        });
+        matrimony_text.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),MatrimonyList.class);
+                startActivity(nextScreen);
+            }
+        });
+        matrimony_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                // Starting a new Intent
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),MatrimonyList.class);
+                startActivity(nextScreen);
+
+            }
+        });
+
+
+        LinearLayout blood_layout = (LinearLayout) rootView.findViewById(R.id.blood_layout);
+        Button blood_Button = (Button) rootView.findViewById(R.id.blood);
+        TextView blood_text = (TextView) rootView.findViewById(R.id.blood_text);
+        // Listening to button event
+        blood_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),BloodList.class);
+                startActivity(nextScreen);
+            }
+        });
+        blood_text.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),BloodList.class);
+                startActivity(nextScreen);
+            }
+        });
+        blood_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                // Starting a new Intent
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),BloodList.class);
+                startActivity(nextScreen);
+
+            }
+        });
 
         return rootView;
     }

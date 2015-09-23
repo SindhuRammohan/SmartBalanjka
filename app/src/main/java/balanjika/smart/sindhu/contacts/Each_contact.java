@@ -91,7 +91,6 @@ public class Each_contact extends ActionBarActivity{
         }
 
 
-        temp = temp + 1;
         c = myDbHelper.query("Profile", null, null, null, null, null, null);
         if (c.moveToFirst()) {
             do {
@@ -102,7 +101,7 @@ public class Each_contact extends ActionBarActivity{
                     Marital .setText(c.getString(13));
                     Maritaldate.setText(c.getString(14));
                     bloodgrouptext .setText(c.getString(11));
-                    Gender.setText(c.getString(5));
+                    Gender.setText(c.getString(5    ));
                     DOB .setText(c.getString(12));
                     Social .setText(c.getString(15));
                     Notes.setText(c.getString(16) +","+ "\n" + c.getString(17) +","+ "\n" + c.getString(18)+".");

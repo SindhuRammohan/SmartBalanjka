@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import balanjika.smart.sindhu.contacts.Contacts;
+import balanjika.smart.sindhu.contacts.MatrimonyList;
 import balanjika.smart.sindhu.smartbalanjka.R;
 
 /**
@@ -73,9 +74,15 @@ public class History extends ActionBarActivity {
             @Override
             public void onClick(View arg0) {
                 Intent nextScreen = new Intent(getApplicationContext(), Contacts.class);
-        startActivity(nextScreen);
-    }
-});
-        
+                startActivity(nextScreen);
+                }
+        });
+        history_matrimonymore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent nextScreen = new Intent(getApplicationContext(), MatrimonyList.class);
+                startActivity(nextScreen);
+            }
+        });
     }
 }

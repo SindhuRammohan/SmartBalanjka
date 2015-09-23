@@ -51,6 +51,11 @@ public class ContactsListAdapter extends BaseAdapter {
         }
         TextView tvName = (TextView) convertView.findViewById(R.id.idnamevalue);
         tvName.setText(contactListItems.getName());
+
+        TextView defaultID = (TextView) convertView.findViewById(R.id.defaultID);
+        defaultID.setText(contactListItems.getNo());
+
+
         TextView tvPhone = (TextView) convertView.findViewById(R.id.phone);
         tvPhone.setText(contactListItems.getPhone());
 
