@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#ffffff"
-
+    android:background="@color/white"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/year"
+        android:textColor="@color/dark_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="YEAR" />
+        android:layout_gravity="center" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="3"
-        android:background="#ffffff"
+        android:background="@color/white"
         android:orientation="horizontal" >
 
         <LinearLayout
@@ -27,11 +26,11 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/First"
-                android:textColor="#ff0000"
+                android:textColor="@color/red"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="First Place" />
+                android:text="@string/First_Place" />
 
 
         </LinearLayout>
@@ -43,11 +42,11 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/Second"
-                android:textColor="#00ff00"
+                android:textColor="@color/green"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Second Place" />
+                android:text="@string/Second_Place" />
 
 
 
@@ -60,11 +59,11 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/Third"
-                android:textColor="#0000ff"
+                android:textColor="@color/deep_blue"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Third Place" />
+                android:text="@string/Third_Place" />
 
         </LinearLayout>
     </LinearLayout>
@@ -74,12 +73,12 @@
         android:layout_marginLeft="15dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="CBSC" />
+        android:text="@string/CBSC" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="3"
-        android:background="#ffffff"
+        android:background="@color/white"
         android:orientation="horizontal" >
 
         <LinearLayout
@@ -91,23 +90,20 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/cbscname1"
-                android:textColor="#81BEF7"
+                android:textColor="@color/blue"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/cbscparents1"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/cbscmarks1"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
         <LinearLayout
@@ -119,24 +115,21 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/cbscname2"
-                android:textColor="#81BEF7"
+                android:textColor="@color/blue"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/cbscparents2"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/cbscmarks2"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
         <LinearLayout
@@ -148,23 +141,20 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/cbscname3"
-                android:textColor="#81BEF7"
+                android:textColor="@color/blue"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/cbscparents3"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/cbscmarks3"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </LinearLayout>
@@ -174,12 +164,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="15dp"
-        android:text="HSC" />
+        android:text="@string/HSC" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="3"
-        android:background="#ffffff"
+        android:background="@color/white"
         android:orientation="horizontal" >
 
         <LinearLayout
@@ -191,23 +181,20 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/hscname1"
-                android:textColor="#81BEF7"
+                android:textColor="@color/blue"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/hscparents1"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/hscmarks1"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
         <LinearLayout
@@ -219,24 +206,21 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/hscname2"
-                android:textColor="#81BEF7"
+                android:textColor="@color/blue"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/hscparents2"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/hscmarks2"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
         <LinearLayout
@@ -248,23 +232,20 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/hscname3"
-                android:textColor="#81BEF7"
+                android:textColor="@color/blue"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/hscparents3"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/hscmarks3"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </LinearLayout>
@@ -274,7 +255,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="15dp"
-        android:text="METRIC" />
+        android:text="@string/METRIC" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -292,22 +273,19 @@
             <TextView
                 android:id="@+id/matricname1"
                 android:layout_margin="10dp"
-                android:textColor="#81BEF7"
+                android:textColor="@color/blue"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/matricparents1"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/matricmarks1"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
         <LinearLayout
@@ -320,22 +298,19 @@
             <TextView
                 android:id="@+id/matricname2"
                 android:layout_margin="10dp"
-                android:textColor="#81BEF7"
+                android:textColor="@color/blue"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/matricparents2"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/matricmarks2"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
         <LinearLayout
@@ -347,23 +322,20 @@
             android:orientation="vertical" >
             <TextView
                 android:id="@+id/matricname3"
-                android:textColor="#81BEF7"
+                android:textColor="@color/blue"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/matricparents3"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/matricmarks3"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </LinearLayout>

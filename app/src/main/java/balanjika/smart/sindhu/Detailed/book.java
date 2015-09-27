@@ -1,18 +1,13 @@
 package balanjika.smart.sindhu.Detailed;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import balanjika.smart.sindhu.smartbalanjka.R;
 
-/**
- * Created by rajesh on 07-09-2015.
- */
 public class book extends ActionBarActivity {
 
     private ListView mListView;
@@ -34,7 +29,6 @@ public class book extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(book.this,BookPdf.class);
-//based on item add info to intent
                 fileName = mListView.getItemAtPosition(position).toString();
                 intent.putExtra("KEY",fileName);
                 startActivity(intent);

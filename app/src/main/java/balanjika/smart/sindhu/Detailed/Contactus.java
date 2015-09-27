@@ -1,23 +1,17 @@
 package balanjika.smart.sindhu.Detailed;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.util.Arrays;
 import java.util.List;
-
 import Mail.SendMailTask;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import balanjika.smart.sindhu.smartbalanjka.SharPref;
 
-/**
- * Created by rajesh on 07-09-2015.
- */
+
 public class Contactus extends ActionBarActivity {
 
     private EditText subject;
@@ -34,8 +28,6 @@ public class Contactus extends ActionBarActivity {
         sharpref = SharPref.getInstance(this);
     }
     public void sendmail(View v) {
-        Log.d("contactus",""+ subject.getText().toString() + body.getText().toString() +
-                sharpref.getTempMailUsername() + sharpref.getTempMailPassword() );
 
         if(!subject.getText().toString().equalsIgnoreCase("") && !body.getText().toString().equalsIgnoreCase("") &&
             !sharpref.getTempMailUsername().equalsIgnoreCase("") && !sharpref.getTempMailPassword().equalsIgnoreCase("")) {

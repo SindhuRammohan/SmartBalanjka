@@ -4,33 +4,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.ListFragment;
-import android.text.InputType;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.SearchView.OnQueryTextListener;
-
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
-public class DoctorList_Fragment extends ListFragment implements OnQueryTextListener {
+public class DoctorList_Fragment extends ListFragment {
 
     public static BloodList_Fragment newInstance(String string) {
         // TODO Auto-generated method stub
@@ -39,7 +28,6 @@ public class DoctorList_Fragment extends ListFragment implements OnQueryTextList
 
     List<String[]> list = new ArrayList<String[]>();
     private View mView;
-    private ProgressDialog pDialog;
     ArrayList<HashMap<String, String>> contactList;
     private ContactsListAdapter adapter;
     private ListView lv;
@@ -79,7 +67,7 @@ public class DoctorList_Fragment extends ListFragment implements OnQueryTextList
         c = myDbHelper.query("Profile", null, null, null, null, null, null);
         if (c.moveToFirst()) {
             do {
-                if(c.getString(27).equalsIgnoreCase("yes")) {
+                if(c.getString(27).equalsIgnoreCase(getResources().getString(R.string.yes))) {
                     ContactListItems contactListItems = new ContactListItems();
                     contactListItems.setName(c.getString(3));
                     contactListItems.setNo(c.getString(0));
@@ -121,21 +109,5 @@ public class DoctorList_Fragment extends ListFragment implements OnQueryTextList
     public void onPause() {
         Log.e("DEBUG", "OnPause of BloodList");
         super.onPause();
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        if (TextUtils.isEmpty(newText)) {
-            lv.clearTextFilter();
-        } else {
-            lv.setFilterText(newText.toString());
-        }
-
-        return true;
-    }
-
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        return false;
     }
 }

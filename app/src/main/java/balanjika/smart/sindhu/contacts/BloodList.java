@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;

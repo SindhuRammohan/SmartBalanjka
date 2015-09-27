@@ -7,7 +7,6 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.ListView;
-
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
@@ -26,7 +25,7 @@ public class healthtipList extends ActionBarActivity {
 
 
 
-        ArrayList<HealthItems> contactList = new ArrayList<HealthItems>();
+        ArrayList<HealthItems> HealthList = new ArrayList<HealthItems>();
         contactList.clear();
         DBHelper myDbHelper = new DBHelper(healthtipList.this);
         try {
@@ -47,11 +46,11 @@ public class healthtipList extends ActionBarActivity {
                 contactListItems.setIngredients(c.getString(1));
                 contactListItems.setTime(c.getString(2));
                 contactListItems.setDirection(c.getString(3));
-                contactList.add(contactListItems);
+                HealthList.add(contactListItems);
             } while (c.moveToNext());
         }
 
-        adapter = new healthAdapter(healthtipList.this, contactList);
+        adapter = new healthAdapter(healthtipList.this, HealthList);
         lv.setAdapter(adapter);
     }
 

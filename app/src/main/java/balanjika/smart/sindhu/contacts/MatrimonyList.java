@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import balanjika.smart.sindhu.smartbalanjka.R;
@@ -44,7 +43,7 @@ public class MatrimonyList extends ActionBarActivity {
         c = myDbHelper.query("Profile", null, null, null, null, null, null);
         if (c.moveToFirst()) {
             do {
-                if(c.getString(19).equalsIgnoreCase("yes")) {
+                if(c.getString(19).equalsIgnoreCase(getResources().getString(R.string.yes))) {
                     ContactListItems contactListItems = new ContactListItems();
                     contactListItems.setName(c.getString(3));
                     contactListItems.setNo(c.getString(0));

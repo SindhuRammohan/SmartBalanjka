@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:gravity="center"
-            android:text="no_equipment_to_view"
+            android:text="stringno_equipment_to_view"
             android:textColor="#3d3d3d"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -66,8 +66,7 @@
         android:layout_marginTop="33dp"
         android:background="@drawable/page_back"
         android:gravity="center"
-        android:text="one_of_four"
-        android:textColor="#ffffff"
+        android:textColor="@color/white"
         android:textSize="13sp"
         android:textStyle="bold" />
 

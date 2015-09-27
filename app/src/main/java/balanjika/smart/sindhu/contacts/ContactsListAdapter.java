@@ -1,6 +1,6 @@
 package balanjika.smart.sindhu.contacts;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,7 +56,7 @@ public class ContactsListAdapter extends BaseAdapter {
         defaultID.setText(contactListItems.getNo());
 
 
-        TextView tvPhone = (TextView) convertView.findViewById(R.id.phone);
+        TextView tvPhone = (TextView) convertView.findViewById(R.id.phone_detail);
         tvPhone.setText(contactListItems.getPhone());
 
         return convertView;

@@ -21,8 +21,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import balanjika.smart.sindhu.smartbalanjka.CustomDialogClass;
 import balanjika.smart.sindhu.smartbalanjka.LogIn;
 import balanjika.smart.sindhu.smartbalanjka.R;
 

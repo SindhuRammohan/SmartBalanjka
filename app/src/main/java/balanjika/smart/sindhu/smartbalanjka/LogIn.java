@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.IOException;
 import dbhelper.DBHelper;
 import balanjika.smart.sindhu.Detailed.Homescreen;

@@ -10,7 +10,6 @@
         android:orientation="horizontal"
         android:background="@drawable/roundrectanglewhite"  >
         <ImageButton
-            android:id="@+id/imageButton1"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/woman_face" />
@@ -20,8 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginLeft="20dp"
-            android:text="TextView" />
+            android:layout_marginLeft="20dp" />
     </LinearLayout>
     <ScrollView
         android:id="@+id/scrollView1"
@@ -38,7 +36,6 @@
                 android:orientation="vertical"
                 android:layout_margin="10dp" >
                 <TextView
-                    android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"

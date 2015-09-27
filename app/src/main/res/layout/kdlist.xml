@@ -4,18 +4,14 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-
-
-
     <EditText
         android:id="@+id/kdeditlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:hint="Event Type"
+        android:hint="@string/Event_Type"
         android:ems="10" >
-
         <requestFocus />
     </EditText>
 
@@ -23,7 +19,7 @@
         android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:padding="1dp"
-        android:divider="#b5b5b5"
+        android:divider="@color/dark_brown"
         android:dividerHeight="11dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -55,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="No Event" />
+            android:text="@string/No_Event" />
     </LinearLayout>
 
 

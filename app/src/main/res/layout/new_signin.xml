@@ -4,8 +4,7 @@
     android:gravity="center"
     android:background="@drawable/login_background"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_height="fill_parent">
 
     <TextView
         android:id="@+id/User_newsignin"
@@ -63,11 +62,6 @@
                         android:background="@null"
                         android:maxLines="1"
                         android:ems="10" />
-
-
-
-
-
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -80,8 +74,6 @@
                     android:gravity="center"
                     android:background="@drawable/edittextstyle"
                     android:orientation="horizontal" >
-
-
 
                     <EditText
                         android:id="@+id/editPassword_newsignin"
@@ -98,11 +90,8 @@
                         android:singleLine="true"
                         android:maxLines="1"
                         android:ems="10" >
-
                     </EditText>
-
                 </LinearLayout>
-
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>
@@ -112,8 +101,7 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:gravity="center"
-        >
+        android:gravity="center">
 
         <Button
             android:id="@+id/Login_newsignin"
@@ -125,6 +113,5 @@
             android:text="@string/maillogin"
             android:textSize="25dp"
             android:background="@drawable/buttonshape" />
-
     </LinearLayout>
 </RelativeLayout>

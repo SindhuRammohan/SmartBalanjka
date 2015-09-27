@@ -1,6 +1,5 @@
 package balanjika.smart.sindhu.smartbalanjka;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;

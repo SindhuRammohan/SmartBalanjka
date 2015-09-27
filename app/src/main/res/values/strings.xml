@@ -225,4 +225,30 @@
     <string name="BloodList">Blood List</string>
     <string name="DoctorsList">Doctors List</string>
 
+    <string name="Awards">Awardst</string>
+
+    <string name="yes">yes</string>
+
+
+    <string name="First_Place">First Place</string>
+    <string name="Second_Place">Second Place</string>
+    <string name="Third_Place">Third Place</string>
+    <string name="CBSC">CBSC</string>
+    <string name="HSC">HSC</string>
+    <string name="METRIC">METRIC</string>
+    <string name="Blood_Type">Blood Type</string>
+    <string name="Ingredients">Ingredients</string>
+    <string name="Directions">Directions</string>
+
+    <string name="Venue">Venue</string>
+    <string name="Date">Date</string>
+    <string name="Time">Time</string>
+    <string name="Contact">Contact</string>
+    <string name="Specification">Specification</string>
+    <string name="Other_Details">Other Details</string>
+
+    <string name="Event_Type">Event Type</string>
+    <string name="No_Event">No Event</string>
+
+    <string name="no_equipment_to_view">no equipment to view</string>
 </resources>

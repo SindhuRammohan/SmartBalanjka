@@ -7,12 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import balanjika.smart.sindhu.smartbalanjka.R;
 
-/**
- * Created by rajesh on 07-09-2015.
- */
+
 public class BookListAdapter extends ArrayAdapter<String> {
     private final Context context;
     private final String[] values;

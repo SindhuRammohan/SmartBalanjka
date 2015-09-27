@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:padding="12dp"
-        android:divider="#EBEBEB"
+        android:divider="@color/grey"
         android:dividerHeight="11dp"
         android:fastScrollEnabled="true" >
     </ListView>

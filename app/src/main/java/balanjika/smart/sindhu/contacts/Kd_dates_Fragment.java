@@ -8,7 +8,6 @@ import org.json.JSONArray;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -20,17 +19,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.SearchView.OnQueryTextListener;
-
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
@@ -89,7 +83,6 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
                         textview_countries.setText(countries_list[which].toString());
                         spinner_countries.getPosition(countries_list[which].toString());
                         String text = Kd_dates_Fragment.this.textview_countries.getText().toString().toLowerCase();
-                        Toast.makeText(getActivity(),"blood" + text,Toast.LENGTH_SHORT).show();
                         ArrayList<KDItems> contactList = new ArrayList<KDItems>();
                         contactList.clear();
                         DBHelper myDbHelper = new DBHelper(getActivity());
@@ -106,7 +99,6 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
                         c = myDbHelper.query("kd", null, null, null, null, null, null);
                         if (c.moveToFirst()) {
                             do {
-                                Toast.makeText(getActivity(),"blood" + c.getString(0),Toast.LENGTH_SHORT).show();
                                 count = 0;
                                 if(c.getString(0).equalsIgnoreCase(text)) {
                                     count = count + 1;

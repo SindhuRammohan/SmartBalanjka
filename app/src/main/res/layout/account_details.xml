@@ -80,7 +80,6 @@
             android:orientation="vertical" >
     <EditText
         android:id="@+id/gender"
-        
         android:layout_marginTop="10dp"
          android:hint="@string/Gender"
         android:layout_width="match_parent"
@@ -90,8 +89,6 @@
         android:ems="10"
         android:focusable="false"
         android:focusableInTouchMode="false" >
-
-        
     </EditText>
 
     <EditText
@@ -99,7 +96,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
          android:hint="@string/Address"
-
          android:inputType="textPostalAddress"
         android:ems="10" >
 </EditText>
@@ -129,15 +125,12 @@
          android:hint="@string/Country"
         />
 
-    
-
     <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Phone_Number"
-        
         android:inputType="phone" />
 
     <EditText

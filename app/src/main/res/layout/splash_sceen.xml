@@ -4,7 +4,6 @@
     android:background="@drawable/splashscreen"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -12,9 +11,5 @@
         android:layout_alignParentTop="true"
         android:gravity="center"
         android:orientation="vertical" >
-
-
-
     </LinearLayout>
-
 </RelativeLayout>

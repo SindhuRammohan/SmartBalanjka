@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import balanjika.smart.sindhu.contacts.BloodList;
 import balanjika.smart.sindhu.contacts.Contacts;
 import balanjika.smart.sindhu.contacts.MatrimonyList;
@@ -136,7 +135,7 @@ public class CreateFragment extends Fragment {
         });
 
         LinearLayout matrimony_layout = (LinearLayout) rootView.findViewById(R.id.matrimony_layout);
-        Button matrimony_Button = (Button) rootView.findViewById(R.id.matrimony);
+        Button matrimony_Button = (Button) rootView.findViewById(R.id.matrimony_head);
         TextView matrimony_text = (TextView) rootView.findViewById(R.id.matrimony_text);
         // Listening to button event
         matrimony_Button.setOnClickListener(new View.OnClickListener() {

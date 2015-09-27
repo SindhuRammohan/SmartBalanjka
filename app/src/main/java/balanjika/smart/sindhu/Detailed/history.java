@@ -1,14 +1,11 @@
 package balanjika.smart.sindhu.Detailed;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
-
 import balanjika.smart.sindhu.contacts.BloodList;
 import balanjika.smart.sindhu.contacts.Contacts;
 import balanjika.smart.sindhu.contacts.MatrimonyList;
@@ -16,9 +13,7 @@ import balanjika.smart.sindhu.contacts.healthtipList;
 import balanjika.smart.sindhu.contacts.kdList;
 import balanjika.smart.sindhu.smartbalanjka.R;
 
-/**
- * Created by rajesh on 07-09-2015.
- */
+
 public class History extends ActionBarActivity {
 
     private TextView history_contentmore;
@@ -104,7 +99,7 @@ public class History extends ActionBarActivity {
             }
         });
 
-        history_kdmore.setOnClickListener(new View.OnClickListener() {
+        history_healthmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 Intent nextScreen = new Intent(getApplicationContext(), healthtipList.class);

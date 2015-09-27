@@ -9,17 +9,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.IOException;
-
-import balanjika.smart.sindhu.Detailed.Homescreen;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
-import android.view.View.OnClickListener;
-/**
- * Created by rajesh on 20-09-2015.
- */
 public class Each_contact extends ActionBarActivity{
     private int temp = 0;
     Cursor c=null;

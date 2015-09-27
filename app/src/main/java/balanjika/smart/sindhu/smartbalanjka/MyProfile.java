@@ -1,12 +1,10 @@
 package balanjika.smart.sindhu.smartbalanjka;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
@@ -372,8 +370,6 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
     private SharPref sharpref;
 
 
-
-    String whole_content;
     int type = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

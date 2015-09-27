@@ -2,24 +2,19 @@ package balanjika.smart.sindhu.contacts;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import org.json.JSONArray;
-import android.app.ProgressDialog;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.ListFragment;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.SearchView.OnQueryTextListener;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
-public class Awards_Fragment extends ListFragment implements OnQueryTextListener {
+public class Awards_Fragment extends ListFragment {
 
     public static Awards_Fragment newInstance(String string) {
         // TODO Auto-generated method stub
@@ -28,10 +23,11 @@ public class Awards_Fragment extends ListFragment implements OnQueryTextListener
 
     private View mView;
 
-    Cursor c=null;
-    ArrayList<KDListItems> contactList = new ArrayList<KDListItems>();
+    Cursor c = null;
+    ArrayList<KDListItems> KDList = new ArrayList<KDListItems>();
     private ListView lv;
     private AwardsListAdapter adapter;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -47,7 +43,7 @@ public class Awards_Fragment extends ListFragment implements OnQueryTextListener
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.awardslist, container, false);
         DBHelper myDbHelper = new DBHelper(getActivity());
         try {
@@ -92,13 +88,13 @@ public class Awards_Fragment extends ListFragment implements OnQueryTextListener
                 contactListItems.sette_name3(c.getString(25));
                 contactListItems.sette_parents3(c.getString(26));
                 contactListItems.sette_mark3(c.getString(27));
-                contactList.add(contactListItems);
+                KDList.add(contactListItems);
             } while (c.moveToNext());
         }
 
         lv = (ListView) mView.findViewById(android.R.id.list);
 
-        adapter = new AwardsListAdapter(getActivity(), contactList);
+        adapter = new AwardsListAdapter(getActivity(), KDList);
         lv.setAdapter(adapter);
         return mView;
     }
@@ -114,21 +110,5 @@ public class Awards_Fragment extends ListFragment implements OnQueryTextListener
     public void onPause() {
         Log.e("DEBUG", "OnPause of BloodList");
         super.onPause();
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        if (TextUtils.isEmpty(newText)) {
-            lv.clearTextFilter();
-        } else {
-            lv.setFilterText(newText.toString());
-        }
-
-        return true;
-    }
-
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        return false;
     }
 }

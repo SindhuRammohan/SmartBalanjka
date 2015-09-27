@@ -52,7 +52,7 @@
                 android:background="@drawable/roundrectanglewhite"
                 android:orientation="vertical" >
                 <TextView
-                    android:id="@+id/Contacts"
+                    android:id="@+id/Contacts_head"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
