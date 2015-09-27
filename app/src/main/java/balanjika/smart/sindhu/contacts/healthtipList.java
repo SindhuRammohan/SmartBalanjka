@@ -11,7 +11,6 @@ import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
 public class healthtipList extends ActionBarActivity {
-    ArrayList<HashMap<String, String>> contactList;
     private ListView lv;
     Cursor c=null;
     private healthAdapter adapter;
@@ -26,7 +25,6 @@ public class healthtipList extends ActionBarActivity {
 
 
         ArrayList<HealthItems> HealthList = new ArrayList<HealthItems>();
-        contactList.clear();
         DBHelper myDbHelper = new DBHelper(healthtipList.this);
         try {
             myDbHelper.createDataBase();
@@ -38,7 +36,7 @@ public class healthtipList extends ActionBarActivity {
             myDbHelper.openDataBase();
         } catch (Exception sqle) {
         }
-        c = myDbHelper.query("Health", null, null, null, null, null, null);
+        c = myDbHelper.query(getResources().getString(R.string.table_Health), null, null, null, null, null, null);
         if (c.moveToFirst()) {
             do {
                 HealthItems contactListItems = new HealthItems();

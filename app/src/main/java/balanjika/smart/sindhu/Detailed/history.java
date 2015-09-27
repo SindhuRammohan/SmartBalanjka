@@ -62,7 +62,7 @@ public class History extends ActionBarActivity {
             @Override
             public void onClick(View arg0) {
                 Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
-                myWebLink.setData(Uri.parse("http://www.youthbalanjika.com/"));
+                myWebLink.setData(Uri.parse( getResources().getString(R.string.website)));
                 startActivity(myWebLink);
             }
         });

@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
@@ -56,7 +57,7 @@ public class Awards_Fragment extends ListFragment {
             myDbHelper.openDataBase();
         } catch (Exception sqle) {
         }
-        c = myDbHelper.query("Awards", null, null, null, null, null, null);
+        c = myDbHelper.query(getResources().getString(R.string.table_Awards), null, null, null, null, null, null);
         if (c.moveToFirst()) {
             do {
                 KDListItems contactListItems = new KDListItems();

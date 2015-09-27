@@ -38,7 +38,7 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
     List<String[]> list = new ArrayList<String[]>();
     private View mView;
     private EditText textview_countries;
-    private String[] countries_list = { "Meeting", "Exam", "Interview", "Other Important Dates" };
+    private String[] countries_list;
     JSONArray contacts = null;
     Cursor c=null;
     private ProgressDialog pDialog;
@@ -65,6 +65,7 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.kdlist, container, false);
+        countries_list = getResources().getStringArray(R.array.kd_list);
         textview_countries = (EditText) mView.findViewById(R.id.kdeditlist);
         emptylayout = (LinearLayout) mView.findViewById(R.id.emptylayout);
         empty = (TextView) mView.findViewById(R.id.empty);
@@ -77,9 +78,9 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
             @Override
             public void onClick(View v) {
                 contactList.clear();
-                new AlertDialog.Builder(getActivity()).setTitle("Select BloodGroup").setAdapter(spinner_countries, new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(getActivity()).setTitle(getResources().getString(R.string.event_type)).setAdapter(spinner_countries, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog,int which) {
+                    public void onClick(DialogInterface dialog, int which) {
                         textview_countries.setText(countries_list[which].toString());
                         spinner_countries.getPosition(countries_list[which].toString());
                         String text = Kd_dates_Fragment.this.textview_countries.getText().toString().toLowerCase();
@@ -96,11 +97,11 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
                             myDbHelper.openDataBase();
                         } catch (Exception sqle) {
                         }
-                        c = myDbHelper.query("kd", null, null, null, null, null, null);
+                        c = myDbHelper.query(getResources().getString(R.string.table_kd), null, null, null, null, null, null);
                         if (c.moveToFirst()) {
                             do {
                                 count = 0;
-                                if(c.getString(0).equalsIgnoreCase(text)) {
+                                if (c.getString(0).equalsIgnoreCase(text)) {
                                     count = count + 1;
                                     KDItems contactListItems = new KDItems();
                                     contactListItems.setVenue(c.getString(1));
@@ -117,7 +118,7 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
                         lv = (ListView) mView.findViewById(android.R.id.list);
                         adapter = new KDAdapter(getActivity(), contactList);
                         lv.setAdapter(adapter);
-                        if(count == 0){
+                        if (count == 0) {
                             empty.setVisibility(View.VISIBLE);
                             emptylayout.setVisibility(View.VISIBLE);
                         } else {

@@ -1,39 +1,24 @@
 <resources>
     <string name="app_name">SmartBalanjka</string>
-
-
     <string name="crash_report">Crash Report</string>
-
     <string name="action_settings">Settings</string>
-
     <string name="my_username">smartbalanjika@gmail.com</string>
     <string name="my_password">believegod</string>
-
-
     <string name="Forget"><u>Forget Password?</u></string>
     <string name="Sign"><u>Sign Up for SmartBalinjika</u></string>
     <string name="letstart">Lets Get Start</string>
     <string name="UserName">User Name</string>
     <string name="Password">Password</string>
     <string name="MemberLogin">Member Login</string>
-
-
     <string name="forgetpassword">Forget Password?</string>
     <string name="mailid">Mail ID</string>
     <string name="mailpassword">Mail Password</string>
     <string name="sendmil">Send Me Mail</string>
-
     <string name="mailsecurity">Are We Secure?\n Enter the mail details to Login</string>
     <string name="maillogin">Login using MailID</string>
-
-
     <string name="CreateAccount">Set Account Details</string>
     <string name="Passwordagain">Password verify</string>
     <string name="createaccount">Create my account</string>
-
-
-
-
     <string name="Gender">Gender</string>
     <string name="Address">Address</string>
     <string name="City">City</string>
@@ -58,39 +43,27 @@
     <string name="Weight">Weight</string>
     <string name="NotesrelatesMatrimony">Notes relates Matrimony</string>
     <string name="NoThanks">No Thanks</string>
-
-
     <string name="Reset_header">Smartbalanjika Password Reset</string>
     <string name="Reset_content">We have just received a password reset request for </string>
     <string name="Reset_subcontent">Your secure password is:  </string>
     <string name="Reset_toast">Mail send success.\nCheck your mail. The Passowrd has send to your mail</string>
     <string name="NotReset_toast">Your mail id is not registered. Please check your mail id is corrct and if correct please register your mail first</string>
-
-
     <string name="newaccount_header">Welcome SmartBalanjika</string>
     <string name="newaccount_content">I would like to create a new account. Please add my mail id is: </string>
     <string name="alreadyaccount_toast">This mailid is already registered. Please use new MailId or enter Login page to login</string>
-
-
     <string name="samepassword_toast">Please enter same password</string>
     <string name="weekpassword_toast">Your Password is week. Please enter more than 6 char</string>
-
     <string name="Exit">Do you really want to Exit?</string>
     <string name="Yes">Yes</string>
     <string name="No">No</string>
     <string name="correct_toast">Please enter correct Username and Password</string>
     <string name="usernameblank_toast">Username should not be blank</string>
     <string name="passwordblank_toast">Password should not be blank</string>
-
     <string name="ur_mailid">Mail Id :</string>
     <string name="ur_name">Name    : </string>
-
-
     <string name="addaccount_header">New User for SmartBalanjika</string>
     <string name="addaccount_content">I would like to add my account dtails in SmartBalanjika. Can u plase add my details.\nMy account details are\n</string>
     <string name="blank_toast">Please enter all details. Should not be blank</string>
-
-
     <string name="Select_Gender">Select Gender</string>
     <string name="Select_Nakthara">Select Nakthara</string>
     <string name="Select_Rashi">Select Rashi</string>
@@ -98,11 +71,7 @@
     <string name="Select_Country">Select Country</string>
     <string name="Select_Status">Select Status</string>
     <string name="married">married</string>
-
     <string name="Loading">Loading...</string>
-
-
-
     <string name="History">History</string>
     <string name="Contacts">Contacts</string>
     <string name="Donar">Donar</string>
@@ -112,12 +81,7 @@
     <string name="Books">Books</string>
     <string name="Health">Health</string>
     <string name="Help">Help</string>
-
     <string name="Logout">Logout</string>
-
-
-
-
     <string name="history_content">Dasabalanjikans realise that all the men including children wear a “Nama” on their forehead . This represents that they are the followers of Lord Vishnu. When we look at the castism in the Hindu community during that time in Karnataka , there were 2 sects of people. One were the follower of Lord Shiva  called “Sharanaru”  and the other were the followers of Lord Vishnu called “Dasaru“. These two group of people were devoted their lives to religious activities towards their respective gods. Since our community people were followers of Lord Vishnu we fall under the group of dasaru. They were not only just religious followers but also were leading merchants during their time and these merchants were called Banajigaru / Balijigaru by the locals in that period.  Since they were Dasaru and Banajigaru / Balijigaru  the name Dasabanajigaru / Dasabalijigaru came into existence. These name over a period of time became Dasabalanjiga when our community people moved from Karnataka into Tamil Nadu during the 1780′s.
     \n\n Now general look at what speciality in this app is?</string>
     <string name="Contacts_content">There is a list of contacts under this option. you can make use o fit and know the entire details about the particular persion.</string>
@@ -132,9 +96,6 @@
     <string name="Help_content">One who wish to improve this service can send some valuable tips and feedback. So thus it will be very helpful to improve this smart balanjika service</string>
     <string name="KDrive">Knowledge Drive</string>
     <string name="More">More>></string>
-
-
-
     <string name="problemifany">If any problem or any suggessions feel free to contact us</string>
     <string name="Name">Name</string>
     <string name="my_name">Sindhu.R</string>
@@ -147,8 +108,6 @@
     <string name="feedback_content">Type in your Feedback</string>
     <string name="feedback_Compose">Compose</string>
 
-
-
     <string-array name="navigation_drawer_items_array">
         <item>Create</item>
         <item>Read</item>
@@ -156,7 +115,6 @@
     </string-array>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
-
 
     <array name="bookArray">
         <item>youthbalanjika_09Sep2015</item>
@@ -206,30 +164,17 @@
 
         <item>youthbalanjika_11nov2013</item>
     </array>
-
-
     <string name="please_wait">please wait</string>
     <string name="one_of">1 of</string>
     <string name="of">of</string>
-
-
     <string name="contactus_toast">Enter valuable commands. Fields should not be empty</string>
-
-
     <string name="Personal_Details">Personal Details</string>
     <string name="Age">Age</string>
     <string name="HeightAndWeight">Height And Weight</string>
-
-
-
     <string name="BloodList">Blood List</string>
     <string name="DoctorsList">Doctors List</string>
-
-    <string name="Awards">Awardst</string>
-
+    <string name="Awards">Awards</string>
     <string name="yes">yes</string>
-
-
     <string name="First_Place">First Place</string>
     <string name="Second_Place">Second Place</string>
     <string name="Third_Place">Third Place</string>
@@ -239,16 +184,310 @@
     <string name="Blood_Type">Blood Type</string>
     <string name="Ingredients">Ingredients</string>
     <string name="Directions">Directions</string>
-
     <string name="Venue">Venue</string>
     <string name="Date">Date</string>
     <string name="Time">Time</string>
     <string name="Contact">Contact</string>
     <string name="Specification">Specification</string>
     <string name="Other_Details">Other Details</string>
-
     <string name="Event_Type">Event Type</string>
     <string name="No_Event">No Event</string>
+    <string name="choose_email">Choose an email client from...</string>
+    <string name="No_email">No email client installed.</string>
+    <string name="website">http://www.youthbalanjika.com/</string>
 
-    <string name="no_equipment_to_view">no equipment to view</string>
+
+    <string name="table_Awards">Awards</string>
+    <string name="table_Profile">Profile</string>
+    <string name="table_kd">kd</string>
+    <string name="table_Health">Health</string>
+
+
+    <string name="event_type">Select Event type</string>
+
+
+    <string-array name="blood_list">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+
+    <string-array name="kd_list">
+        <item>Meeting</item>
+        <item>Exam</item>
+        <item>Interview</item>
+        <item>Other Important Dates</item>
+    </string-array>
+
+    <string-array name="matrimony_list">
+        <item>Married</item>
+        <item>Single</item>
+        <item>Diversed</item>
+    </string-array>
+
+
+    <string-array name="gender_list">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+
+    <string-array name="rashi_list">
+        <item>Mesha-Aries</item>
+        <item>Vrishabha-Taurus</item>
+        <item>Mithuna-Gemini</item>
+        <item>Karka-Cancer</item>
+        <item>Simha-Leo</item>
+        <item>Kanya-Virgo</item>
+        <item>Tula-Libra</item>
+        <item>Vrishchika-Scorpio</item>
+        <item>Dhanu-Sagittarius</item>
+        <item>Makara-Capricorn</item>
+        <item>Kumbha-Aquarius</item>
+        <item>Meena-Pisces</item>
+    </string-array>
+
+    <string-array name="nakthara_list">
+        <item>Ashvini/Aswini-Aswini</item>
+        <item>Bharani-Bharani</item>
+        <item>Krittika/Krithika-Karthigai"</item>
+        <item>Rohini-Rohini</item>
+        <item>Mrigashirsha-Mrigasheersham</item>
+        <item>Ardra-Thiruvaathirai</item>
+        <item>Punarvasu-Punarpoosam</item>
+        <item>Pushya-Poosam</item>
+        <item>Ashlesha-Aayilyam</item>
+        <item>Magha-Makam</item>
+        <item>Purva Phalguni-Pooram</item>
+        <item>Uttara Phalguni-Uthiram</item>
+        <item>Hasta-Hastham</item>
+        <item>Chitra-Chithirai</item>
+        <item>Swati-Swaathi</item>
+        <item>Vishakha-Visaakam</item>
+        <item>Anuradha-Anusham</item>
+        <item>Jyeshtha-Kettai</item>
+        <item>Mula-Moolam</item>
+        <item>Purva Ashadha-Pooraadam</item>
+        <item>Uttara Ashadha-Uthiraadam</item>
+        <item>Shravana-Thiruvonam</item>
+        <item>Dhanishtha-Avittam</item>
+        <item>Shatabhisha  -Chathayam/Sadayam</item>
+        <item>Purva Bhadrapada-Poorattathi</item>
+        <item>Uttara Bhadrapada-Uthirattathi</item>
+        <item>Revati-Revathi</item>
+    </string-array>
+
+    <string-array name="country_list">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Aruba</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Brazil</item>
+        <item>Brunei </item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burma</item>
+        <item>Burundi</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Cape Verde</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo Democratic Republic</item>
+        <item>Congo Republic of the</item>
+        <item>Costa Rica</item>
+        <item>Cote d\'Ivoire</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Curacao</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+        <item>East Timor (see Timor-Lest</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Ethiopia</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Gabon</item>
+        <item>Gambia The</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Greece</item>
+        <item>Grenada</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guinea-Bissau</item>
+        <item>Guyana</item>
+        <item>Haiti</item>
+        <item>Holy See</item>
+        <item>Honduras</item>
+        <item>Hong Kong</item>
+        <item>Hungary</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Jordan</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>Korea North</item>
+        <item>Korea South</item>
+        <item>Kosovo</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Laos</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Macau</item>
+        <item>Macedonia</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mexico</item>
+        <item>Micronesia</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>Netherlands Antilles</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>North Korea</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Palestinian Territories</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Qatar</item>
+        <item>Romania</item>
+        <item>Russia</item>
+        <item>Rwanda</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>Saint Lucia</item>
+        <item>Saint Vincent and the Gren</item>
+        <item>Samoa </item>
+        <item>San Marino</item>
+        <item>Sao Tome and Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Sint Maarten</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>South Korea</item>
+        <item>South Sudan</item>
+        <item>Spain </item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Swaziland </item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syria</item>
+        <item>Taiwan</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>Timor-Leste</item>
+        <item>Togo</item>
+        <item>Tonga</item>
+        <item>Trinidad and Tobago</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Tuvalu</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Yemen</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </string-array>
+
 </resources>

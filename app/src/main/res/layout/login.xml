@@ -18,10 +18,6 @@
         android:textColor="@color/blue"
         android:text="@string/letstart" />
 
-<ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="fill_parent"
-    android:layout_below="@+id/info_login">
     <RelativeLayout
         android:layout_gravity="center"
         android:gravity="center"
@@ -121,7 +117,6 @@
 
     </LinearLayout>
         </RelativeLayout>
-    </ScrollView>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

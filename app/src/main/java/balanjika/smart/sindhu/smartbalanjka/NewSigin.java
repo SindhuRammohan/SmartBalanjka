@@ -61,7 +61,7 @@ public class NewSigin extends ActionBarActivity {
                 } catch (Exception sqle) {
                 }
                 count = 0;
-                c = myDbHelper.query("Profile", null, null, null, null, null, null);
+                c = myDbHelper.query(getResources().getString(R.string.table_Profile), null, null, null, null, null, null);
                 if (c.moveToFirst()) {
                     do {
                         if ((c.getString(1).equalsIgnoreCase(gmail_username_text))) {

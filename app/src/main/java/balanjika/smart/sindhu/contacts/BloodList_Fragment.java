@@ -34,7 +34,7 @@ public class BloodList_Fragment extends ListFragment{
     List<String[]> list = new ArrayList<String[]>();
     private View mView;
     private EditText textview_countries;
-    private String[] countries_list = { "A+", "A-", "B+", "B-", "O+", "O-","AB+", "AB-" };
+    private String[] countries_list;
     private ContactsListAdapter adapter;
     private ListView lv;
     Cursor c=null;
@@ -55,13 +55,14 @@ public class BloodList_Fragment extends ListFragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.bloodlist, container, false);
+        countries_list = getResources().getStringArray(R.array.blood_list);
         textview_countries = (EditText) mView.findViewById(R.id.bloodlist);
         textview_countries.setInputType(InputType.TYPE_NULL);
         final ArrayAdapter<String> spinner_countries = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item,countries_list);
         textview_countries.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                new AlertDialog.Builder(getActivity()).setTitle("Select BloodGroup").setAdapter(spinner_countries, new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(getActivity()).setTitle(getResources().getString(R.string.Select_BloodGroup)).setAdapter(spinner_countries, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog,int which) {
                         textview_countries.setText(countries_list[which].toString());
@@ -80,7 +81,7 @@ public class BloodList_Fragment extends ListFragment{
                             myDbHelper.openDataBase();
                         } catch (Exception sqle) {
                         }
-                        c = myDbHelper.query("Profile", null, null, null, null, null, null);
+                        c = myDbHelper.query(getResources().getString(R.string.table_Profile), null, null, null, null, null, null);
                         if (c.moveToFirst()) {
                             do {
                                 if(c.getString(11).equalsIgnoreCase(text)) {

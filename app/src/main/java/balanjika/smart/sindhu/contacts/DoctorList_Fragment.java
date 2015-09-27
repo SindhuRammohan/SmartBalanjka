@@ -64,7 +64,7 @@ public class DoctorList_Fragment extends ListFragment {
             myDbHelper.openDataBase();
         } catch (Exception sqle) {
         }
-        c = myDbHelper.query("Profile", null, null, null, null, null, null);
+        c = myDbHelper.query(getResources().getString(R.string.table_Profile), null, null, null, null, null, null);
         if (c.moveToFirst()) {
             do {
                 if(c.getString(27).equalsIgnoreCase(getResources().getString(R.string.yes))) {

@@ -40,7 +40,7 @@ public class MatrimonyList extends ActionBarActivity {
             myDbHelper.openDataBase();
         } catch (Exception sqle) {
         }
-        c = myDbHelper.query("Profile", null, null, null, null, null, null);
+        c = myDbHelper.query(getResources().getString(R.string.table_Profile), null, null, null, null, null, null);
         if (c.moveToFirst()) {
             do {
                 if(c.getString(19).equalsIgnoreCase(getResources().getString(R.string.yes))) {

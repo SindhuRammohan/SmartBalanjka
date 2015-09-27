@@ -59,7 +59,7 @@ public class ForgetPassword extends ActionBarActivity {
                 }
 
                 isMailSend = false;
-                c=myDbHelper.query("Profile", null, null, null, null, null, null);
+                c=myDbHelper.query(getResources().getString(R.string.table_Profile), null, null, null, null, null, null);
                 if(c.moveToFirst())
                 {
                     do {

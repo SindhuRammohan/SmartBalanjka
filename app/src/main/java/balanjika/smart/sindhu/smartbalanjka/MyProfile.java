@@ -30,312 +30,12 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
 
 
     Calendar myCalendar = Calendar.getInstance();
-    private String[] countries_list = {
-            "Afghanistan",
-            "Albania",
-            "Algeria",
-            "Andorra",
-            "Angola",
-            "Antigua and Barbuda",
-            "Argentina",
-            "Armenia",
-            "Aruba",
-            "Australia",
-            "Austria",
-            "Azerbaijan",
-
-            "Bahamas",
-            "Bahrain",
-            "Bangladesh",
-            "Barbados",
-            "Belarus",
-            "Belgium",
-            "Belize",
-            "Benin",
-            "Bhutan",
-            "Bolivia",
-            "Bosnia and Herzegovina",
-            "Botswana",
-            "Brazil",
-            "Brunei ",
-            "Bulgaria",
-            "Burkina Faso",
-            "Burma",
-            "Burundi",
-
-
-            "Cambodia",
-            "Cameroon",
-            "Canada",
-            "Cape Verde",
-            "Central African Republic",
-            "Chad",
-            "Chile",
-            "China",
-            "Colombia",
-            "Comoros",
-            "Congo, Democratic Republic of the",
-            "Congo, Republic of the",
-            "Costa Rica",
-            "Cote d'Ivoire",
-            "Croatia",
-            "Cuba",
-            "Curacao",
-            "Cyprus",
-            "Czech Republic",
-
-
-
-            "Denmark",
-            "Djibouti",
-            "Dominica",
-            "Dominican Republic",
-
-
-            "East Timor (see Timor-Leste)",
-            "Ecuador",
-            "Egypt",
-            "El Salvador",
-            "Equatorial Guinea",
-            "Eritrea",
-            "Estonia",
-            "Ethiopia",
-
-
-
-            "Fiji",
-            "Finland",
-            "France",
-
-
-            "Gabon",
-            "Gambia, The",
-            "Georgia",
-            "Germany",
-            "Ghana",
-            "Greece",
-            "Grenada",
-            "Guatemala",
-            "Guinea",
-            "Guinea-Bissau",
-            "Guyana",
-
-
-            "Haiti",
-            "Holy See",
-            "Honduras",
-            "Hong Kong",
-            "Hungary",
-
-
-
-            "Iceland",
-            "India",
-            "Indonesia",
-            "Iran",
-            "Iraq",
-            "Ireland",
-            "Israel",
-            "Italy",
-
-
-
-            "Jamaica",
-            "Japan",
-            "Jordan",
-
-
-            "Kazakhstan",
-            "Kenya",
-            "Kiribati",
-            "Korea, North",
-            "Korea, South",
-            "Kosovo",
-            "Kuwait",
-            "Kyrgyzstan",
-
-
-
-            "Laos",
-            "Latvia",
-            "Lebanon",
-            "Lesotho",
-            "Liberia",
-            "Libya",
-            "Liechtenstein",
-            "Lithuania",
-            "Luxembourg",
-
-
-
-
-
-            "Macau",
-            "Macedonia",
-            "Madagascar",
-            "Malawi",
-            "Malaysia",
-            "Maldives",
-            "Mali",
-            "Malta",
-            "Marshall Islands",
-            "Mauritania",
-            "Mauritius",
-            "Mexico",
-            "Micronesia",
-            "Moldova",
-            "Monaco",
-            "Mongolia",
-            "Montenegro",
-            "Morocco",
-            "Mozambique",
-
-            "Namibia",
-            "Nauru",
-            "Nepal",
-            "Netherlands",
-            "Netherlands Antilles",
-            "New Zealand",
-            "Nicaragua",
-            "Niger",
-            "Nigeria",
-            "North Korea",
-            "Norway",
-
-
-            "Oman",
-
-
-
-
-            "Pakistan",
-            "Palau",
-            "Palestinian Territories",
-            "Panama",
-            "Papua New Guinea",
-            "Paraguay",
-            "Peru",
-            "Philippines",
-            "Poland",
-            "Portugal",
-
-
-            "Qatar",
-
-
-            "Romania",
-            "Russia",
-            "Rwanda",
-
-
-            "Saint Kitts and Nevis",
-            "Saint Lucia",
-            "Saint Vincent and the Grenadines",
-            "Samoa ",
-            "San Marino",
-            "Sao Tome and Principe",
-            "Saudi Arabia",
-            "Senegal",
-            "Serbia",
-            "Seychelles",
-            "Sierra Leone",
-            "Singapore",
-            "Sint Maarten",
-            "Slovakia",
-            "Slovenia",
-            "Solomon Islands",
-            "Somalia",
-            "South Africa",
-            "South Korea",
-            "South Sudan",
-            "Spain ",
-            "Sri Lanka",
-            "Sudan",
-            "Suriname",
-            "Swaziland ",
-            "Sweden",
-            "Switzerland",
-            "Syria",
-
-
-
-            "Taiwan",
-            "Tajikistan",
-            "Tanzania",
-            "Thailand",
-            "Timor-Leste",
-            "Togo",
-            "Tonga",
-            "Trinidad and Tobago",
-            "Tunisia",
-            "Turkey",
-            "Turkmenistan",
-            "Tuvalu",
-
-            "Uganda",
-            "Ukraine",
-            "United Arab Emirates",
-            "United Kingdom",
-            "Uruguay",
-            "Uzbekistan",
-
-
-            "Vanuatu",
-            "Venezuela",
-            "Vietnam",
-
-
-            "Yemen",
-
-
-            "Zambia",
-            "Zimbabwe"
-    };
-    private String[] blood_list = { "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" };
-    private String[] rashi_list = {
-            "Mesha-Aries",
-            "Vrishabha-Taurus",
-            "Mithuna-Gemini",
-            "Karka-Cancer",
-            "Simha-Leo",
-            "Kanya-Virgo",
-            "Tula-Libra",
-            "Vrishchika-Scorpio",
-            "Dhanu-Sagittarius",
-            "Makara-Capricorn",
-            "Kumbha-Aquarius",
-            "Meena-Pisces"
-    };
-    private String[] nakthara_list = {
-            "Ashvini/Aswini-Aswini",
-            "Bharani-Bharani",
-            "Krittika/Krithika-Karthigai",
-            "Rohini-Rohini",
-            "Mrigashirsha-Mrigasheersham",
-            "Ardra-Thiruvaathirai",
-            "Punarvasu-Punarpoosam",
-            "Pushya-Poosam",
-            "Ashlesha-Aayilyam",
-            "Magha-Makam",
-            "Purva Phalguni-Pooram",
-            "Uttara Phalguni-Uthiram",
-            "Hasta-Hastham",
-            "Chitra-Chithirai",
-            "Swati-Swaathi",
-            "Vishakha-Visaakam",
-            "Anuradha-Anusham",
-            "Jyeshtha-Kettai",
-            "Mula-Moolam",
-            "Purva Ashadha-Pooraadam",
-            "Uttara Ashadha-Uthiraadam",
-            "Shravana-Thiruvonam",
-            "Dhanishtha-Avittam",
-            "Shatabhisha  -Chathayam/Sadayam",
-            "Purva Bhadrapada-Poorattathi",
-            "Uttara Bhadrapada-Uthirattathi",
-            "Revati-Revathi"	 };
-    private String[] spinner_list= { "Married", "Single", "Diversed"};
-    private String[] gender_list= { "Female", "Male"};
+    private String[] countries_list;
+    private String[] blood_list;
+    private String[] rashi_list;
+    private String[] nakthara_list ;
+    private String[] spinner_list;
+    private String[] gender_list;
     private LinearLayout linear;
     private EditText City;
     private EditText District;
@@ -363,7 +63,6 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
     private TextView MailId;
     private Button save;
 
-    private ProgressDialog pDialog;
     private String gmail_username_text;
     private String gmail_password_text;
 
@@ -377,6 +76,14 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.account_details);
         sharpref = SharPref.getInstance(this);
+
+
+        blood_list = getResources().getStringArray(R.array.blood_list);
+        spinner_list = getResources().getStringArray(R.array.matrimony_list);
+        gender_list = getResources().getStringArray(R.array.gender_list);
+        nakthara_list = getResources().getStringArray(R.array.nakthara_list);
+        rashi_list  = getResources().getStringArray(R.array.rashi_list);
+        countries_list = getResources().getStringArray(R.array.country_list);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);

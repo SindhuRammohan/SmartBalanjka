@@ -84,7 +84,7 @@ public class Each_contact extends ActionBarActivity{
         }
 
 
-        c = myDbHelper.query("Profile", null, null, null, null, null, null);
+        c = myDbHelper.query(getResources().getString(R.string.table_Profile), null, null, null, null, null, null);
         if (c.moveToFirst()) {
             do {
                 if (c.getString(0).equalsIgnoreCase(Integer.toString(temp))) {
@@ -124,9 +124,9 @@ public class Each_contact extends ActionBarActivity{
                 try {
                     // the user can choose the email client
                     startActivity(Intent.createChooser(email,
-                            "Choose an email client from..."));
+                            getResources().getString(R.string.choose_email)));
                 } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(Each_contact.this, "No email client installed.",
+                    Toast.makeText(Each_contact.this,  getResources().getString(R.string.No_email),
                             Toast.LENGTH_LONG).show();
                 }
             }
