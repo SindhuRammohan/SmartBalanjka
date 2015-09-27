@@ -14,6 +14,8 @@ import android.widget.TextView;
 import balanjika.smart.sindhu.contacts.BloodList;
 import balanjika.smart.sindhu.contacts.Contacts;
 import balanjika.smart.sindhu.contacts.MatrimonyList;
+import balanjika.smart.sindhu.contacts.healthtipList;
+import balanjika.smart.sindhu.contacts.kdList;
 import balanjika.smart.sindhu.smartbalanjka.R;
 
 public class CreateFragment extends Fragment {
@@ -183,6 +185,61 @@ public class CreateFragment extends Fragment {
             public void onClick(View arg0) {
                 // Starting a new Intent
                 Intent nextScreen = new Intent(getActivity().getApplicationContext(),BloodList.class);
+                startActivity(nextScreen);
+
+            }
+        });
+
+        LinearLayout kd_layout = (LinearLayout) rootView.findViewById(R.id.kd_layout);
+        Button kd_Button = (Button) rootView.findViewById(R.id.kd);
+        TextView kdtext = (TextView) rootView.findViewById(R.id.kdtext);
+        // Listening to button event
+        kd_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),kdList.class);
+                startActivity(nextScreen);
+            }
+        });
+        kdtext.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),kdList.class);
+                startActivity(nextScreen);
+            }
+        });
+        kd_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                // Starting a new Intent
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),kdList.class);
+                startActivity(nextScreen);
+
+            }
+        });
+
+
+        LinearLayout health_layout = (LinearLayout) rootView.findViewById(R.id.health_layout);
+        Button health_Button = (Button) rootView.findViewById(R.id.health);
+        TextView healthtext = (TextView) rootView.findViewById(R.id.healthtext);
+        // Listening to button event
+        health_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),healthtipList.class);
+                startActivity(nextScreen);
+            }
+        });
+        healthtext.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),healthtipList.class);
+                startActivity(nextScreen);
+            }
+        });
+        health_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                // Starting a new Intent
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),healthtipList.class);
                 startActivity(nextScreen);
 
             }

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/healthtips"
+            android:layout_weight="1.5"
+            android:textColor="#ff0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="9dp"
+            android:textColor="#BDBDBD"
+            android:gravity="center"
+            android:text="TextView" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/ingeridents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:textColor="#81BEF7"
+        android:text="Ingredients" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundrectanglewhite"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/healthtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:text="TextView" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/recipee"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:textColor="#81BEF7"
+        android:layout_marginLeft="5dp"
+        android:text="Directions" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundrectanglewhite"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/directions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="TextView" />
+    </LinearLayout>
+</LinearLayout>

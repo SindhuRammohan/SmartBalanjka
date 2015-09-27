@@ -17,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
     //The Android's default system path of your application database.
     String DB_PATH =null;
 
-    private static String DB_NAME = "SmartBalanjika001.sqlite";
+    private static String DB_NAME = "SmartBalanjika006.sqlite";
 
     private SQLiteDatabase myDataBase;
 
@@ -151,7 +151,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
     //return cursor
     public Cursor query(String table,String[] columns, String selection,String[] selectionArgs,String groupBy,String having,String orderBy){
-        return myDataBase.query("Profile", null, null, null, null, null, null);
+        return myDataBase.query(table, null, null, null, null, null, null);
 
 
     }

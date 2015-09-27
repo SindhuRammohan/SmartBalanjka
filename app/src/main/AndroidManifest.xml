@@ -50,6 +50,10 @@
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.contacts.BloodList" android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.contacts.kdList" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.contacts.healthtipList" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

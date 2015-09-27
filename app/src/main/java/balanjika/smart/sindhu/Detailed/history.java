@@ -9,8 +9,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import balanjika.smart.sindhu.contacts.BloodList;
 import balanjika.smart.sindhu.contacts.Contacts;
 import balanjika.smart.sindhu.contacts.MatrimonyList;
+import balanjika.smart.sindhu.contacts.healthtipList;
+import balanjika.smart.sindhu.contacts.kdList;
 import balanjika.smart.sindhu.smartbalanjka.R;
 
 /**
@@ -81,6 +84,30 @@ public class History extends ActionBarActivity {
             @Override
             public void onClick(View arg0) {
                 Intent nextScreen = new Intent(getApplicationContext(), MatrimonyList.class);
+                startActivity(nextScreen);
+            }
+        });
+
+        Donar_contentmore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent nextScreen = new Intent(getApplicationContext(), BloodList.class);
+                startActivity(nextScreen);
+            }
+        });
+
+        history_kdmore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent nextScreen = new Intent(getApplicationContext(), kdList.class);
+                startActivity(nextScreen);
+            }
+        });
+
+        history_kdmore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent nextScreen = new Intent(getApplicationContext(), healthtipList.class);
                 startActivity(nextScreen);
             }
         });

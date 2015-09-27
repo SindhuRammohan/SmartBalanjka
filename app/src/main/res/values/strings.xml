@@ -219,4 +219,10 @@
     <string name="Personal_Details">Personal Details</string>
     <string name="Age">Age</string>
     <string name="HeightAndWeight">Height And Weight</string>
+
+
+
+    <string name="BloodList">Blood List</string>
+    <string name="DoctorsList">Doctors List</string>
+
 </resources>

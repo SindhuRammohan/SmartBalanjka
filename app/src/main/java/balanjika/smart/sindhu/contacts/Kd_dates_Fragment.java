@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import org.json.JSONArray;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -22,16 +23,20 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.SearchView.OnQueryTextListener;
 
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
-public class BloodList_Fragment extends ListFragment implements OnQueryTextListener {
+public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListener {
 
-    public static BloodList_Fragment newInstance(String string) {
+    public static Kd_dates_Fragment newInstance(String string) {
         // TODO Auto-generated method stub
         return null;
     }
@@ -39,10 +44,16 @@ public class BloodList_Fragment extends ListFragment implements OnQueryTextListe
     List<String[]> list = new ArrayList<String[]>();
     private View mView;
     private EditText textview_countries;
-    private String[] countries_list = { "A+", "A-", "B+", "B-", "O+", "O-","AB+", "AB-" };
-    private ContactsListAdapter adapter;
-    private ListView lv;
+    private String[] countries_list = { "Meeting", "Exam", "Interview", "Other Important Dates" };
+    JSONArray contacts = null;
     Cursor c=null;
+    private ProgressDialog pDialog;
+    ArrayList<HashMap<String, String>> contactList;
+    private ListView lv;
+    private LinearLayout emptylayout;
+    private TextView empty;
+    private KDAdapter adapter;
+    int count = 0;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -59,20 +70,27 @@ public class BloodList_Fragment extends ListFragment implements OnQueryTextListe
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.bloodlist, container, false);
-        textview_countries = (EditText) mView.findViewById(R.id.bloodlist);
+        mView = inflater.inflate(R.layout.kdlist, container, false);
+        textview_countries = (EditText) mView.findViewById(R.id.kdeditlist);
+        emptylayout = (LinearLayout) mView.findViewById(R.id.emptylayout);
+        empty = (TextView) mView.findViewById(R.id.empty);
+        empty.setVisibility(View.VISIBLE);
+        emptylayout.setVisibility(View.VISIBLE);
         textview_countries.setInputType(InputType.TYPE_NULL);
+        contactList = new ArrayList<HashMap<String, String>>();
         final ArrayAdapter<String> spinner_countries = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item,countries_list);
         textview_countries.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                contactList.clear();
                 new AlertDialog.Builder(getActivity()).setTitle("Select BloodGroup").setAdapter(spinner_countries, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog,int which) {
                         textview_countries.setText(countries_list[which].toString());
                         spinner_countries.getPosition(countries_list[which].toString());
-                        String text = BloodList_Fragment.this.textview_countries.getText().toString().toLowerCase();
-                        ArrayList<ContactListItems> contactList = new ArrayList<ContactListItems>();
+                        String text = Kd_dates_Fragment.this.textview_countries.getText().toString().toLowerCase();
+                        Toast.makeText(getActivity(),"blood" + text,Toast.LENGTH_SHORT).show();
+                        ArrayList<KDItems> contactList = new ArrayList<KDItems>();
                         contactList.clear();
                         DBHelper myDbHelper = new DBHelper(getActivity());
                         try {
@@ -85,32 +103,35 @@ public class BloodList_Fragment extends ListFragment implements OnQueryTextListe
                             myDbHelper.openDataBase();
                         } catch (Exception sqle) {
                         }
-                        c = myDbHelper.query("Profile", null, null, null, null, null, null);
+                        c = myDbHelper.query("kd", null, null, null, null, null, null);
                         if (c.moveToFirst()) {
                             do {
-                                if(c.getString(11).equalsIgnoreCase(text)) {
-                                    ContactListItems contactListItems = new ContactListItems();
-                                    contactListItems.setName(c.getString(3));
-                                    contactListItems.setNo(c.getString(0));
-                                    contactListItems.setPhone(c.getString(10));
+                                Toast.makeText(getActivity(),"blood" + c.getString(0),Toast.LENGTH_SHORT).show();
+                                count = 0;
+                                if(c.getString(0).equalsIgnoreCase(text)) {
+                                    count = count + 1;
+                                    KDItems contactListItems = new KDItems();
+                                    contactListItems.setVenue(c.getString(1));
+                                    contactListItems.setDate(c.getString(2));
+                                    contactListItems.setTime(c.getString(3));
+                                    contactListItems.setContact(c.getString(4));
+                                    contactListItems.setSpecification(c.getString(5));
+                                    contactListItems.setothers(c.getString(6));
                                     contactList.add(contactListItems);
                                 }
                             } while (c.moveToNext());
                         }
-                        adapter = new ContactsListAdapter(getActivity(), contactList);
-                        lv.setAdapter(adapter);
-                        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-                                // TODO Auto-generated method stub
-                                Intent nextScreen = new Intent(getActivity(), Each_contact.class);
-                                TextView defaultID = (TextView) arg1.findViewById(R.id.defaultID);
-                                int id = Integer.parseInt(defaultID.getText().toString());
-                                nextScreen.putExtra("new_variable_name", id);
-                                startActivity(nextScreen);
-                            }
-                        });
 
+                        lv = (ListView) mView.findViewById(android.R.id.list);
+                        adapter = new KDAdapter(getActivity(), contactList);
+                        lv.setAdapter(adapter);
+                        if(count == 0){
+                            empty.setVisibility(View.VISIBLE);
+                            emptylayout.setVisibility(View.VISIBLE);
+                        } else {
+                            empty.setVisibility(View.GONE);
+                            emptylayout.setVisibility(View.GONE);
+                        }
                         dialog.dismiss();
                     }
                 }).create().show();
@@ -118,7 +139,6 @@ public class BloodList_Fragment extends ListFragment implements OnQueryTextListe
         });
         return mView;
     }
-
 
 
     @Override
