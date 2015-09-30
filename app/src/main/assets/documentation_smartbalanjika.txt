@@ -1,0 +1,101 @@
+screen 1:
+	splash screen
+screen 2:
+	Log In
+	First Time Login
+	ForgetPasscode
+	
+		Details:
+			1. Sync with Gmail
+					Enter gmail username and passsword, and if it is OK send mail to smartbalanjiaka saying "I would like to open an account in smart balanjika".
+					Enter personal details and send mail to the SmartBalanjika.
+					Set username and password
+			2.	Login by give username and password.
+			3.	Enter gmail id and send mail to SmartBalanjika.
+screen 3:
+	Home screen	
+		drawer Layout
+		9 box
+		Name, Logout
+3.1 :
+	History
+		Details of App.
+	Contacts
+		List of name, Phone no
+			on click, entire details
+	Donar
+		List of only Donar name, Phone no
+			on click, entire details
+		on/off option for add in list, ask confirmatio and send mail and notify msg as "soon will be removed/added"
+	K D
+		Monthly information regards meeting 
+		I like to add for next month.
+	Events
+		marriage, DOB
+		I would like to add info
+	Matrimony
+		List of only who person interest in matrimony's name, Phone no
+			on click, entire details
+		on/off option for add in list, ask confirmatio and send mail and notify msg as "soon will be removed/added"
+	Books
+		link to pdf page, dasabalajika website.
+		PDF reader.
+	Health
+		list of helth tips.
+		Like to add my tips
+	Help
+		send mail to smartbalanjika
+sub:
+	My Account
+	Logout
+
+	
+	
+Extra:
+	Graphs
+	Maps
+	Chats
+	
+SocialAccounts Link
+Real Image
+
+
+
+
+
+
+
+bloodlist fragment
+kddates fragment
+home screen
+my profile
+
+table name
+
+
+hardcode
+layout corrections
+back button
+self info
+add 1
+add 2
+fso
+logout
+check internet connection
+
+
+
+
+
+
+register(2 chance) -->  
+non matrimony
+matrimony
+
+
+
+
+
+
+
+

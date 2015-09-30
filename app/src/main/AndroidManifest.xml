@@ -54,6 +54,12 @@
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.contacts.healthtipList" android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.Detailed.ViewProfile" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.contacts.New_HealthTips" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.contacts.NewKDEvents" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

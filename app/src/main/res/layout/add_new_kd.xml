@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/addVenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:layout_gravity="center"
+            android:background="@drawable/roundrectanglewhite"
+            android:ems="10"
+            android:maxLines="10"
+            android:paddingLeft="10dp"
+            android:inputType="textMultiLine"
+            android:layout_weight="1"
+            android:hint="@string/addVenue" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/addDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:layout_gravity="center"
+            android:background="@drawable/roundrectanglewhite"
+            android:ems="10"
+            android:maxLines="10"
+            android:paddingLeft="10dp"
+            android:inputType="textMultiLine"
+            android:layout_weight="1"
+            android:hint="@string/addDate" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/addTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:layout_gravity="center"
+            android:background="@drawable/roundrectanglewhite"
+            android:ems="10"
+            android:maxLines="10"
+            android:paddingLeft="10dp"
+            android:inputType="textMultiLine"
+            android:layout_weight="1"
+            android:hint="@string/addTime" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/addContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:layout_gravity="center"
+            android:background="@drawable/roundrectanglewhite"
+            android:ems="10"
+            android:maxLines="10"
+            android:paddingLeft="10dp"
+            android:inputType="phone"
+            android:layout_weight="1"
+            android:hint="@string/addContact" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/addSpecification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:layout_gravity="center"
+            android:background="@drawable/roundrectanglewhite"
+            android:ems="10"
+            android:maxLines="10"
+            android:paddingLeft="10dp"
+            android:inputType="textMultiLine"
+            android:layout_weight="1"
+            android:hint="@string/addSpecification" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/addothers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:layout_gravity="center"
+            android:background="@drawable/roundrectanglewhite"
+            android:ems="10"
+            android:maxLines="10"
+            android:paddingLeft="10dp"
+            android:inputType="textMultiLine"
+            android:layout_weight="1"
+            android:hint="@string/addOther_Details" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/addKD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/add_Event"
+            android:textSize="25dp"
+            android:background="@drawable/buttonshape" />
+
+    </LinearLayout>
+</LinearLayout>

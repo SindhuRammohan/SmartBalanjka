@@ -8,9 +8,11 @@ import org.json.JSONArray;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ListFragment;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -69,6 +71,15 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
         textview_countries = (EditText) mView.findViewById(R.id.kdeditlist);
         emptylayout = (LinearLayout) mView.findViewById(R.id.emptylayout);
         empty = (TextView) mView.findViewById(R.id.empty);
+
+        FloatingActionButton fab_addkd = (FloatingActionButton) mView.findViewById(R.id.fab_addkd);
+        fab_addkd.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addkdevents();
+            }
+        });
+
+
         empty.setVisibility(View.VISIBLE);
         emptylayout.setVisibility(View.VISIBLE);
         textview_countries.setInputType(InputType.TYPE_NULL);
@@ -160,5 +171,11 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
     @Override
     public boolean onQueryTextSubmit(String query) {
         return false;
+    }
+
+
+    public void addkdevents(){
+        Intent nextScreen = new Intent(getActivity().getApplicationContext(), NewKDEvents.class);
+        startActivity(nextScreen);
     }
 }

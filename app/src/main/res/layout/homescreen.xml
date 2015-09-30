@@ -293,7 +293,6 @@
                     android:gravity="left|center"
                     android:layout_weight="0.5"
                     android:layout_marginLeft="10dp"
-                    android:text="hi"
                     android:textColor="@color/black" />
                 <TextView
                     android:layout_width="fill_parent"

@@ -154,6 +154,24 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
                     type = 1;
                     gmail_username_text = sharpref.getMailUsername();
                     gmail_password_text = sharpref.getMailPassword();
+
+                    sharpref.setgender(gender.getText().toString());
+                    sharpref.setaddress(address.getText().toString());
+                    sharpref.setCity(City.getText().toString());
+                    sharpref.setDistrict(District.getText().toString());
+                    sharpref.setCountry(Country.getText().toString());
+                    sharpref.setphone(phone.getText().toString());
+                    sharpref.setblood(textview_blood.getText().toString());
+                    sharpref.setdob(dob.getText().toString());
+                    sharpref.setstatus(status.getText().toString());
+                    sharpref.setstatusdate(statusdate.getText().toString());
+                    sharpref.setTempMail(Mail.getText().toString());
+                    sharpref.setAbout(About.getText().toString());
+                    sharpref.setquestion(question.getText().toString());
+                    sharpref.setanswer(answer.getText().toString());
+                    sharpref.setMatrimonyType(type);
+
+
                     String toEmails = getResources().getString(R.string.my_username);
                     List<String> toEmailList = Arrays.asList(toEmails
                             .split("\\s*,\\s*"));
@@ -161,6 +179,7 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
                             gmail_password_text, toEmailList,
                             getResources().getString(R.string.addaccount_header),
                             getResources().getString(R.string.addaccount_content) + " " +
+                            sharpref.getUsername()+
                             gender.getText().toString() +
                             address.getText().toString()
                             +City.getText().toString()
@@ -211,6 +230,31 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
                     type = 2;
                     gmail_username_text = sharpref.getMailUsername();
                     gmail_password_text = sharpref.getMailPassword();
+
+
+                    sharpref.setgender(gender.getText().toString());
+                    sharpref.setaddress(address.getText().toString());
+                    sharpref.setCity(City.getText().toString());
+                    sharpref.setDistrict(District.getText().toString());
+                    sharpref.setCountry(Country.getText().toString());
+                    sharpref.setphone(phone.getText().toString());
+                    sharpref.setblood(textview_blood.getText().toString());
+                    sharpref.setdob(dob.getText().toString());
+                    sharpref.setstatus(status.getText().toString());
+                    sharpref.setstatusdate(statusdate.getText().toString());
+                    sharpref.setTempMail(Mail.getText().toString());
+                    sharpref.setAbout(About.getText().toString());
+                    sharpref.setquestion(question.getText().toString());
+                    sharpref.setanswer(answer.getText().toString());
+                    sharpref.setRashi(Rashi.getText().toString());
+                    sharpref.setNakthara(Nakthara.getText().toString());
+                    sharpref.setQualification(Qualification.getText().toString());
+                    sharpref.setWork(Work.getText().toString());
+                    sharpref.setTempHeight(Height.getText().toString());
+                    sharpref.setWeight(Weight.getText().toString());
+                    sharpref.setNotes(Notes.getText().toString());
+                    sharpref.setMatrimonyType(type);
+
                     String toEmails = getResources().getString(R.string.my_username);
 
                     List<String> toEmailList = Arrays.asList(toEmails
@@ -219,6 +263,7 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
                         gmail_password_text, toEmailList,
                         getResources().getString(R.string.addaccount_header),
                         getResources().getString(R.string.addaccount_content) + " " +
+                        sharpref.getUsername()+
                         gender.getText().toString() +
                         address.getText().toString()
                         +City.getText().toString()

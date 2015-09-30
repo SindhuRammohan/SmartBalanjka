@@ -16,14 +16,19 @@ import balanjika.smart.sindhu.contacts.MatrimonyList;
 import balanjika.smart.sindhu.contacts.healthtipList;
 import balanjika.smart.sindhu.contacts.kdList;
 import balanjika.smart.sindhu.smartbalanjka.R;
+import balanjika.smart.sindhu.smartbalanjka.SharPref;
 
 public class CreateFragment extends Fragment {
+
+    private SharPref sharpref;
+
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.homescreen, container, false);
-
+        sharpref = SharPref.getInstance(getActivity());
         LinearLayout history = (LinearLayout) rootView.findViewById(R.id.history_layout);
         Button history_Button = (Button) rootView.findViewById(R.id.history);
         TextView history_text = (TextView) rootView.findViewById(R.id.history_text);
@@ -238,11 +243,23 @@ public class CreateFragment extends Fragment {
             @Override
             public void onClick(View arg0) {
                 // Starting a new Intent
-                Intent nextScreen = new Intent(getActivity().getApplicationContext(),healthtipList.class);
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(), healthtipList.class);
                 startActivity(nextScreen);
 
             }
         });
+
+
+        TextView myname = (TextView) rootView.findViewById(R.id.myname);
+        myname.setText(getResources().getString(R.string.welcome) + " " + sharpref.getUsername());
+        myname.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(), ViewProfile.class);
+                startActivity(nextScreen);
+            }
+        });
+
+
 
         return rootView;
     }

@@ -3,9 +3,12 @@ package balanjika.smart.sindhu.contacts;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.View;
 import android.widget.ListView;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
@@ -17,7 +20,7 @@ public class healthtipList extends ActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.awardslist);
+        setContentView(R.layout.health_list);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         lv = (ListView) findViewById(android.R.id.list);
@@ -52,5 +55,8 @@ public class healthtipList extends ActionBarActivity {
         lv.setAdapter(adapter);
     }
 
-
+    public void addhealthtips(View v){
+        Intent nextScreen = new Intent(healthtipList.this, New_HealthTips.class);
+        startActivity(nextScreen);
+    }
 }
