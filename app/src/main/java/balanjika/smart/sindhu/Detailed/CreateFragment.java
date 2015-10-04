@@ -10,13 +10,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import balanjika.smart.sindhu.Calendar.Events;
 import balanjika.smart.sindhu.contacts.BloodList;
 import balanjika.smart.sindhu.contacts.Contacts;
 import balanjika.smart.sindhu.contacts.MatrimonyList;
 import balanjika.smart.sindhu.contacts.healthtipList;
 import balanjika.smart.sindhu.contacts.kdList;
 import balanjika.smart.sindhu.smartbalanjka.CustomDialogClass;
-import balanjika.smart.sindhu.smartbalanjka.LogIn;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import balanjika.smart.sindhu.smartbalanjka.SharPref;
 
@@ -251,6 +252,33 @@ public class CreateFragment extends Fragment {
             }
         });
 
+
+        LinearLayout birthday_layout = (LinearLayout) rootView.findViewById(R.id.birthday_layout);
+        Button birthday_Button = (Button) rootView.findViewById(R.id.birthday);
+        TextView birthday_text = (TextView) rootView.findViewById(R.id.birthday_text);
+        // Listening to button event
+        birthday_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(),Events.class);
+                startActivity(nextScreen);
+            }
+        });
+        birthday_text.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(), Events.class);
+                startActivity(nextScreen);
+            }
+        });
+        birthday_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                // Starting a new Intent
+                Intent nextScreen = new Intent(getActivity().getApplicationContext(), Events.class);
+                startActivity(nextScreen);
+
+            }
+        });
 
         TextView myname = (TextView) rootView.findViewById(R.id.myname);
         myname.setText(getResources().getString(R.string.welcome) + " " + sharpref.getUsername());

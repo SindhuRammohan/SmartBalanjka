@@ -513,4 +513,8 @@
     <string name="internet_correct_toast">Please check internet connection and enter correct username and password which u have regstered.</string>
 
 
+    <string name="customize">Customize</string>
+    <string name="show_dialog">Show Dialog</string>
+    <string name="undo">Undo</string>
+
 </resources>

@@ -53,7 +53,7 @@
         <activity android:name="balanjika.smart.sindhu.Detailed.PdfView" android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.contacts.Contacts" android:configChanges="keyboardHidden|orientation"
-        android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.contacts.Each_contact" android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.contacts.MatrimonyList" android:configChanges="keyboardHidden|orientation"
@@ -69,6 +69,8 @@
         <activity android:name="balanjika.smart.sindhu.contacts.New_HealthTips" android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.contacts.NewKDEvents" android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.Calendar.Events" android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
     </application>
 

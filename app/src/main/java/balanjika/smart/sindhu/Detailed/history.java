@@ -7,6 +7,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import balanjika.smart.sindhu.Calendar.Events;
 import balanjika.smart.sindhu.contacts.BloodList;
 import balanjika.smart.sindhu.contacts.Contacts;
 import balanjika.smart.sindhu.contacts.MatrimonyList;
@@ -111,7 +113,7 @@ public class History extends ActionBarActivity {
         history_eventsmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent nextScreen = new Intent(getApplicationContext(), kdList.class);
+                Intent nextScreen = new Intent(getApplicationContext(), Events.class);
                 startActivity(nextScreen);
             }
         });
