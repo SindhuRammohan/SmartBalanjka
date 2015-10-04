@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.InputType;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -24,10 +25,13 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import Mail.NetworkStateReceiver;
 import Mail.SendMailTask;
 import balanjika.smart.sindhu.smartbalanjka.LogIn;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import balanjika.smart.sindhu.smartbalanjka.SharPref;
+import balanjika.smart.sindhu.smartbalanjka.SplashScreen;
 
 public class ViewProfile extends ActionBarActivity implements View.OnClickListener {
 
@@ -70,7 +74,7 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
 
     private SharPref sharpref;
 
-
+    private NetworkStateReceiver checkInternet = new NetworkStateReceiver();
     int type = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -345,6 +349,7 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
 
                         List<String> toEmailList = Arrays.asList(toEmails
                                 .split("\\s*,\\s*"));
+                        if(checkInternet.isOnline(getApplicationContext())) {
                         new SendMailTask(ViewProfile.this).execute(gmail_username_text,
                                 gmail_password_text, toEmailList,
                                 getResources().getString(R.string.addaccount_header),
@@ -370,8 +375,11 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                                         + Weight.getText().toString()
                                         + Notes.getText().toString()
                                         + type);
-                        Intent in = new Intent(ViewProfile.this, LogIn.class);
-                        startActivity(in);
+                                Intent in = new Intent(ViewProfile.this, LogIn.class);
+                                startActivity(in);
+                        } else {
+                            Toast.makeText(ViewProfile.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
+                        }
                     } else {
                         Toast.makeText(ViewProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
                     }
@@ -568,6 +576,14 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
     @Override
     public void onClick(View arg0) {
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                super.onBackPressed();
+                return true;
+        }
+        return (super.onOptionsItemSelected(menuItem));
+    }
 }
 

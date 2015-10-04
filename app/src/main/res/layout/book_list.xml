@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,4 +14,16 @@
         android:dividerHeight="10dp"
         android:background="@drawable/login_background"
         android:layout_weight="1" />
-</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_addbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:borderWidth="0dp"
+        fab:elevation="6dp"
+        fab:fabSize="normal"
+        android:onClick="urllinks"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        fab:backgroundTint="@color/blue"
+        android:src="@drawable/urllink" />
+</android.support.design.widget.CoordinatorLayout>

@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.InputType;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -22,6 +23,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import Mail.NetworkStateReceiver;
 import Mail.SendMailTask;
 
 public class MyProfile extends ActionBarActivity implements View.OnClickListener {
@@ -29,6 +32,7 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
 
 
 
+    NetworkStateReceiver checkInternet = new NetworkStateReceiver();
     Calendar myCalendar = Calendar.getInstance();
     private String[] countries_list;
     private String[] blood_list;
@@ -175,6 +179,8 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
                     String toEmails = getResources().getString(R.string.my_username);
                     List<String> toEmailList = Arrays.asList(toEmails
                             .split("\\s*,\\s*"));
+
+                    if(checkInternet.isOnline(getApplicationContext())) {
                     new SendMailTask(MyProfile.this).execute(gmail_username_text,
                             gmail_password_text, toEmailList,
                             getResources().getString(R.string.addaccount_header),
@@ -195,8 +201,11 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
                             +question.getText().toString()
                             + answer.getText().toString()
                             + type);
-                    Intent in = new Intent(MyProfile.this, LogIn.class);
-                    startActivity(in);
+                            Intent in = new Intent(MyProfile.this, LogIn.class);
+                            startActivity(in);
+                    } else {
+                        Toast.makeText(MyProfile.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
+                    }
                 }else {
                     Toast.makeText(MyProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
                 }
@@ -259,6 +268,7 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
 
                     List<String> toEmailList = Arrays.asList(toEmails
                             .split("\\s*,\\s*"));
+                    if(checkInternet.isOnline(getApplicationContext())) {
                     new SendMailTask(MyProfile.this).execute(gmail_username_text,
                         gmail_password_text, toEmailList,
                         getResources().getString(R.string.addaccount_header),
@@ -287,6 +297,9 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
                         + type);
                     Intent in = new Intent(MyProfile.this, LogIn.class);
                     startActivity(in);
+                    } else {
+                        Toast.makeText(MyProfile.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
+                    }
                 } else {
                     Toast.makeText(MyProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
                 }
@@ -480,5 +493,13 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
     @Override
     public void onClick(View arg0) {
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                super.onBackPressed();
+                return true;
+        }
+        return (super.onOptionsItemSelected(menuItem));
+    }
 }

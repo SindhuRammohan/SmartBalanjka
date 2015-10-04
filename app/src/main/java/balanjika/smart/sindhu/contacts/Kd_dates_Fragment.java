@@ -26,11 +26,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.SearchView.OnQueryTextListener;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
-public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListener {
+public class Kd_dates_Fragment extends ListFragment {
 
     public static Kd_dates_Fragment newInstance(String string) {
         // TODO Auto-generated method stub
@@ -157,21 +156,8 @@ public class Kd_dates_Fragment extends ListFragment implements OnQueryTextListen
         super.onPause();
     }
 
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        if (TextUtils.isEmpty(newText)) {
-            lv.clearTextFilter();
-        } else {
-            lv.setFilterText(newText.toString());
-        }
 
-        return true;
-    }
 
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        return false;
-    }
 
 
     public void addkdevents(){

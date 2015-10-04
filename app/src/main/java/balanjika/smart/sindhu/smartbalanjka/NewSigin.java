@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+
+import Mail.NetworkStateReceiver;
 import dbhelper.DBHelper;
 import Mail.SendMailTask;
 
@@ -28,7 +31,7 @@ public class NewSigin extends ActionBarActivity {
     private ProgressDialog pdia;
     public NewSigin() {
     }
-
+    NetworkStateReceiver checkInternet = new NetworkStateReceiver();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,11 +73,15 @@ public class NewSigin extends ActionBarActivity {
                     } while (c.moveToNext());
                 }
                 if (count == 0) {
-                    new SendMailTask(NewSigin.this).execute(gmail_username_text,
-                            gmail_password_text, toEmailList,
-                            getResources().getString(R.string.newaccount_header),
-                            getResources().getString(R.string.newaccount_content) + " " + gmail_username_text + ".");
-                    new LongOperation(NewSigin.this).execute("");
+                    if(checkInternet.isOnline(getApplicationContext())) {
+                        new SendMailTask(NewSigin.this).execute(gmail_username_text,
+                                gmail_password_text, toEmailList,
+                                getResources().getString(R.string.newaccount_header),
+                                getResources().getString(R.string.newaccount_content) + " " + gmail_username_text + ".");
+                        new LongOperation(NewSigin.this).execute("");
+                    } else {
+                        Toast.makeText(NewSigin.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
+                    }
                 } else {
                     Toast.makeText(NewSigin.this, getResources().getString(R.string.alreadyaccount_toast), Toast.LENGTH_LONG).show();
                 }
@@ -129,5 +136,15 @@ public class NewSigin extends ActionBarActivity {
         protected void onProgressUpdate(Void... values) {
 
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                super.onBackPressed();
+                return true;
+        }
+        return (super.onOptionsItemSelected(menuItem));
     }
 }

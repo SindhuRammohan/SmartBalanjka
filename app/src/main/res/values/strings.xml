@@ -122,48 +122,48 @@
         <item>YouthBalanjika_08Aug2015</item>
         <item>YouthBalanjika_07jul2015</item>
         <item>YouthBalanjika_06Jun2015</item>
-        <item>YouthBalanjika_05May2015</item>
-        <item>YouthBalanjika_04Apr2015</item>
-        <item>YouthBalanjika_03Mar2015</item>
-        <item>YouthBalanjika_02Feb2015</item>
-        <item>YouthBalanjika_01Jan2015</item>
+        <!--<item>YouthBalanjika_05May2015</item>-->
+        <!--<item>YouthBalanjika_04Apr2015</item>-->
+        <!--<item>YouthBalanjika_03Mar2015</item>-->
+        <!--<item>YouthBalanjika_02Feb2015</item>-->
+        <!--<item>YouthBalanjika_01Jan2015</item>-->
 
-        <item>YouthBalanjika_12Dec2014</item>
-        <item>YouthBalanjika_11Nov2014</item>
-        <item>YouthBalanjika_10Oct2014</item>
-        <item>YouthBalanjika_09Sep2014</item>
-        <item>YouthBalanjika_08Aug2014</item>
-        <item>YouthBalanjika_07Jul2014</item>
-        <item>YouthBalanjika_06Jun2014</item>
-        <item>YouthBalanjika_05May2014</item>
-        <item>YouthBalanjika_04apr2014</item>
-        <item>YouthBalanjika_01jan2014</item>
+        <!--<item>YouthBalanjika_12Dec2014</item>-->
+        <!--<item>YouthBalanjika_11Nov2014</item>-->
+        <!--<item>YouthBalanjika_10Oct2014</item>-->
+        <!--<item>YouthBalanjika_09Sep2014</item>-->
+        <!--<item>YouthBalanjika_08Aug2014</item>-->
+        <!--<item>YouthBalanjika_07Jul2014</item>-->
+        <!--<item>YouthBalanjika_06Jun2014</item>-->
+        <!--<item>YouthBalanjika_05May2014</item>-->
+        <!--<item>YouthBalanjika_04apr2014</item>-->
+        <!--<item>YouthBalanjika_01jan2014</item>-->
 
-        <item>YouthBalanjika_11Nov2013</item>
+        <!--<item>YouthBalanjika_11Nov2013</item>-->
     </array>
     <array name="bookArrayString">
         <item>youthbalanjika_09sep2015</item>
         <item>youthbalanjika_08aug2015</item>
         <item>youthbalanjika_07jul2015</item>
         <item>youthbalanjika_06jun2015</item>
-        <item>youthbalanjika_05may2015</item>
-        <item>youthbalanjika_04apr2015</item>
-        <item>youthbalanjika_03mar2015</item>
-        <item>youthbalanjika_02feb2015</item>
-        <item>youthbalanjika_01jan2015</item>
+        <!--<item>youthbalanjika_05may2015</item>-->
+        <!--<item>youthbalanjika_04apr2015</item>-->
+        <!--<item>youthbalanjika_03mar2015</item>-->
+        <!--<item>youthbalanjika_02feb2015</item>-->
+        <!--<item>youthbalanjika_01jan2015</item>-->
 
-        <item>youthbalanjika_12dec2014</item>
-        <item>youthbalanjika_11nov2014</item>
-        <item>youthbalanjika_10oct2014</item>
-        <item>youthbalanjika_09sep2014</item>
-        <item>youthbalanjika_08aug2014</item>
-        <item>youthbalanjika_07jul2014</item>
-        <item>youthbalanjika_06jun2014</item>
-        <item>youthbalanjika_05may2014</item>
-        <item>youthbalanjika_04apr2014</item>
-        <item>youthbalanjika_01jan2014</item>
+        <!--<item>youthbalanjika_12dec2014</item>-->
+        <!--<item>youthbalanjika_11nov2014</item>-->
+        <!--<item>youthbalanjika_10oct2014</item>-->
+        <!--<item>youthbalanjika_09sep2014</item>-->
+        <!--<item>youthbalanjika_08aug2014</item>-->
+        <!--<item>youthbalanjika_07jul2014</item>-->
+        <!--<item>youthbalanjika_06jun2014</item>-->
+        <!--<item>youthbalanjika_05may2014</item>-->
+        <!--<item>youthbalanjika_04apr2014</item>-->
+        <!--<item>youthbalanjika_01jan2014</item>-->
 
-        <item>youthbalanjika_11nov2013</item>
+        <!--<item>youthbalanjika_11nov2013</item>-->
     </array>
     <string name="please_wait">please wait</string>
     <string name="one_of">1 of</string>
@@ -197,7 +197,7 @@
     <string name="choose_email">Choose an email client from...</string>
     <string name="No_email">No email client installed.</string>
     <string name="website">http://www.youthbalanjika.com/</string>
-
+    <string name="bookwebsite">https://sites.google.com/site/youthbalanjika/</string>
 
     <string name="table_Awards">Awards</string>
     <string name="table_Profile">Profile</string>
@@ -507,4 +507,10 @@
     <string name="addOther_Details">Enter Other Details</string>
 
     <string name="correct_Details_toast">Enter correct Details. Should not be empty</string>
+
+
+    <string name="internet_connect_toast">Check internet connectivity before sending mail please</string>
+    <string name="internet_correct_toast">Please check internet connection and enter correct username and password which u have regstered.</string>
+
+
 </resources>

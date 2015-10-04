@@ -79,10 +79,10 @@ back button
 self info
 add 1
 add 2
-fso
+ICE
 logout
 check internet connection
-
+listview onclick
 
 
 

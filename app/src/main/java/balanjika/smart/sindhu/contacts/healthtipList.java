@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import balanjika.smart.sindhu.smartbalanjka.R;
@@ -58,5 +59,15 @@ public class healthtipList extends ActionBarActivity {
     public void addhealthtips(View v){
         Intent nextScreen = new Intent(healthtipList.this, New_HealthTips.class);
         startActivity(nextScreen);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                super.onBackPressed();
+                return true;
+        }
+        return (super.onOptionsItemSelected(menuItem));
     }
 }
