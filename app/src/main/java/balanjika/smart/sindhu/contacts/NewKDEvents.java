@@ -1,15 +1,20 @@
 package balanjika.smart.sindhu.contacts;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import Mail.NetworkStateReceiver;
 import Mail.SendMailTask;
@@ -18,7 +23,7 @@ import balanjika.smart.sindhu.smartbalanjka.SharPref;
 import balanjika.smart.sindhu.smartbalanjka.SplashScreen;
 
 public class NewKDEvents  extends ActionBarActivity {
-
+    Calendar myCalendar = Calendar.getInstance();
     private EditText addVenue;
     private EditText addDate;
     private EditText addTime;
@@ -46,7 +51,14 @@ public class NewKDEvents  extends ActionBarActivity {
         addothers = (EditText) findViewById(R.id.addothers);
         addKD = (Button) findViewById(R.id.addKD);
 
-
+        addDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(NewKDEvents.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
 
         addKD.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,19 +70,16 @@ public class NewKDEvents  extends ActionBarActivity {
                         addSpecification.getText().toString().equalsIgnoreCase("") &&
                         addothers.getText().toString().equalsIgnoreCase(""))) {
 
-
-                    addVenue.setText("");
-                    addDate.setText("");
-                    addTime.setText("");
-                    addContact.setText("");
-                    addSpecification.setText("");
-                    addothers.setText("");
-
-
-
                     String toEmails = getResources().getString(R.string.my_username);
                     List<String> toEmailList = Arrays.asList(toEmails.split("\\s*,\\s*"));
                     if(checkInternet.isOnline(getApplicationContext())) {
+
+                        addVenue.setText("");
+                        addDate.setText("");
+                        addTime.setText("");
+                        addContact.setText("");
+                        addSpecification.setText("");
+                        addothers.setText("");
                     new SendMailTask(NewKDEvents.this).execute(sharpref.getTempMailUsername(),
                             sharpref.getTempMailPassword(), toEmailList,
                             addVenue.getText().toString(),
@@ -97,5 +106,21 @@ public class NewKDEvents  extends ActionBarActivity {
                 return true;
         }
         return (super.onOptionsItemSelected(menuItem));
+    }
+    DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+        @Override
+        public void onDateSet(DatePicker view, int year, int monthOfYear,
+                              int dayOfMonth) {
+            myCalendar.set(Calendar.YEAR, year);
+            myCalendar.set(Calendar.MONTH, monthOfYear);
+            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            updateLabel();
+        }
+
+    };
+    private void updateLabel() {
+        String myFormat = "MM/dd/yy"; // In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+        addDate.setText(sdf.format(myCalendar.getTime()));
     }
 }

@@ -169,7 +169,7 @@ public class LogIn extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-        CustomDialogClass cdd = new CustomDialogClass(LogIn.this);
+        CustomDialogClass cdd = new CustomDialogClass(this);
         cdd.show();
     }
 }

@@ -81,7 +81,6 @@ add 1
 add 2
 ICE
 logout
-check internet connection
 listview onclick
 
 
@@ -94,8 +93,16 @@ matrimony
 
 
 
+1.table data
+2.on click
+3.self info
+4.logout
+5.hide drawer
+6.
 
 
+1.birthday
+2.ICE
 
 
 

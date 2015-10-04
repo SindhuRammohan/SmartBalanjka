@@ -36,7 +36,11 @@ public class CustomDialogClass extends Dialog implements
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_yes:
-                c.finish();
+                c.moveTaskToBack(true);
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(0);
+//                c.moveTaskToBack(true);
+//                c.finish();
                 break;
             case R.id.btn_no:
                 dismiss();

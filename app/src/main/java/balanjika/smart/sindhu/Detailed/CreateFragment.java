@@ -15,6 +15,8 @@ import balanjika.smart.sindhu.contacts.Contacts;
 import balanjika.smart.sindhu.contacts.MatrimonyList;
 import balanjika.smart.sindhu.contacts.healthtipList;
 import balanjika.smart.sindhu.contacts.kdList;
+import balanjika.smart.sindhu.smartbalanjka.CustomDialogClass;
+import balanjika.smart.sindhu.smartbalanjka.LogIn;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import balanjika.smart.sindhu.smartbalanjka.SharPref;
 
@@ -259,7 +261,13 @@ public class CreateFragment extends Fragment {
             }
         });
 
-
+        TextView logout = (TextView) rootView.findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                CustomDialogClass cdd = new CustomDialogClass(getActivity());
+                cdd.show();
+            }
+        });
 
         return rootView;
     }
