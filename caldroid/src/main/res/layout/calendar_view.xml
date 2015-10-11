@@ -3,38 +3,77 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     style="?styleCaldroidViewLayout"
+    android:background="@color/caldroid_white"
     android:orientation="vertical" >
 
     <LinearLayout
         android:id="@+id/calendar_title_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:weightSum="7"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/calendar_left_arrow"
-            style="?styleCaldroidLeftArrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/calendar_month_year_textview"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/three"
+            android:background="@color/caldroid_white"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?styleCaldroidMonthName"/>
-
-        <Button
-            android:id="@+id/calendar_right_arrow"
-            android:layout_width="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/calendar_left_arrow"
+                android:background="@drawable/calendar_prev_arrow"
+                style="?styleCaldroidLeftArrow"
+                android:layout_width="15dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/two"
+            android:background="@color/caldroid_white"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?styleCaldroidRightArrow" />
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/calendar_month_year_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="bold|italic"
+                android:textAppearance="@style/UiTestTextView"
+                style="?styleCaldroidMonthName"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"            android:background="@color/caldroid_white"
+
+            android:layout_marginRight="10dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/calendar_right_arrow"
+                android:layout_width="15dp"
+                android:background="@drawable/calendar_next_arrow"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                style="?styleCaldroidRightArrow" />
+        </LinearLayout>
     </LinearLayout>
 
     <GridView
         android:id="@+id/weekday_gridview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-10dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
         android:numColumns="7"
         android:stretchMode="columnWidth" >
     </GridView>

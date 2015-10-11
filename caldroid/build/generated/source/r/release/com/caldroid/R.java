@@ -103,16 +103,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int red_border_dark=0x7f020008;
         public static int red_border_gray_bg=0x7f020009;
         public static int right_arrow=0x7f02000a;
+        public static int right_arrow_calender=0x7f02000b;
     }
     public static final class id {
-        public static int calendar_gridview=0x7f070006;
-        public static int calendar_left_arrow=0x7f070001;
-        public static int calendar_month_year_textview=0x7f070002;
-        public static int calendar_right_arrow=0x7f070003;
+        public static int calendar_gridview=0x7f070009;
+        public static int calendar_left_arrow=0x7f070002;
+        public static int calendar_month_year_textview=0x7f070004;
+        public static int calendar_right_arrow=0x7f070006;
         public static int calendar_title_view=0x7f070000;
-        public static int calendar_tv=0x7f070007;
-        public static int months_infinite_pager=0x7f070005;
-        public static int weekday_gridview=0x7f070004;
+        public static int calendar_tv=0x7f07000a;
+        public static int months_infinite_pager=0x7f070008;
+        public static int one=0x7f070005;
+        public static int three=0x7f070001;
+        public static int two=0x7f070003;
+        public static int weekday_gridview=0x7f070007;
     }
     public static final class layout {
         public static int calendar_view=0x7f030000;
@@ -147,6 +151,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int CaldroidDefaultRightButton=0x7f06000f;
         public static int CaldroidDefaultSquareCell=0x7f060010;
         public static int CaldroidDefaultWeekday=0x7f060011;
+        public static int UiTestTextView=0x7f060013;
     }
     public static final class styleable {
         /** Attributes that can be used with a Cell.

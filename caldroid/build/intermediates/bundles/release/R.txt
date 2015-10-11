@@ -36,14 +36,18 @@ int drawable red_border 0x7f020007
 int drawable red_border_dark 0x7f020008
 int drawable red_border_gray_bg 0x7f020009
 int drawable right_arrow 0x7f02000a
-int id calendar_gridview 0x7f070006
-int id calendar_left_arrow 0x7f070001
-int id calendar_month_year_textview 0x7f070002
-int id calendar_right_arrow 0x7f070003
+int drawable right_arrow_calender 0x7f02000b
+int id calendar_gridview 0x7f070009
+int id calendar_left_arrow 0x7f070002
+int id calendar_month_year_textview 0x7f070004
+int id calendar_right_arrow 0x7f070006
 int id calendar_title_view 0x7f070000
-int id calendar_tv 0x7f070007
-int id months_infinite_pager 0x7f070005
-int id weekday_gridview 0x7f070004
+int id calendar_tv 0x7f07000a
+int id months_infinite_pager 0x7f070008
+int id one 0x7f070005
+int id three 0x7f070001
+int id two 0x7f070003
+int id weekday_gridview 0x7f070007
 int layout calendar_view 0x7f030000
 int layout date_grid_fragment 0x7f030001
 int layout normal_date_cell 0x7f030002
@@ -69,6 +73,7 @@ int style CaldroidDefaultNormalCell 0x7f06000e
 int style CaldroidDefaultRightButton 0x7f06000f
 int style CaldroidDefaultSquareCell 0x7f060010
 int style CaldroidDefaultWeekday 0x7f060011
+int style UiTestTextView 0x7f060013
 int[] styleable Cell { 0x01010098, 0x010100d4 }
 int styleable Cell_android_background 1
 int styleable Cell_android_textColor 0
