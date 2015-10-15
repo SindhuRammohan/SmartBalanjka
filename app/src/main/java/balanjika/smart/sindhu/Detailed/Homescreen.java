@@ -39,6 +39,9 @@ public class Homescreen extends ActionBarActivity{
         mNavigationDrawerItemTitles= getResources().getStringArray(R.array.navigation_drawer_items_array);
         mDrawerList = (ListView)findViewById(R.id.navList);
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+
+        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+
         mActivityTitle = getTitle().toString();
         drawerItem = new ObjectDrawerItem[3];
 
@@ -116,7 +119,7 @@ public class Homescreen extends ActionBarActivity{
             }
         };
 
-        mDrawerToggle.setDrawerIndicatorEnabled(true);
+        mDrawerToggle.setDrawerIndicatorEnabled(false);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
     }
@@ -137,7 +140,7 @@ public class Homescreen extends ActionBarActivity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

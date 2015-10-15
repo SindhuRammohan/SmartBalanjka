@@ -10,6 +10,7 @@
         android:orientation="horizontal"
         android:background="@drawable/roundrectanglewhite"  >
         <ImageButton
+            android:layout_margin="15dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/woman_face" />
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
+            android:textColor="@color/dark_blue"
             android:layout_marginLeft="20dp" />
     </LinearLayout>
     <ScrollView

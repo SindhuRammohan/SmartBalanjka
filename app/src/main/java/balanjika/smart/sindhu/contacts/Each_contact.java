@@ -103,7 +103,7 @@ public class Each_contact extends ActionBarActivity{
                     Nakthara .setText(c.getString(21));
                     Qualification.setText(c.getString(22));
                     Qccupation.setText(c.getString(23));
-//                    Age .setText(c.getString(28));
+                    Age .setText(c.getString(30));
                     Height.setText(c.getString(24)+" , "+c.getString(25));
                     About.setText(c.getString(26));
                     mail_id.setText(c.getString(1));

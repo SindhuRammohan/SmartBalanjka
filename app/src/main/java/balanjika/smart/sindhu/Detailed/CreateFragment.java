@@ -293,6 +293,7 @@ public class CreateFragment extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 CustomDialogClass cdd = new CustomDialogClass(getActivity());
+                cdd.setCanceledOnTouchOutside(false);
                 cdd.show();
             }
         });

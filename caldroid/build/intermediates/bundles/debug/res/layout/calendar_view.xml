@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     style="?styleCaldroidViewLayout"
+    android:background="@color/caldroid_white"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -16,6 +17,7 @@
         android:orientation="horizontal">
         <LinearLayout
             android:id="@+id/three"
+            android:background="@color/caldroid_white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
@@ -31,6 +33,7 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/two"
+            android:background="@color/caldroid_white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -43,7 +46,6 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:text="fsdfsdfsdfds sdsdgdsg sfsdfsdfds sfsdf"
                 android:textStyle="bold|italic"
                 android:textAppearance="@style/UiTestTextView"
                 style="?styleCaldroidMonthName"/>
@@ -52,7 +54,8 @@
             android:id="@+id/one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right"
+            android:gravity="right"            android:background="@color/caldroid_white"
+
             android:layout_marginRight="10dp"
             android:layout_weight="3"
             android:orientation="horizontal">

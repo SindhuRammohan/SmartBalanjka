@@ -68,5 +68,30 @@
         android:layout_weight="1"
         android:fastScrollEnabled="true" >
     </ListView>
+    <LinearLayout
+        android:id="@+id/emptylayoutblood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical" >
 
+        <ImageButton
+            android:id="@+id/emptyimageButtonblood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:background="#F2F2F2"
+            android:src="@drawable/emptynew" />
+        <TextView
+            android:id="@+id/emptyblood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/Select_blood" />
+    </LinearLayout>
 </LinearLayout>

@@ -43,8 +43,8 @@ public class New_HealthTips  extends ActionBarActivity {
         addrecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!(title.getText().toString().equalsIgnoreCase("") &&
-                        newhealthIngredients.getText().toString().equalsIgnoreCase("") &&
+                if(!(title.getText().toString().equalsIgnoreCase("") ||
+                        newhealthIngredients.getText().toString().equalsIgnoreCase("") ||
                         newdirections.getText().toString().equalsIgnoreCase(""))) {
                     title.setText("");
                     newhealthIngredients.setText("");

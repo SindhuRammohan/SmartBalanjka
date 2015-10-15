@@ -78,7 +78,6 @@ public class Kd_dates_Fragment extends ListFragment {
             }
         });
 
-
         empty.setVisibility(View.VISIBLE);
         emptylayout.setVisibility(View.VISIBLE);
         textview_countries.setInputType(InputType.TYPE_NULL);
@@ -155,10 +154,6 @@ public class Kd_dates_Fragment extends ListFragment {
         Log.e("DEBUG", "OnPause of BloodList");
         super.onPause();
     }
-
-
-
-
 
     public void addkdevents(){
         Intent nextScreen = new Intent(getActivity().getApplicationContext(), NewKDEvents.class);

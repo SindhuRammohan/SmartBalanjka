@@ -6,7 +6,7 @@
     <string name="my_username">smartbalanjika@gmail.com</string>
     <string name="my_password">believegod</string>
     <string name="Forget"><u>Forget Password?</u></string>
-    <string name="Sign"><u>Sign Up for SmartBalinjika</u></string>
+    <string name="Sign"><u>Sign Up for SmartBalanjika</u></string>
     <string name="letstart">Lets Get Start</string>
     <string name="UserName">User Name</string>
     <string name="Password">Password</string>
@@ -47,11 +47,11 @@
     <string name="Reset_header">Smartbalanjika Password Reset</string>
     <string name="Reset_content">We have just received a password reset request for </string>
     <string name="Reset_subcontent">Your secure password is:  </string>
-    <string name="Reset_toast">Mail send success.\nCheck your mail. The Passowrd has send to your mail</string>
-    <string name="NotReset_toast">Your mail id is not registered. Please check your mail id is corrct and if correct please register your mail first</string>
+    <string name="Reset_toast">Mail send success.\nCheck your mail. The Password has send to your mail</string>
+    <string name="NotReset_toast">Your mail id is not registered. Please check your mail id is correct and if correct please register your mail first</string>
     <string name="newaccount_header">Welcome SmartBalanjika</string>
-    <string name="newaccount_content">I would like to create a new account. Please add my mail id is: </string>
-    <string name="alreadyaccount_toast">This mailid is already registered. Please use new MailId or enter Login page to login</string>
+    <string name="newaccount_content">I would like to create a new account. Please add my mail ID is: </string>
+    <string name="alreadyaccount_toast">This mailID is already registered. Please use new MailId or enter Login page to login</string>
     <string name="samepassword_toast">Please enter same password</string>
     <string name="weekpassword_toast">Your Password is week. Please enter more than 6 char</string>
     <string name="Exit">Do you really want to Exit?</string>
@@ -72,7 +72,7 @@
     <string name="Select_Country">Select Country</string>
     <string name="Select_Status">Select Status</string>
     <string name="married">married</string>
-    <string name="Loading">Loading...</string>
+    <string name="Loading">Loading&#8230;&#8230;&#8230;</string>
     <string name="History">History</string>
     <string name="Contacts">Contacts</string>
     <string name="Donar">Donar</string>
@@ -84,27 +84,27 @@
     <string name="Help">Help</string>
     <string name="Logout">Logout</string>
     <string name="history_content">Dasabalanjikans realise that all the men including children wear a “Nama” on their forehead . This represents that they are the followers of Lord Vishnu. When we look at the castism in the Hindu community during that time in Karnataka , there were 2 sects of people. One were the follower of Lord Shiva  called “Sharanaru”  and the other were the followers of Lord Vishnu called “Dasaru“. These two group of people were devoted their lives to religious activities towards their respective gods. Since our community people were followers of Lord Vishnu we fall under the group of dasaru. They were not only just religious followers but also were leading merchants during their time and these merchants were called Banajigaru / Balijigaru by the locals in that period.  Since they were Dasaru and Banajigaru / Balijigaru  the name Dasabanajigaru / Dasabalijigaru came into existence. These name over a period of time became Dasabalanjiga when our community people moved from Karnataka into Tamil Nadu during the 1780′s.
-    \n\n Now general look at what speciality in this app is?</string>
-    <string name="Contacts_content">There is a list of contacts under this option. you can make use o fit and know the entire details about the particular persion.</string>
+    \n\n Now general look at what speciality inside is?</string>
+    <string name="Contacts_content">There is a list of contacts. you can make use of it and know the entire details about our relatives in detailed.</string>
     <string name="Donar_content">There is a list of contacts who wish to donate their blood. It will be more use on the emergency.
     \n\nThere is also a list of doctors contacts who wish to give the emergency guide and suggesion at the critical stage.
     \n\nWe also provide some contacts of hospitals which can be use at the time of emergency</string>
     <string name="KD_content">Here are some tips for the school students,College students,also for working persons about the future</string>
-    <string name="Events_content">We Privide all important dates to be noted as Birthday, Marriage, House warming cerimony, baby naming function, temple function, meeting on Dasabalinjika, condelence etc</string>
-    <string name="Matrimony_content">Useful for one whe seraching for their partner. Here we list of all contacts and details who searching for their partner</string>
+    <string name="Events_content">We Provide the Birthday reminder of our relatives.</string>
+    <string name="Matrimony_content">Matrimony: Useful for one who seraching for their partner. Here we list of all relatives contacts and details who searching for their partner</string>
     <string name="Books_content">You can read and download the Youth balanjika Book</string>
-    <string name="Health_content">General tips for the heath and also some details about health recepipe tips</string>
-    <string name="Help_content">One who wish to improve this service can send some valuable tips and feedback. So thus it will be very helpful to improve this smart balanjika service</string>
+    <string name="Health_content">General tips for the heath and also some details about health recipe tips</string>
+    <string name="Help_content">One who wish to improve this service can send some valuable tips and feedback. So thus it will be very helpful to improve our smart balanjika service</string>
     <string name="KDrive">Knowledge Drive</string>
-    <string name="More">More>></string>
-    <string name="problemifany">If any problem or any suggessions feel free to contact us</string>
+    <string name="More">Click here for More>></string>
+    <string name="problemifany">If any problem or any suggestions feel free to contact us</string>
     <string name="Name">Name</string>
     <string name="my_name">Sindhu.R</string>
     <string name="india">India Number</string>
     <string name="india_no">+91 9790659680</string>
     <string name="malatsia">Malaysia Number</string>
     <string name="malatsia_no">+60 146250626</string>
-    <string name="mail_feedback">Sending your valuable Feedback through email is always welcome. \nPlease include screenshots of particulars if necessary</string>
+    <string name="mail_feedback">Sending your valuable Feedback through email is always welcome.</string>
     <string name="feedback_title">Title(About)</string>
     <string name="feedback_content">Type in your Feedback</string>
     <string name="feedback_Compose">Compose</string>
@@ -194,7 +194,8 @@
     <string name="Other_Details">Other Details</string>
     <string name="Event_Type">Event Type</string>
     <string name="No_Event">No Event</string>
-    <string name="choose_email">Choose an email client from...</string>
+    <string name="Select_blood">Select Blood Group</string>
+    <string name="choose_email">Choose an email client from&#8230;&#8230;&#8230;</string>
     <string name="No_email">No email client installed.</string>
     <string name="website">http://www.youthbalanjika.com/</string>
     <string name="bookwebsite">https://sites.google.com/site/youthbalanjika/</string>
@@ -220,8 +221,9 @@
     </string-array>
 
     <string-array name="kd_list">
-        <item>Meeting</item>
-        <item>Exam</item>
+        <item>Temple Function</item>
+        <item>Knowledge Drive Meeting</item>
+        <item>Exams</item>
         <item>Interview</item>
         <item>Other Important Dates</item>
     </string-array>
@@ -496,14 +498,14 @@
     <string name="add_recipe">Add New Recipe</string>
     <string name="add_recipetitle">Enter Recipe Name</string>
     <string name="add_recipe_Ingredients">Enter List of Ingredients</string>
-    <string name="add_recipe_directions">Methd to prepare</string>
+    <string name="add_recipe_directions">Method to prepare</string>
 
     <string name="add_Event">Enter New Event</string>
     <string name="addVenue">Enter Venue</string>
     <string name="addDate">Enter Date</string>
     <string name="addTime">Enter Time</string>
     <string name="addContact">Enter Contact Number</string>
-    <string name="addSpecification">Enter Specification</string>
+    <string name="addSpecification">Enter Specification(Event type)</string>
     <string name="addOther_Details">Enter Other Details</string>
 
     <string name="correct_Details_toast">Enter correct Details. Should not be empty</string>
@@ -517,4 +519,10 @@
     <string name="show_dialog">Show Dialog</string>
     <string name="undo">Undo</string>
 
+
+    <string name="happybirthday">Happy Birthday</string>
+    <string name="ok">OK</string>
+
+    <string name="Set_Time">Set Time</string>
+    <string name="addnewevent">Add Temple function, Knowledge Drive Meeting, Exam, Interview?</string>
 </resources>

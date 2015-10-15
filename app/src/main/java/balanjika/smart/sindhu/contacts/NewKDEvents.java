@@ -1,6 +1,7 @@
 package balanjika.smart.sindhu.contacts;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
@@ -8,19 +9,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
-
 import Mail.NetworkStateReceiver;
 import Mail.SendMailTask;
 import balanjika.smart.sindhu.smartbalanjka.R;
 import balanjika.smart.sindhu.smartbalanjka.SharPref;
-import balanjika.smart.sindhu.smartbalanjka.SplashScreen;
 
 public class NewKDEvents  extends ActionBarActivity {
     Calendar myCalendar = Calendar.getInstance();
@@ -33,7 +32,8 @@ public class NewKDEvents  extends ActionBarActivity {
     private Button addKD;
     private SharPref sharpref;
     private NetworkStateReceiver checkInternet = new NetworkStateReceiver();
-
+    int mHour = myCalendar.get(Calendar.HOUR_OF_DAY);
+    int mMinute = myCalendar.get(Calendar.MINUTE);
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +41,6 @@ public class NewKDEvents  extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         sharpref = SharPref.getInstance(this);
-
-
         addVenue = (EditText) findViewById(R.id.addVenue);
         addDate = (EditText) findViewById(R.id.addDate);
         addTime = (EditText) findViewById(R.id.addTime);
@@ -50,6 +48,24 @@ public class NewKDEvents  extends ActionBarActivity {
         addSpecification = (EditText) findViewById(R.id.addSpecification);
         addothers = (EditText) findViewById(R.id.addothers);
         addKD = (Button) findViewById(R.id.addKD);
+
+
+
+        addTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TimePickerDialog mTimePicker = new TimePickerDialog(NewKDEvents.this,
+                    new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker timepicker, int selectedhour, int selectedminute) {
+                            addTime.setText(selectedhour + ":" + selectedminute);
+                        }
+                    }, mHour, mMinute, true);
+                mTimePicker.setTitle(getResources().getString(R.string.Set_Time));
+                mTimePicker.show();
+            }
+        });
+
 
         addDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,11 +79,11 @@ public class NewKDEvents  extends ActionBarActivity {
         addKD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!(addVenue.getText().toString().equalsIgnoreCase("") &&
-                        addDate.getText().toString().equalsIgnoreCase("") &&
-                        addTime.getText().toString().equalsIgnoreCase("") &&
-                        addContact.getText().toString().equalsIgnoreCase("") &&
-                        addSpecification.getText().toString().equalsIgnoreCase("") &&
+                if(!(addVenue.getText().toString().equalsIgnoreCase("") ||
+                        addDate.getText().toString().equalsIgnoreCase("") ||
+                        addTime.getText().toString().equalsIgnoreCase("") ||
+                        addContact.getText().toString().equalsIgnoreCase("") ||
+                        addSpecification.getText().toString().equalsIgnoreCase("") ||
                         addothers.getText().toString().equalsIgnoreCase(""))) {
 
                     String toEmails = getResources().getString(R.string.my_username);

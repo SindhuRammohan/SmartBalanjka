@@ -93,16 +93,37 @@ matrimony
 
 
 
-1.table data
+1.real table data
 2.on click
 3.self info
-4.logout
-5.hide drawer
-6.
+4.hide drawer
+5.string data corrections
+6.layout corrections
+7.image size corrections(3)
+8.view profile
 
 
-1.birthday
-2.ICE
+view,save,unregister,save matrimony
+
+matrimoy,save,unregiste,nothanks
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+doctor list
+database
+self info
+img resize

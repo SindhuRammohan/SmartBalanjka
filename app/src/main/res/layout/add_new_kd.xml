@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="@drawable/login_background"
+    android:layout_height="fill_parent" >
+<LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/login_background"
@@ -8,7 +12,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:paddingLeft="10dp"
+          android:paddingTop="10dp"
+          android:paddingBottom="10dp"
+          android:paddingRight="10dp"
+          android:gravity="center"
+          android:layout_gravity="center"
+          android:textSize="18dp"
+          android:textAppearance="@style/UiTestTextView"
+          android:text="@string/addnewevent"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="20dp"
         android:orientation="horizontal" >
 
@@ -22,6 +50,8 @@
             android:ems="10"
             android:maxLines="10"
             android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:inputType="textMultiLine"
             android:layout_weight="1"
             android:hint="@string/addVenue" />
@@ -31,7 +61,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         android:orientation="horizontal" >
 
@@ -42,9 +73,15 @@
             android:gravity="top|left"
             android:layout_gravity="center"
             android:background="@drawable/roundrectanglewhite"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:ems="10"
             android:maxLines="10"
             android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:inputType="textMultiLine"
             android:layout_weight="1"
             android:hint="@string/addDate" />
@@ -54,7 +91,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         android:orientation="horizontal" >
 
@@ -65,9 +103,15 @@
             android:gravity="top|left"
             android:layout_gravity="center"
             android:background="@drawable/roundrectanglewhite"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:ems="10"
             android:maxLines="10"
             android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:inputType="textMultiLine"
             android:layout_weight="1"
             android:hint="@string/addTime" />
@@ -77,7 +121,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         android:orientation="horizontal" >
 
@@ -91,6 +136,8 @@
             android:ems="10"
             android:maxLines="10"
             android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:inputType="phone"
             android:layout_weight="1"
             android:hint="@string/addContact" />
@@ -101,7 +148,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         android:orientation="horizontal" >
 
@@ -115,6 +163,8 @@
             android:ems="10"
             android:maxLines="10"
             android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:inputType="textMultiLine"
             android:layout_weight="1"
             android:hint="@string/addSpecification" />
@@ -124,7 +174,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         android:orientation="horizontal" >
 
@@ -138,6 +189,8 @@
             android:ems="10"
             android:maxLines="10"
             android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:inputType="textMultiLine"
             android:layout_weight="1"
             android:hint="@string/addOther_Details" />
@@ -165,3 +218,4 @@
 
     </LinearLayout>
 </LinearLayout>
+    </ScrollView>

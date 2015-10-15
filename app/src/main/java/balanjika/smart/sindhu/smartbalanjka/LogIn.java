@@ -114,6 +114,7 @@ public class LogIn extends ActionBarActivity {
                                 sharpref.setTempHeight(c.getString(24));
                                 sharpref.setWeight(c.getString(25));
                                 sharpref.setNotes(c.getString(26));
+                                sharpref.setAge(c.getString(30));
                             } else if(c.getString(19).equalsIgnoreCase(getResources().getString(R.string.no))){
                                 sharpref.setMatrimonyType(1);
                                 sharpref.setTempMailUsername(c.getString(1));
@@ -134,6 +135,7 @@ public class LogIn extends ActionBarActivity {
                                 sharpref.setAbout(c.getString(16));
                                 sharpref.setquestion(c.getString(17));
                                 sharpref.setanswer(c.getString(18));
+                                sharpref.setAge(c.getString(30));
                             }
 
                             Intent in = new Intent(getBaseContext(), Homescreen.class);
@@ -170,6 +172,7 @@ public class LogIn extends ActionBarActivity {
     @Override
     public void onBackPressed() {
         CustomDialogClass cdd = new CustomDialogClass(this);
+        cdd.setCanceledOnTouchOutside(false);
         cdd.show();
     }
 }

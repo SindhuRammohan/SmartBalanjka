@@ -286,4 +286,13 @@ public class SharPref  {
     public int getMatrimonyType(){
         return prefs.getInt("MatrimonyType", 0);
     }
+
+    public void setAge(String Age){
+        prefsEditor.putString("Age", Age);
+        prefsEditor.commit();
+    }
+
+    public String getAge(){
+        return prefs.getString("Age", null);
+    }
 }

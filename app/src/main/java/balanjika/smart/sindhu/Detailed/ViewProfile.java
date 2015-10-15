@@ -381,7 +381,7 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                             Toast.makeText(ViewProfile.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
                         }
                     } else {
-                        Toast.makeText(ViewProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
+//                        Toast.makeText(ViewProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
                     }
                 }else {
                     Toast.makeText(ViewProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();

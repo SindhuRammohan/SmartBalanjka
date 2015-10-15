@@ -4,6 +4,7 @@
      <!--RGB Decimal :138, 180, 255-->
      <color name="dark_blue">#0040FF</color>
      <color name="light_blue">#b8d2ff</color>
+     <!--RGB Decimal :184,210,255-->
      <color name="blue_shade">#f3f7ff</color>
      <color name="white">#ffffff</color>
      <color name="black">#000000</color>

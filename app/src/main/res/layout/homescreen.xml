@@ -271,18 +271,22 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="1dp"
             >
             <ImageButton
                 android:id="@+id/myphoto"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/woman_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/woman_face_resize"
                 />
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal"
                 android:weightSum="2"
+                android:layout_marginRight="10dp"
                 android:gravity="left|center"
                 android:layout_gravity="left"
                 >

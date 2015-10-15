@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import balanjika.smart.sindhu.smartbalanjka.R;
@@ -37,6 +38,9 @@ public class BloodList_Fragment extends ListFragment{
     private String[] countries_list;
     private ContactsListAdapter adapter;
     private ListView lv;
+    private LinearLayout emptylayout;
+    private TextView empty;
+    int count = 0;
     Cursor c=null;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,10 @@ public class BloodList_Fragment extends ListFragment{
         mView = inflater.inflate(R.layout.bloodlist, container, false);
         countries_list = getResources().getStringArray(R.array.blood_list);
         textview_countries = (EditText) mView.findViewById(R.id.bloodlist);
+        emptylayout = (LinearLayout) mView.findViewById(R.id.emptylayoutblood);
+        empty = (TextView) mView.findViewById(R.id.emptyblood);
+        empty.setVisibility(View.VISIBLE);
+        emptylayout.setVisibility(View.VISIBLE);
         textview_countries.setInputType(InputType.TYPE_NULL);
         final ArrayAdapter<String> spinner_countries = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item,countries_list);
         textview_countries.setOnClickListener(new OnClickListener() {
@@ -84,7 +92,9 @@ public class BloodList_Fragment extends ListFragment{
                         c = myDbHelper.query(getResources().getString(R.string.table_Profile), null, null, null, null, null, null);
                         if (c.moveToFirst()) {
                             do {
+                                count = 0;
                                 if(c.getString(11).equalsIgnoreCase(text)) {
+                                    count = count + 1;
                                     ContactListItems contactListItems = new ContactListItems();
                                     contactListItems.setName(c.getString(3));
                                     contactListItems.setNo(c.getString(0));
@@ -95,6 +105,13 @@ public class BloodList_Fragment extends ListFragment{
                         }
                         adapter = new ContactsListAdapter(getActivity(), contactList);
                         lv.setAdapter(adapter);
+                        if (count == 0) {
+                            empty.setVisibility(View.VISIBLE);
+                            emptylayout.setVisibility(View.VISIBLE);
+                        } else {
+                            empty.setVisibility(View.GONE);
+                            emptylayout.setVisibility(View.GONE);
+                        }
                         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
@@ -114,8 +131,6 @@ public class BloodList_Fragment extends ListFragment{
         });
         return mView;
     }
-
-
 
     @Override
     public void onResume() {
