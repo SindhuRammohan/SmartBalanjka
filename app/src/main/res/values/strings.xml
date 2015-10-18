@@ -64,6 +64,9 @@
     <string name="ur_name">Name    : </string>
     <string name="addaccount_header">New User for SmartBalanjika</string>
     <string name="addaccount_content">I would like to add my account details in SmartBalanjika. Can u please add my details.\nMy account details are\n</string>
+    <string name="removeaccount_header">Delete Matrimony for SmartBalanjika</string>
+    <string name="removeaccount_content">I would like to Delete my account details og Matrimony in SmartBalanjika. Can u please Delete my details in Matrimony List.\nMy account details are\n</string>
+    <string name="nochange_toast">There is nothing to save.</string>
     <string name="blank_toast">Please enter all details. Should not be blank</string>
     <string name="Select_Gender">Select Gender</string>
     <string name="Select_Nakthara">Select Nakthara</string>
@@ -83,6 +86,7 @@
     <string name="Health">Health</string>
     <string name="Help">Help</string>
     <string name="Logout">Logout</string>
+    <string name="register">Register</string>
     <string name="history_content">Dasabalanjikans realise that all the men including children wear a “Nama” on their forehead . This represents that they are the followers of Lord Vishnu. When we look at the castism in the Hindu community during that time in Karnataka , there were 2 sects of people. One were the follower of Lord Shiva  called “Sharanaru”  and the other were the followers of Lord Vishnu called “Dasaru“. These two group of people were devoted their lives to religious activities towards their respective gods. Since our community people were followers of Lord Vishnu we fall under the group of dasaru. They were not only just religious followers but also were leading merchants during their time and these merchants were called Banajigaru / Balijigaru by the locals in that period.  Since they were Dasaru and Banajigaru / Balijigaru  the name Dasabanajigaru / Dasabalijigaru came into existence. These name over a period of time became Dasabalanjiga when our community people moved from Karnataka into Tamil Nadu during the 1780′s.
     \n\n Now general look at what speciality inside is?</string>
     <string name="Contacts_content">There is a list of contacts. you can make use of it and know the entire details about our relatives in detailed.</string>
@@ -174,6 +178,7 @@
     <string name="HeightAndWeight">Height And Weight</string>
     <string name="BloodList">Blood List</string>
     <string name="DoctorsList">Doctors List</string>
+    <string name="ICEList">ICE List</string>
     <string name="Awards">Awards</string>
     <string name="yes">yes</string>
     <string name="no">No</string>
@@ -204,6 +209,7 @@
     <string name="table_Profile">Profile</string>
     <string name="table_kd">kd</string>
     <string name="table_Health">Health</string>
+    <string name="table_ICE">ice</string>
 
 
     <string name="event_type">Select Event type</string>

@@ -79,6 +79,7 @@ public class BloodList extends ActionBarActivity implements TabHost.OnTabChangeL
         List<Fragment> fragments = new Vector<Fragment>();
         fragments.add(Fragment.instantiate(this, BloodList_Fragment.class.getName()));
         fragments.add(Fragment.instantiate(this, DoctorList_Fragment.class.getName()));
+        fragments.add(Fragment.instantiate(this, ICEList_Fragment.class.getName()));
         this.mPagerAdapter = new PagerAdapter(super.getSupportFragmentManager(), fragments);
         this.mViewPager = (ViewPager) super.findViewById(R.id.viewpager);
         this.mViewPager.setAdapter(this.mPagerAdapter);
@@ -97,6 +98,10 @@ public class BloodList extends ActionBarActivity implements TabHost.OnTabChangeL
         BloodList.AddTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab2")
                 .setIndicator(getResources().getString(R.string.DoctorsList)), (tabInfo = new TabInfo(
                 "Tab2", DoctorList_Fragment.class, args)));
+        this.mapTabInfo.put(tabInfo.tag, tabInfo);
+        BloodList.AddTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab3")
+                .setIndicator(getResources().getString(R.string.ICEList)), (tabInfo = new TabInfo(
+                "Tab3", ICEList_Fragment.class, args)));
         this.mapTabInfo.put(tabInfo.tag, tabInfo);
         mTabHost.setOnTabChangedListener(this);
     }

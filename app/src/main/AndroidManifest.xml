@@ -30,47 +30,47 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogIn" android:configChanges="keyboardHidden|orientation"
+        <activity android:name=".LogIn" android:configChanges="keyboardHidden|orientation" android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name=".ForgetPassword" android:configChanges="keyboardHidden|orientation"
+        <activity android:name=".ForgetPassword" android:configChanges="keyboardHidden|orientation" android:label="@string/register"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name=".NewSigin" android:configChanges="keyboardHidden|orientation"
+        <activity android:name=".NewSigin" android:configChanges="keyboardHidden|orientation" android:label="@string/register"
             android:windowSoftInputMode="stateHidden"  android:screenOrientation="portrait"></activity>
-        <activity android:name=".CreateLogin" android:configChanges="keyboardHidden|orientation"
+        <activity android:name=".CreateLogin" android:configChanges="keyboardHidden|orientation" android:label="@string/register"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name=".MyProfile" android:configChanges="keyboardHidden|orientation"
+        <activity android:name=".MyProfile" android:configChanges="keyboardHidden|orientation" android:label="@string/register"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.Detailed.Homescreen" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.Detailed.Homescreen" android:configChanges="keyboardHidden|orientation" android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.Detailed.History" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.Detailed.History" android:configChanges="keyboardHidden|orientation" android:label="@string/History"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.Detailed.Contactus" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.Detailed.Contactus" android:configChanges="keyboardHidden|orientation" android:label="@string/Help"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.Detailed.book" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.Detailed.book" android:configChanges="keyboardHidden|orientation" android:label="@string/Books"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.Detailed.BookPdf" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.Detailed.BookPdf" android:configChanges="keyboardHidden|orientation" android:label="@string/Books"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.Detailed.PdfView" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.Detailed.PdfView" android:configChanges="keyboardHidden|orientation" android:label="@string/Books"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.contacts.Contacts" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.contacts.Contacts" android:configChanges="keyboardHidden|orientation" android:label="@string/Contacts"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.contacts.Each_contact" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.contacts.Each_contact" android:configChanges="keyboardHidden|orientation" android:label="@string/Contacts"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.contacts.MatrimonyList" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.contacts.MatrimonyList" android:configChanges="keyboardHidden|orientation" android:label="@string/Matrimonys"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.contacts.BloodList" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.contacts.BloodList" android:configChanges="keyboardHidden|orientation" android:label="@string/Donar"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.contacts.kdList" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.contacts.kdList" android:configChanges="keyboardHidden|orientation" android:label="@string/KD"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.contacts.healthtipList" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.contacts.healthtipList" android:configChanges="keyboardHidden|orientation" android:label="@string/Health"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.Detailed.ViewProfile" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.Detailed.ViewProfile" android:configChanges="keyboardHidden|orientation" android:label="@string/Contacts"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.contacts.New_HealthTips" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.contacts.New_HealthTips" android:configChanges="keyboardHidden|orientation" android:label="@string/Health"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.contacts.NewKDEvents" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.contacts.NewKDEvents" android:configChanges="keyboardHidden|orientation" android:label="@string/KD"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
-        <activity android:name="balanjika.smart.sindhu.Calendar.Events" android:configChanges="keyboardHidden|orientation"
+        <activity android:name="balanjika.smart.sindhu.Calendar.Events" android:configChanges="keyboardHidden|orientation" android:label="@string/Events"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
     </application>
 

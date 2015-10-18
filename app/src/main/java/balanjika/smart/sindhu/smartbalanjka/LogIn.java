@@ -78,72 +78,75 @@ public class LogIn extends ActionBarActivity {
             }
             isSend = false;
             c = myDbHelper.query(getResources().getString(R.string.table_Profile), null, null, null, null, null, null);
-            if (c.moveToFirst()) {
-                do {
-                    if (c.getString(3).equalsIgnoreCase(str)) {
-                        if (c.getString(4).equalsIgnoreCase(password)) {
-                            isSend = true;
-                            editusername.setText("");
-                            editpassword.setText("");
+            if(c == null) {
+            } else {
+                if (c.moveToFirst()) {
+                    do {
+                        if (c.getString(3).equalsIgnoreCase(str)) {
+                            if (c.getString(4).equalsIgnoreCase(password)) {
+                                isSend = true;
+                                editusername.setText("");
+                                editpassword.setText("");
 
 
-                            if(c.getString(19).equalsIgnoreCase(getResources().getString(R.string.yes))){
-                                sharpref.setMatrimonyType(2);
-                                sharpref.setTempMailUsername(c.getString(1));
-                                sharpref.setTempMailPassword(c.getString(2));
-                                sharpref.setUsername(c.getString(3));
-                                sharpref.setPassword(c.getString(4));
-                                sharpref.setgender(c.getString(5));
-                                sharpref.setaddress(c.getString(6));
-                                sharpref.setCity(c.getString(7));
-                                sharpref.setDistrict(c.getString(8));
-                                sharpref.setCountry(c.getString(9));
-                                sharpref.setphone(c.getString(10));
-                                sharpref.setblood(c.getString(11));
-                                sharpref.setdob(c.getString(12));
-                                sharpref.setstatus(c.getString(13));
-                                sharpref.setstatusdate(c.getString(14));
-                                sharpref.setTempMail(c.getString(15));
-                                sharpref.setAbout(c.getString(16));
-                                sharpref.setquestion(c.getString(17));
-                                sharpref.setanswer(c.getString(18));
-                                sharpref.setRashi(c.getString(20));
-                                sharpref.setNakthara(c.getString(21));
-                                sharpref.setQualification(c.getString(22));
-                                sharpref.setWork(c.getString(23));
-                                sharpref.setTempHeight(c.getString(24));
-                                sharpref.setWeight(c.getString(25));
-                                sharpref.setNotes(c.getString(26));
-                                sharpref.setAge(c.getString(30));
-                            } else if(c.getString(19).equalsIgnoreCase(getResources().getString(R.string.no))){
-                                sharpref.setMatrimonyType(1);
-                                sharpref.setTempMailUsername(c.getString(1));
-                                sharpref.setTempMailPassword(c.getString(2));
-                                sharpref.setUsername(c.getString(3));
-                                sharpref.setPassword(c.getString(4));
-                                sharpref.setgender(c.getString(5));
-                                sharpref.setaddress(c.getString(6));
-                                sharpref.setCity(c.getString(7));
-                                sharpref.setDistrict(c.getString(8));
-                                sharpref.setCountry(c.getString(9));
-                                sharpref.setphone(c.getString(10));
-                                sharpref.setblood(c.getString(11));
-                                sharpref.setdob(c.getString(12));
-                                sharpref.setstatus(c.getString(13));
-                                sharpref.setstatusdate(c.getString(14));
-                                sharpref.setTempMail(c.getString(15));
-                                sharpref.setAbout(c.getString(16));
-                                sharpref.setquestion(c.getString(17));
-                                sharpref.setanswer(c.getString(18));
-                                sharpref.setAge(c.getString(30));
+                                if (c.getString(19).equalsIgnoreCase(getResources().getString(R.string.yes))) {
+                                    sharpref.setMatrimonyType(2);
+                                    sharpref.setTempMailUsername(c.getString(1));
+                                    sharpref.setTempMailPassword(c.getString(2));
+                                    sharpref.setUsername(c.getString(3));
+                                    sharpref.setPassword(c.getString(4));
+                                    sharpref.setgender(c.getString(5));
+                                    sharpref.setaddress(c.getString(6));
+                                    sharpref.setCity(c.getString(7));
+                                    sharpref.setDistrict(c.getString(8));
+                                    sharpref.setCountry(c.getString(9));
+                                    sharpref.setphone(c.getString(10));
+                                    sharpref.setblood(c.getString(11));
+                                    sharpref.setdob(c.getString(12));
+                                    sharpref.setstatus(c.getString(13));
+                                    sharpref.setstatusdate(c.getString(14));
+                                    sharpref.setTempMail(c.getString(15));
+                                    sharpref.setAbout(c.getString(16));
+                                    sharpref.setquestion(c.getString(17));
+                                    sharpref.setanswer(c.getString(18));
+                                    sharpref.setRashi(c.getString(20));
+                                    sharpref.setNakthara(c.getString(21));
+                                    sharpref.setQualification(c.getString(22));
+                                    sharpref.setWork(c.getString(23));
+                                    sharpref.setTempHeight(c.getString(24));
+                                    sharpref.setWeight(c.getString(25));
+                                    sharpref.setNotes(c.getString(26));
+                                    sharpref.setAge(c.getString(30));
+                                } else if (c.getString(19).equalsIgnoreCase(getResources().getString(R.string.no))) {
+                                    sharpref.setMatrimonyType(1);
+                                    sharpref.setTempMailUsername(c.getString(1));
+                                    sharpref.setTempMailPassword(c.getString(2));
+                                    sharpref.setUsername(c.getString(3));
+                                    sharpref.setPassword(c.getString(4));
+                                    sharpref.setgender(c.getString(5));
+                                    sharpref.setaddress(c.getString(6));
+                                    sharpref.setCity(c.getString(7));
+                                    sharpref.setDistrict(c.getString(8));
+                                    sharpref.setCountry(c.getString(9));
+                                    sharpref.setphone(c.getString(10));
+                                    sharpref.setblood(c.getString(11));
+                                    sharpref.setdob(c.getString(12));
+                                    sharpref.setstatus(c.getString(13));
+                                    sharpref.setstatusdate(c.getString(14));
+                                    sharpref.setTempMail(c.getString(15));
+                                    sharpref.setAbout(c.getString(16));
+                                    sharpref.setquestion(c.getString(17));
+                                    sharpref.setanswer(c.getString(18));
+                                    sharpref.setAge(c.getString(30));
+                                }
+
+                                Intent in = new Intent(getBaseContext(), Homescreen.class);
+                                startActivity(in);
                             }
-
-                            Intent in = new Intent(getBaseContext(), Homescreen.class);
-                            startActivity(in);
                         }
-                    }
 
-                } while (c.moveToNext());
+                    } while (c.moveToNext());
+                }
             }
             if (!isSend) {
                 username_text = sharpref.getUsername();

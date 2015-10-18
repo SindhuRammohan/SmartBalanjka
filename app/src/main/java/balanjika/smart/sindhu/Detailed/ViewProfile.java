@@ -198,109 +198,66 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
             }
         });
 
-//        nothanks.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                linear.setVisibility(View.GONE);
-//                matrimony.setVisibility(View.VISIBLE);
-//                save.setVisibility(View.VISIBLE);
-//                Rashi.setText("");
-//                Nakthara.setText("");
-//                Qualification.setText("");
-//                Work.setText("");
-//                Height.setText("");
-//                Weight.setText("");
-//                Notes.setText("");
-//            }
-//        });
-//
-//
-//
-//        save.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (!(gender.getText().toString().equalsIgnoreCase("") ||
-//                        address.getText().toString().equalsIgnoreCase("") ||
-//                        City.getText().toString().equalsIgnoreCase("") ||
-//                        District.getText().toString().equalsIgnoreCase("") ||
-//                        Country.getText().toString().equalsIgnoreCase("") ||
-//                        phone.getText().toString().equalsIgnoreCase("") ||
-//                        textview_blood.getText().toString().equalsIgnoreCase("") ||
-//                        dob.getText().toString().equalsIgnoreCase("") ||
-//                        status.getText().toString().equalsIgnoreCase("") ||
-//                        statusdate.getText().toString().equalsIgnoreCase("") ||
-//                        Mail.getText().toString().equalsIgnoreCase("") ||
-//                        About.getText().toString().equalsIgnoreCase("") ||
-//                        question.getText().toString().equalsIgnoreCase("") ||
-//                        answer.getText().toString().equalsIgnoreCase(""))) {
-//                    type = 1;
-//                    gmail_username_text = sharpref.getMailUsername();
-//                    gmail_password_text = sharpref.getMailPassword();
-//
-//                    sharpref.setgender(gender.getText().toString());
-//                    sharpref.setaddress(address.getText().toString());
-//                    sharpref.setCity(City.getText().toString());
-//                    sharpref.setDistrict(District.getText().toString());
-//                    sharpref.setCountry(Country.getText().toString());
-//                    sharpref.setphone(phone.getText().toString());
-//                    sharpref.setblood(textview_blood.getText().toString());
-//                    sharpref.setdob(dob.getText().toString());
-//                    sharpref.setstatus(status.getText().toString());
-//                    sharpref.setstatusdate(statusdate.getText().toString());
-//                    sharpref.setTempMail(Mail.getText().toString());
-//                    sharpref.setAbout(About.getText().toString());
-//                    sharpref.setquestion(question.getText().toString());
-//                    sharpref.setanswer(answer.getText().toString());
-//                    sharpref.setRashi("");
-//                    sharpref.setNakthara("");
-//                    sharpref.setQualification("");
-//                    sharpref.setWork("");
-//                    sharpref.setTempHeight("");
-//                    sharpref.setWeight("");
-//                    sharpref.setNotes("");
-//                    sharpref.setMatrimonyType(type);
-//
-//
-//                    String toEmails = getResources().getString(R.string.my_username);
-//                    List<String> toEmailList = Arrays.asList(toEmails
-//                            .split("\\s*,\\s*"));
-//                    new SendMailTask(ViewProfile.this).execute(gmail_username_text,
-//                            gmail_password_text, toEmailList,
-//                            getResources().getString(R.string.addaccount_header),
-//                            getResources().getString(R.string.addaccount_content) + " " +
-//                                    sharpref.getUsername() +
-//                                    gender.getText().toString() +
-//                                    address.getText().toString()
-//                                    + City.getText().toString()
-//                                    + District.getText().toString()
-//                                    + Country.getText().toString()
-//                                    + phone.getText().toString()
-//                                    + textview_blood.getText().toString()
-//                                    + dob.getText().toString()
-//                                    + status.getText().toString()
-//                                    + statusdate.getText().toString()
-//                                    + Mail.getText().toString()
-//                                    + About.getText().toString()
-//                                    + question.getText().toString()
-//                                    + answer.getText().toString()
-//                                    + type);
-//                    Intent in = new Intent(ViewProfile.this, LogIn.class);
-//                    startActivity(in);
-//                } else {
-//                    Toast.makeText(ViewProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
-//                }
-//            }
-//        });
-
-
-        unregister.setOnClickListener(new View.OnClickListener() {
+        nothanks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!(gender.getText().toString().equalsIgnoreCase("") ||
-                        address.getText().toString().equalsIgnoreCase("")||
-                        City.getText().toString().equalsIgnoreCase("")||
-                        District.getText().toString().equalsIgnoreCase("")||
-                        Country.getText().toString().equalsIgnoreCase("")||
+                linear.setVisibility(View.GONE);
+                matrimony.setVisibility(View.VISIBLE);
+                save.setVisibility(View.VISIBLE);
+
+                gmail_username_text = sharpref.getMailUsername();
+                gmail_password_text = sharpref.getMailPassword();
+                String toEmails = getResources().getString(R.string.my_username);
+                List<String> toEmailList = Arrays.asList(toEmails
+                        .split("\\s*,\\s*"));
+                if (!(Rashi.getText().toString().equalsIgnoreCase("") ||
+                        Nakthara.getText().toString().equalsIgnoreCase("") ||
+                        Qualification.getText().toString().equalsIgnoreCase("") ||
+                        Work.getText().toString().equalsIgnoreCase("") ||
+                        Height.getText().toString().equalsIgnoreCase("") ||
+                        Weight.getText().toString().equalsIgnoreCase("") ||
+                        Notes.getText().toString().equalsIgnoreCase(""))) {
+                    if (checkInternet.isOnline(getApplicationContext())) {
+                        new SendMailTask(ViewProfile.this).execute(gmail_username_text,
+                                gmail_password_text, toEmailList,
+                                getResources().getString(R.string.removeaccount_header),
+                                getResources().getString(R.string.removeaccount_content) + " " +
+                                        Rashi.getText().toString()
+                                        + Nakthara.getText().toString()
+                                        + Qualification.getText().toString()
+                                        + Work.getText().toString()
+                                        + Height.getText().toString()
+                                        + Weight.getText().toString()
+                                        + Notes.getText().toString()
+                                        + type);
+                        Rashi.setText("");
+                        Nakthara.setText("");
+                        Qualification.setText("");
+                        Work.setText("");
+                        Height.setText("");
+                        Weight.setText("");
+                        Notes.setText("");
+                    } else {
+                        Toast.makeText(ViewProfile.this, getResources().getString(R.string.internet_connect_toast), Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    linear.setVisibility(View.GONE);
+                    matrimony.setVisibility(View.VISIBLE);
+                    save.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!(gender.getText().toString().equalsIgnoreCase("") ||
+                        address.getText().toString().equalsIgnoreCase("") ||
+                        City.getText().toString().equalsIgnoreCase("") ||
+                        District.getText().toString().equalsIgnoreCase("") ||
+                        Country.getText().toString().equalsIgnoreCase("") ||
                         phone.getText().toString().equalsIgnoreCase("")||
                         textview_blood.getText().toString().equalsIgnoreCase("")||
                         dob.getText().toString().equalsIgnoreCase("")||
@@ -309,13 +266,88 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                         Mail.getText().toString().equalsIgnoreCase("")||
                         About.getText().toString().equalsIgnoreCase("")||
                         question.getText().toString().equalsIgnoreCase("")||
-                        answer.getText().toString().equalsIgnoreCase("")||
-                        Rashi.getText().toString().equalsIgnoreCase("")||
-                        Nakthara.getText().toString().equalsIgnoreCase("")||
-                        Qualification.getText().toString().equalsIgnoreCase("")||
-                        Work.getText().toString().equalsIgnoreCase("")||
-                        Height.getText().toString().equalsIgnoreCase("")||
-                        Weight.getText().toString().equalsIgnoreCase("")||
+                        answer.getText().toString().equalsIgnoreCase(""))){
+                    type = 1;
+                    if (!(gender.getText().toString().equalsIgnoreCase(sharpref.getTempgender()) ||
+                            address.getText().toString().equalsIgnoreCase(sharpref.getTempaddress()) ||
+                            City.getText().toString().equalsIgnoreCase(sharpref.getTempCity()) ||
+                            District.getText().toString().equalsIgnoreCase(sharpref.getTempDistrict()) ||
+                            Country.getText().toString().equalsIgnoreCase(sharpref.getTempCountry()) ||
+                            phone.getText().toString().equalsIgnoreCase(sharpref.getTempphone()) ||
+                            textview_blood.getText().toString().equalsIgnoreCase(sharpref.getTempblood()) ||
+                            dob.getText().toString().equalsIgnoreCase(sharpref.getTempdob()) ||
+                            status.getText().toString().equalsIgnoreCase(sharpref.getTempstatus()) ||
+                            statusdate.getText().toString().equalsIgnoreCase(sharpref.getTempstatusdate()) ||
+                            Mail.getText().toString().equalsIgnoreCase(sharpref.getTempMail()) ||
+                            About.getText().toString().equalsIgnoreCase(sharpref.getTempAbout()) ||
+                            question.getText().toString().equalsIgnoreCase(sharpref.getTempquestion()) ||
+                            answer.getText().toString().equalsIgnoreCase(sharpref.getTempanswer()))) {
+
+                        gmail_username_text = sharpref.getMailUsername();
+                        gmail_password_text = sharpref.getMailPassword();
+
+
+
+                        String toEmails = getResources().getString(R.string.my_username);
+
+                        List<String> toEmailList = Arrays.asList(toEmails
+                                .split("\\s*,\\s*"));
+                        if(checkInternet.isOnline(getApplicationContext())) {
+                            new SendMailTask(ViewProfile.this).execute(gmail_username_text,
+                                    gmail_password_text, toEmailList,
+                                    getResources().getString(R.string.addaccount_header),
+                                    getResources().getString(R.string.addaccount_content) + " " +
+                                            gender.getText().toString() +
+                                            address.getText().toString()
+                                            + City.getText().toString()
+                                            + District.getText().toString()
+                                            + Country.getText().toString()
+                                            + phone.getText().toString()
+                                            + textview_blood.getText().toString()
+                                            + dob.getText().toString()
+                                            + status.getText().toString()
+                                            + Mail.getText().toString()
+                                            + About.getText().toString()
+                                            + question.getText().toString()
+                                            + answer.getText().toString()
+                                            + type);
+                            Intent in = new Intent(ViewProfile.this, LogIn.class);
+                            startActivity(in);
+                        } else {
+                            Toast.makeText(ViewProfile.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
+                        }
+                    } else {
+                        Toast.makeText(ViewProfile.this, getResources().getString(R.string.nochange_toast), Toast.LENGTH_LONG).show();
+                    }
+                }else {
+                    Toast.makeText(ViewProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        unregister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!(gender.getText().toString().equalsIgnoreCase("") ||
+                        address.getText().toString().equalsIgnoreCase("") ||
+                        City.getText().toString().equalsIgnoreCase("") ||
+                        District.getText().toString().equalsIgnoreCase("") ||
+                        Country.getText().toString().equalsIgnoreCase("") ||
+                        phone.getText().toString().equalsIgnoreCase("") ||
+                        textview_blood.getText().toString().equalsIgnoreCase("") ||
+                        dob.getText().toString().equalsIgnoreCase("") ||
+                        status.getText().toString().equalsIgnoreCase("") ||
+                        statusdate.getText().toString().equalsIgnoreCase("") ||
+                        Mail.getText().toString().equalsIgnoreCase("") ||
+                        About.getText().toString().equalsIgnoreCase("") ||
+                        question.getText().toString().equalsIgnoreCase("") ||
+                        answer.getText().toString().equalsIgnoreCase("") ||
+                        Rashi.getText().toString().equalsIgnoreCase("") ||
+                        Nakthara.getText().toString().equalsIgnoreCase("") ||
+                        Qualification.getText().toString().equalsIgnoreCase("") ||
+                        Work.getText().toString().equalsIgnoreCase("") ||
+                        Height.getText().toString().equalsIgnoreCase("") ||
+                        Weight.getText().toString().equalsIgnoreCase("") ||
                         Notes.getText().toString().equalsIgnoreCase(""))) {
                     type = 2;
                     if (!(gender.getText().toString().equalsIgnoreCase(sharpref.getTempgender()) ||
@@ -344,46 +376,45 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                         gmail_password_text = sharpref.getMailPassword();
 
 
-
                         String toEmails = getResources().getString(R.string.my_username);
 
                         List<String> toEmailList = Arrays.asList(toEmails
                                 .split("\\s*,\\s*"));
-                        if(checkInternet.isOnline(getApplicationContext())) {
-                        new SendMailTask(ViewProfile.this).execute(gmail_username_text,
-                                gmail_password_text, toEmailList,
-                                getResources().getString(R.string.addaccount_header),
-                                getResources().getString(R.string.addaccount_content) + " " +
-                                        gender.getText().toString() +
-                                        address.getText().toString()
-                                        + City.getText().toString()
-                                        + District.getText().toString()
-                                        + Country.getText().toString()
-                                        + phone.getText().toString()
-                                        + textview_blood.getText().toString()
-                                        + dob.getText().toString()
-                                        + status.getText().toString()
-                                        + Mail.getText().toString()
-                                        + About.getText().toString()
-                                        + question.getText().toString()
-                                        + answer.getText().toString()
-                                        + Rashi.getText().toString()
-                                        + Nakthara.getText().toString()
-                                        + Qualification.getText().toString()
-                                        + Work.getText().toString()
-                                        + Height.getText().toString()
-                                        + Weight.getText().toString()
-                                        + Notes.getText().toString()
-                                        + type);
-                                Intent in = new Intent(ViewProfile.this, LogIn.class);
-                                startActivity(in);
+                        if (checkInternet.isOnline(getApplicationContext())) {
+                            new SendMailTask(ViewProfile.this).execute(gmail_username_text,
+                                    gmail_password_text, toEmailList,
+                                    getResources().getString(R.string.addaccount_header),
+                                    getResources().getString(R.string.addaccount_content) + " " +
+                                            gender.getText().toString() +
+                                            address.getText().toString()
+                                            + City.getText().toString()
+                                            + District.getText().toString()
+                                            + Country.getText().toString()
+                                            + phone.getText().toString()
+                                            + textview_blood.getText().toString()
+                                            + dob.getText().toString()
+                                            + status.getText().toString()
+                                            + Mail.getText().toString()
+                                            + About.getText().toString()
+                                            + question.getText().toString()
+                                            + answer.getText().toString()
+                                            + Rashi.getText().toString()
+                                            + Nakthara.getText().toString()
+                                            + Qualification.getText().toString()
+                                            + Work.getText().toString()
+                                            + Height.getText().toString()
+                                            + Weight.getText().toString()
+                                            + Notes.getText().toString()
+                                            + type);
+                            Intent in = new Intent(ViewProfile.this, LogIn.class);
+                            startActivity(in);
                         } else {
-                            Toast.makeText(ViewProfile.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
+                            Toast.makeText(ViewProfile.this, getResources().getString(R.string.internet_connect_toast), Toast.LENGTH_LONG).show();
                         }
                     } else {
-//                        Toast.makeText(ViewProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
+                        Toast.makeText(ViewProfile.this, getResources().getString(R.string.nochange_toast), Toast.LENGTH_LONG).show();
                     }
-                }else {
+                } else {
                     Toast.makeText(ViewProfile.this, getResources().getString(R.string.blank_toast), Toast.LENGTH_LONG).show();
                 }
             }
