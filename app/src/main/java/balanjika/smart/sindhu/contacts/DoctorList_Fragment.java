@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
@@ -79,21 +81,34 @@ public class DoctorList_Fragment extends ListFragment {
         lv = (ListView) mView.findViewById(android.R.id.list);
         adapter = new ContactsListAdapter(getActivity(), contactList);
         lv.setAdapter(adapter);
+        lv.setItemsCanFocus(false);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1,
                                     int position, long arg3) {
                 // TODO Auto-generated method stub
+//                Toast.makeText(getActivity(), getResources().getString(R.string.samepassword_toast), Toast.LENGTH_LONG).show();
+//                Intent nextScreen = new Intent(getActivity(), Each_contact.class);
+//                TextView defaultID = (TextView) arg1.findViewById(R.id.defaultID);
+//                int id = Integer.parseInt(defaultID.getText().toString());
+//                nextScreen.putExtra("new_variable_name", id);
+//                startActivity(nextScreen);
+            }
+        });
+
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           int pos, long idr) {
+                // TODO Auto-generated method stub
                 Intent nextScreen = new Intent(getActivity(), Each_contact.class);
                 TextView defaultID = (TextView) arg1.findViewById(R.id.defaultID);
                 int id = Integer.parseInt(defaultID.getText().toString());
                 nextScreen.putExtra("new_variable_name", id);
                 startActivity(nextScreen);
+                return true;
             }
         });
-
-
         return mView;
     }
 

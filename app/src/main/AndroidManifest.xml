@@ -70,6 +70,8 @@
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.contacts.NewKDEvents" android:configChanges="keyboardHidden|orientation" android:label="@string/KD"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
+        <activity android:name="balanjika.smart.sindhu.contacts.NewAwardsEvents" android:configChanges="keyboardHidden|orientation" android:label="@string/Awards"
+            android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
         <activity android:name="balanjika.smart.sindhu.Calendar.Events" android:configChanges="keyboardHidden|orientation" android:label="@string/Events"
             android:windowSoftInputMode="stateHidden" android:screenOrientation="portrait"></activity>
     </application>

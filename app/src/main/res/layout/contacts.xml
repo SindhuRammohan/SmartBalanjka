@@ -47,5 +47,6 @@
         android:dividerHeight="11dp"
         android:layout_height="20dp"
         android:layout_weight="1"
-        android:fastScrollEnabled="true" />
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
 </LinearLayout>

@@ -122,10 +122,12 @@
     <string name="drawer_close">Close navigation drawer</string>
 
     <array name="bookArray">
+
+        <item>youthbalanjika_10oct2015</item>
         <item>youthbalanjika_09Sep2015</item>
         <item>YouthBalanjika_08Aug2015</item>
         <item>YouthBalanjika_07jul2015</item>
-        <item>YouthBalanjika_06Jun2015</item>
+        <!--<item>YouthBalanjika_06Jun2015</item>-->
         <!--<item>YouthBalanjika_05May2015</item>-->
         <!--<item>YouthBalanjika_04Apr2015</item>-->
         <!--<item>YouthBalanjika_03Mar2015</item>-->
@@ -146,10 +148,11 @@
         <!--<item>YouthBalanjika_11Nov2013</item>-->
     </array>
     <array name="bookArrayString">
+        <item>youthbalanjika_10oct2015</item>
         <item>youthbalanjika_09sep2015</item>
         <item>youthbalanjika_08aug2015</item>
         <item>youthbalanjika_07jul2015</item>
-        <item>youthbalanjika_06jun2015</item>
+        <!--<item>youthbalanjika_06jun2015</item>-->
         <!--<item>youthbalanjika_05may2015</item>-->
         <!--<item>youthbalanjika_04apr2015</item>-->
         <!--<item>youthbalanjika_03mar2015</item>-->
@@ -505,6 +508,15 @@
     <string name="add_recipetitle">Enter Recipe Name</string>
     <string name="add_recipe_Ingredients">Enter List of Ingredients</string>
     <string name="add_recipe_directions">Method to prepare</string>
+
+    <string name="add_awarddetails">Is your Son, Daughter or relatives scored good marks. Come, Lets we encourage them!!!</string>
+    <string name="add_award_name">Enter Name</string>
+    <string name="add_award_parents">Enter Parents Name</string>
+    <string name="add_award_mark">Enter Mark</string>
+    <string name="add_award_year">Enter Year</string>
+    <string name="add_award_section">Enter Class</string>
+    <string name="add_Awards_sumbit">Sumbit Mark</string>
+
 
     <string name="add_Event">Enter New Event</string>
     <string name="addVenue">Enter Venue</string>

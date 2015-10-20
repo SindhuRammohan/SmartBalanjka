@@ -2,16 +2,18 @@ package balanjika.smart.sindhu.contacts;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-
 import balanjika.smart.sindhu.smartbalanjka.R;
 import dbhelper.DBHelper;
 
@@ -65,30 +67,7 @@ public class Awards_Fragment extends ListFragment {
                 contactListItems.setcbsename1(c.getString(1));
                 contactListItems.setcbseparents1(c.getString(2));
                 contactListItems.setcbsemark1(c.getString(3));
-                contactListItems.setcbsename2(c.getString(4));
-                contactListItems.setcbseparents2(c.getString(5));
-                contactListItems.setcbsemark2(c.getString(6));
-                contactListItems.setcbsename3(c.getString(7));
-                contactListItems.setcbseparents3(c.getString(8));
-                contactListItems.setcbsemark3(c.getString(9));
-                contactListItems.settw_name1(c.getString(10));
-                contactListItems.settw_parents1(c.getString(11));
-                contactListItems.settw_mark1(c.getString(12));
-                contactListItems.settw_name2(c.getString(13));
-                contactListItems.settw_parents2(c.getString(14));
-                contactListItems.settw_mark2(c.getString(15));
-                contactListItems.settw_name3(c.getString(16));
-                contactListItems.settw_parents3(c.getString(17));
-                contactListItems.settw_mark3(c.getString(18));
-                contactListItems.sette_name1(c.getString(19));
-                contactListItems.sette_parents1(c.getString(20));
-                contactListItems.sette_mark1(c.getString(21));
-                contactListItems.sette_name2(c.getString(22));
-                contactListItems.sette_parents2(c.getString(23));
-                contactListItems.sette_mark2(c.getString(24));
-                contactListItems.sette_name3(c.getString(25));
-                contactListItems.sette_parents3(c.getString(26));
-                contactListItems.sette_mark3(c.getString(27));
+                contactListItems.setSection(c.getString(4));
                 KDList.add(contactListItems);
             } while (c.moveToNext());
         }
@@ -97,6 +76,14 @@ public class Awards_Fragment extends ListFragment {
 
         adapter = new AwardsListAdapter(getActivity(), KDList);
         lv.setAdapter(adapter);
+
+        FloatingActionButton fab_addawards = (FloatingActionButton) mView.findViewById(R.id.fab_addawards);
+        fab_addawards.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addAwardsevents();
+            }
+        });
+
         return mView;
     }
 
@@ -111,5 +98,10 @@ public class Awards_Fragment extends ListFragment {
     public void onPause() {
         Log.e("DEBUG", "OnPause of BloodList");
         super.onPause();
+    }
+
+    public void addAwardsevents(){
+        Intent nextScreen = new Intent(getActivity().getApplicationContext(), NewAwardsEvents.class);
+        startActivity(nextScreen);
     }
 }
