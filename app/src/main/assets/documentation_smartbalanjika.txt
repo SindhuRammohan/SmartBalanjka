@@ -109,8 +109,18 @@ matrimoy,save,unregiste,nothanks
 
 
 
+new born baby
+baby name function
+baby shower
+marriage
+condelence
+Aniversery
+House Warming cerimony'
+Temple
 
 
+birthday
+other
 
 
 
@@ -145,3 +155,28 @@ doctor list
 database
 self info
 img resize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.view profile
+2.db correct data
+
+1.password store encrypt
+2.password send
+3.wrong login number of times

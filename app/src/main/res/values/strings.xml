@@ -79,8 +79,8 @@
     <string name="History">History</string>
     <string name="Contacts">Contacts</string>
     <string name="Donar">Donar</string>
-    <string name="KD">K D</string>
-    <string name="Events">Events</string>
+    <string name="KD">Kg Drv</string>
+    <string name="Events">Birthday</string>
     <string name="Matrimonys">Matrimony</string>
     <string name="Books">Books</string>
     <string name="Health">Health</string>
@@ -103,11 +103,11 @@
     <string name="More">Click here for More>></string>
     <string name="problemifany">If any problem or any suggestions feel free to contact us</string>
     <string name="Name">Name</string>
-    <string name="my_name">Sindhu.R</string>
+    <string name="my_name">Sindhu Rajesh</string>
     <string name="india">India Number</string>
     <string name="india_no">+91 9790659680</string>
     <string name="malatsia">Malaysia Number</string>
-    <string name="malatsia_no">+60 146250626</string>
+    <string name="malatsia_no">+60 146250626, +60 162682728</string>
     <string name="mail_feedback">Sending your valuable Feedback through email is always welcome.</string>
     <string name="feedback_title">Title(About)</string>
     <string name="feedback_content">Type in your Feedback</string>
@@ -126,7 +126,7 @@
         <item>youthbalanjika_10oct2015</item>
         <item>youthbalanjika_09Sep2015</item>
         <item>YouthBalanjika_08Aug2015</item>
-        <item>YouthBalanjika_07jul2015</item>
+        <!--<item>YouthBalanjika_07jul2015</item>-->
         <!--<item>YouthBalanjika_06Jun2015</item>-->
         <!--<item>YouthBalanjika_05May2015</item>-->
         <!--<item>YouthBalanjika_04Apr2015</item>-->
@@ -151,7 +151,7 @@
         <item>youthbalanjika_10oct2015</item>
         <item>youthbalanjika_09sep2015</item>
         <item>youthbalanjika_08aug2015</item>
-        <item>youthbalanjika_07jul2015</item>
+        <!--<item>youthbalanjika_07jul2015</item>-->
         <!--<item>youthbalanjika_06jun2015</item>-->
         <!--<item>youthbalanjika_05may2015</item>-->
         <!--<item>youthbalanjika_04apr2015</item>-->
@@ -185,12 +185,6 @@
     <string name="Awards">Awards</string>
     <string name="yes">yes</string>
     <string name="no">No</string>
-    <string name="First_Place">First Place</string>
-    <string name="Second_Place">Second Place</string>
-    <string name="Third_Place">Third Place</string>
-    <string name="CBSC">CBSC</string>
-    <string name="HSC">HSC</string>
-    <string name="METRIC">METRIC</string>
     <string name="Blood_Type">Blood Type</string>
     <string name="Ingredients">Ingredients</string>
     <string name="Directions">Directions</string>
@@ -234,7 +228,14 @@
         <item>Knowledge Drive Meeting</item>
         <item>Exams</item>
         <item>Interview</item>
-        <item>Other Important Dates</item>
+        <item>New Born Baby</item>
+        <item>Baby Namming Function</item>
+        <item>Baby Shower</item>
+        <item>Marrriage</item>
+        <item>Anniversary</item>
+        <item>Housewarming Function</item>
+        <item>Condolence</item>
+        <item>Other Dates</item>
     </string-array>
 
     <string-array name="matrimony_list">
@@ -532,10 +533,6 @@
     <string name="internet_connect_toast">Check internet connectivity before sending mail please</string>
     <string name="internet_correct_toast">Please check internet connection and enter correct username and password which u have regstered.</string>
 
-
-    <string name="customize">Customize</string>
-    <string name="show_dialog">Show Dialog</string>
-    <string name="undo">Undo</string>
 
 
     <string name="happybirthday">Happy Birthday</string>
