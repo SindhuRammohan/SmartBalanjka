@@ -57,7 +57,6 @@ public class Contacts extends ActionBarActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,long arg3) {
-                // TODO Auto-generated method stub
                 Intent nextScreen = new Intent(Contacts.this,Each_contact.class);
                 TextView defaultID = (TextView) arg1.findViewById(R.id.defaultID);
                 int id = Integer.parseInt(defaultID.getText().toString());

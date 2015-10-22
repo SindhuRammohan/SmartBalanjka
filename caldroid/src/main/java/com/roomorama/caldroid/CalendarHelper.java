@@ -172,7 +172,6 @@ public class CalendarHelper {
             date = getDateFromString(dateString, dateFormat);
             return convertDateToDateTime(date);
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return null;

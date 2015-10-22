@@ -129,18 +129,15 @@ public class kdList extends ActionBarActivity implements
     @Override
     public void onPageScrolled(int position, float positionOffset,
                                int positionOffsetPixels) {
-        // TODO Auto-generated method stub
 
     }
 
     @Override
     public void onPageSelected(int position) {
-        // TODO Auto-generated method stub
         this.mTabHost.setCurrentTab(position);
     }
     @Override
     public void onPageScrollStateChanged(int state) {
-        // TODO Auto-generated method stub
 
     }
 

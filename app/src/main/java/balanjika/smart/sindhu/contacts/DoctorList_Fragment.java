@@ -24,7 +24,6 @@ import dbhelper.DBHelper;
 public class DoctorList_Fragment extends ListFragment {
 
     public static BloodList_Fragment newInstance(String string) {
-        // TODO Auto-generated method stub
         return null;
     }
 
@@ -87,7 +86,6 @@ public class DoctorList_Fragment extends ListFragment {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1,
                                     int position, long arg3) {
-                // TODO Auto-generated method stub
 //                Toast.makeText(getActivity(), getResources().getString(R.string.samepassword_toast), Toast.LENGTH_LONG).show();
 //                Intent nextScreen = new Intent(getActivity(), Each_contact.class);
 //                TextView defaultID = (TextView) arg1.findViewById(R.id.defaultID);
@@ -100,7 +98,6 @@ public class DoctorList_Fragment extends ListFragment {
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
                                            int pos, long idr) {
-                // TODO Auto-generated method stub
                 Intent nextScreen = new Intent(getActivity(), Each_contact.class);
                 TextView defaultID = (TextView) arg1.findViewById(R.id.defaultID);
                 int id = Integer.parseInt(defaultID.getText().toString());

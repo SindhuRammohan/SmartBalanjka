@@ -32,7 +32,6 @@ import dbhelper.DBHelper;
 public class Kd_dates_Fragment extends ListFragment {
 
     public static Kd_dates_Fragment newInstance(String string) {
-        // TODO Auto-generated method stub
         return null;
     }
 

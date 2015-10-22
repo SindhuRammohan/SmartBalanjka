@@ -19,7 +19,6 @@ import dbhelper.DBHelper;
 public class ICEList_Fragment extends ListFragment {
 
     public static ICEList_Fragment newInstance(String string) {
-        // TODO Auto-generated method stub
         return null;
     }
 

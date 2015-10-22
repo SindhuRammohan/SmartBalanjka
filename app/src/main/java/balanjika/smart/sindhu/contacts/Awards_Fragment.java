@@ -20,7 +20,6 @@ import dbhelper.DBHelper;
 public class Awards_Fragment extends ListFragment {
 
     public static Awards_Fragment newInstance(String string) {
-        // TODO Auto-generated method stub
         return null;
     }
 
