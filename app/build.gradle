@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'smartbalanjika'
+            keyPassword 'Sindhu010989'
+            storeFile file('C:/Users/rajesh/Desktop/Sindhu/StudioSmart/SmartBalanjka/SmartBalanjika.jks')
+            storePassword 'Sindhu010989'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion '23.0.1'
-
     defaultConfig {
         applicationId "balanjika.smart.sindhu.smartbalanjka"
         minSdkVersion 15
@@ -15,6 +22,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
 }
@@ -28,4 +39,13 @@ dependencies {
     compile files('libs/additionnal.jar')
     compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
     compile project(':caldroid')
+}
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
 }
