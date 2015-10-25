@@ -115,9 +115,9 @@ public class Kd_dates_Fragment extends ListFragment {
                                     contactListItems.setVenue(c.getString(1));
                                     contactListItems.setDate(c.getString(2));
                                     contactListItems.setTime(c.getString(3));
-                                    contactListItems.setContact(c.getString(4));
-                                    contactListItems.setSpecification(c.getString(5));
-                                    contactListItems.setothers(c.getString(6));
+                                    contactListItems.setContact(c.getString(6));
+                                    contactListItems.setSpecification(c.getString(4));
+                                    contactListItems.setothers(c.getString(5));
                                     contactList.add(contactListItems);
                                 }
                             } while (c.moveToNext());
