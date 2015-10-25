@@ -98,7 +98,9 @@ public class NewKDEvents  extends ActionBarActivity {
                         addothers.setText("");
                     new SendMailTask(NewKDEvents.this).execute(sharpref.getTempMailUsername(),
                             sharpref.getTempMailPassword(), toEmailList,
+                            getResources().getString(R.string.KDaccount_content) + " " +
                             addVenue.getText().toString(),
+                            getResources().getString(R.string.KDHeader) + " " +
                             addDate.getText().toString() + "\n" +
                                     addTime.getText().toString() + "\n" +
                                     addContact.getText().toString() + "\n" +

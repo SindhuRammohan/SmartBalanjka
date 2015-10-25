@@ -41,7 +41,9 @@ public class Contactus extends ActionBarActivity {
             if(checkInternet.isOnline(getApplicationContext())) {
             new SendMailTask(Contactus.this).execute(sharpref.getTempMailUsername(),
                     sharpref.getTempMailPassword(), toEmailList,
+                    getResources().getString(R.string.helpHeader) + " " +
                     subject.getText().toString(),
+                    getResources().getString(R.string.helpBody) + " " +
                     body.getText().toString());
             } else {
                 Toast.makeText(Contactus.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();

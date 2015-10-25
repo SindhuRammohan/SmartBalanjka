@@ -56,7 +56,9 @@ public class New_HealthTips  extends ActionBarActivity {
                     if(checkInternet.isOnline(getApplicationContext())) {
                     new SendMailTask(New_HealthTips.this).execute(sharpref.getTempMailUsername(),
                             sharpref.getTempMailPassword(), toEmailList,
+                            getResources().getString(R.string.healthHeader) + " " +
                             title.getText().toString(),
+                            getResources().getString(R.string.healthaccount_content) + " " +
                             newhealthIngredients.getText().toString() + "\n" +
                                     newdirections.getText().toString());
                     } else {

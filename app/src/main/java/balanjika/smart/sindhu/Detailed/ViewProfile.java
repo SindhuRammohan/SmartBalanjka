@@ -268,19 +268,19 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                         question.getText().toString().equalsIgnoreCase("")||
                         answer.getText().toString().equalsIgnoreCase(""))){
                     type = 1;
-                    if (!(gender.getText().toString().equalsIgnoreCase(sharpref.getTempgender()) ||
-                            address.getText().toString().equalsIgnoreCase(sharpref.getTempaddress()) ||
-                            City.getText().toString().equalsIgnoreCase(sharpref.getTempCity()) ||
-                            District.getText().toString().equalsIgnoreCase(sharpref.getTempDistrict()) ||
-                            Country.getText().toString().equalsIgnoreCase(sharpref.getTempCountry()) ||
-                            phone.getText().toString().equalsIgnoreCase(sharpref.getTempphone()) ||
-                            textview_blood.getText().toString().equalsIgnoreCase(sharpref.getTempblood()) ||
-                            dob.getText().toString().equalsIgnoreCase(sharpref.getTempdob()) ||
-                            status.getText().toString().equalsIgnoreCase(sharpref.getTempstatus()) ||
-                            statusdate.getText().toString().equalsIgnoreCase(sharpref.getTempstatusdate()) ||
-                            Mail.getText().toString().equalsIgnoreCase(sharpref.getTempMail()) ||
-                            About.getText().toString().equalsIgnoreCase(sharpref.getTempAbout()) ||
-                            question.getText().toString().equalsIgnoreCase(sharpref.getTempquestion()) ||
+                    if (!(gender.getText().toString().equalsIgnoreCase(sharpref.getTempgender()) &&
+                            address.getText().toString().equalsIgnoreCase(sharpref.getTempaddress()) &&
+                            City.getText().toString().equalsIgnoreCase(sharpref.getTempCity()) &&
+                            District.getText().toString().equalsIgnoreCase(sharpref.getTempDistrict()) &&
+                            Country.getText().toString().equalsIgnoreCase(sharpref.getTempCountry()) &&
+                            phone.getText().toString().equalsIgnoreCase(sharpref.getTempphone()) &&
+                            textview_blood.getText().toString().equalsIgnoreCase(sharpref.getTempblood()) &&
+                            dob.getText().toString().equalsIgnoreCase(sharpref.getTempdob()) &&
+                            status.getText().toString().equalsIgnoreCase(sharpref.getTempstatus()) &&
+                            statusdate.getText().toString().equalsIgnoreCase(sharpref.getTempstatusdate())&&
+                            Mail.getText().toString().equalsIgnoreCase(sharpref.getTempMail()) &&
+                            About.getText().toString().equalsIgnoreCase(sharpref.getTempAbout()) &&
+                            question.getText().toString().equalsIgnoreCase(sharpref.getTempquestion()) &&
                             answer.getText().toString().equalsIgnoreCase(sharpref.getTempanswer()))) {
 
                         gmail_username_text = sharpref.getMailUsername();
@@ -295,8 +295,8 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                         if(checkInternet.isOnline(getApplicationContext())) {
                             new SendMailTask(ViewProfile.this).execute(gmail_username_text,
                                     gmail_password_text, toEmailList,
-                                    getResources().getString(R.string.addaccount_header),
-                                    getResources().getString(R.string.addaccount_content) + " " +
+                                    getResources().getString(R.string.editaccount_header),
+                                    getResources().getString(R.string.editaccount_content) + " " +
                                             gender.getText().toString() +
                                             address.getText().toString()
                                             + City.getText().toString()
@@ -311,8 +311,6 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                                             + question.getText().toString()
                                             + answer.getText().toString()
                                             + type);
-                            Intent in = new Intent(ViewProfile.this, LogIn.class);
-                            startActivity(in);
                         } else {
                             Toast.makeText(ViewProfile.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
                         }
@@ -350,26 +348,26 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                         Weight.getText().toString().equalsIgnoreCase("") ||
                         Notes.getText().toString().equalsIgnoreCase(""))) {
                     type = 2;
-                    if (!(gender.getText().toString().equalsIgnoreCase(sharpref.getTempgender()) ||
-                            address.getText().toString().equalsIgnoreCase(sharpref.getTempaddress()) ||
-                            City.getText().toString().equalsIgnoreCase(sharpref.getTempCity()) ||
-                            District.getText().toString().equalsIgnoreCase(sharpref.getTempDistrict()) ||
-                            Country.getText().toString().equalsIgnoreCase(sharpref.getTempCountry()) ||
-                            phone.getText().toString().equalsIgnoreCase(sharpref.getTempphone()) ||
-                            textview_blood.getText().toString().equalsIgnoreCase(sharpref.getTempblood()) ||
-                            dob.getText().toString().equalsIgnoreCase(sharpref.getTempdob()) ||
-                            status.getText().toString().equalsIgnoreCase(sharpref.getTempstatus()) ||
-                            statusdate.getText().toString().equalsIgnoreCase(sharpref.getTempstatusdate()) ||
-                            Mail.getText().toString().equalsIgnoreCase(sharpref.getTempMail()) ||
-                            About.getText().toString().equalsIgnoreCase(sharpref.getTempAbout()) ||
-                            question.getText().toString().equalsIgnoreCase(sharpref.getTempquestion()) ||
-                            answer.getText().toString().equalsIgnoreCase(sharpref.getTempanswer()) ||
-                            Rashi.getText().toString().equalsIgnoreCase(sharpref.getTempRashi()) ||
-                            Nakthara.getText().toString().equalsIgnoreCase(sharpref.getTempNakthara()) ||
-                            Qualification.getText().toString().equalsIgnoreCase(sharpref.getTempQualification()) ||
-                            Work.getText().toString().equalsIgnoreCase(sharpref.getTempWork()) ||
-                            Height.getText().toString().equalsIgnoreCase(sharpref.getTempHeight()) ||
-                            Weight.getText().toString().equalsIgnoreCase(sharpref.getTempWeight()) ||
+                    if (!(gender.getText().toString().equalsIgnoreCase(sharpref.getTempgender()) &&
+                            address.getText().toString().equalsIgnoreCase(sharpref.getTempaddress()) &&
+                            City.getText().toString().equalsIgnoreCase(sharpref.getTempCity()) &&
+                            District.getText().toString().equalsIgnoreCase(sharpref.getTempDistrict()) &&
+                            Country.getText().toString().equalsIgnoreCase(sharpref.getTempCountry()) &&
+                            phone.getText().toString().equalsIgnoreCase(sharpref.getTempphone()) &&
+                            textview_blood.getText().toString().equalsIgnoreCase(sharpref.getTempblood()) &&
+                            dob.getText().toString().equalsIgnoreCase(sharpref.getTempdob()) &&
+                            status.getText().toString().equalsIgnoreCase(sharpref.getTempstatus()) &&
+                            statusdate.getText().toString().equalsIgnoreCase(sharpref.getTempstatusdate()) &&
+                            Mail.getText().toString().equalsIgnoreCase(sharpref.getTempMail()) &&
+                            About.getText().toString().equalsIgnoreCase(sharpref.getTempAbout()) &&
+                            question.getText().toString().equalsIgnoreCase(sharpref.getTempquestion()) &&
+                            answer.getText().toString().equalsIgnoreCase(sharpref.getTempanswer()) &&
+                            Rashi.getText().toString().equalsIgnoreCase(sharpref.getTempRashi()) &&
+                            Nakthara.getText().toString().equalsIgnoreCase(sharpref.getTempNakthara()) &&
+                            Qualification.getText().toString().equalsIgnoreCase(sharpref.getTempQualification()) &&
+                            Work.getText().toString().equalsIgnoreCase(sharpref.getTempWork()) &&
+                            Height.getText().toString().equalsIgnoreCase(sharpref.getTempHeight()) &&
+                            Weight.getText().toString().equalsIgnoreCase(sharpref.getTempWeight()) &&
                             Notes.getText().toString().equalsIgnoreCase(sharpref.getTempNotes()))) {
 
                         gmail_username_text = sharpref.getMailUsername();
@@ -383,8 +381,8 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                         if (checkInternet.isOnline(getApplicationContext())) {
                             new SendMailTask(ViewProfile.this).execute(gmail_username_text,
                                     gmail_password_text, toEmailList,
-                                    getResources().getString(R.string.addaccount_header),
-                                    getResources().getString(R.string.addaccount_content) + " " +
+                                    getResources().getString(R.string.editaccount_header),
+                                    getResources().getString(R.string.editaccount_content) + " " +
                                             gender.getText().toString() +
                                             address.getText().toString()
                                             + City.getText().toString()
@@ -406,8 +404,6 @@ public class ViewProfile extends ActionBarActivity implements View.OnClickListen
                                             + Weight.getText().toString()
                                             + Notes.getText().toString()
                                             + type);
-                            Intent in = new Intent(ViewProfile.this, LogIn.class);
-                            startActivity(in);
                         } else {
                             Toast.makeText(ViewProfile.this, getResources().getString(R.string.internet_connect_toast), Toast.LENGTH_LONG).show();
                         }

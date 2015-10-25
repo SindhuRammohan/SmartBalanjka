@@ -71,7 +71,9 @@ public class NewAwardsEvents  extends ActionBarActivity {
                         addSection.setText("");
                         new SendMailTask(NewAwardsEvents.this).execute(sharpref.getTempMailUsername(),
                                 sharpref.getTempMailPassword(), toEmailList,
+                                getResources().getString(R.string.awardHeader) + " " +
                                 addName.getText().toString(),
+                                getResources().getString(R.string.awardaccount_content) + " " +
                                 addParentsName.getText().toString() + "\n" +
                                         addMark.getText().toString() + "\n" +
                                         addYear.getText().toString() + "\n" +

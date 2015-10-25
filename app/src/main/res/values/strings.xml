@@ -62,6 +62,16 @@
     <string name="passwordblank_toast">Password should not be blank</string>
     <string name="ur_mailid">Mail Id :</string>
     <string name="ur_name">Name    : </string>
+    <string name="KDHeader">My Event is: </string>
+    <string name="KDaccount_content">Event Details are \n</string>
+    <string name="awardHeader">My Son/Daughter scored good marks. I would like to add marks of: </string>
+    <string name="awardaccount_content">My Son/Daughter scored: </string>
+    <string name="healthHeader">Recipe Title: </string>
+    <string name="healthaccount_content">Recipe Content:</string>
+    <string name="helpHeader">Hello, I would like to Help you:</string>
+    <string name="helpBody">My Suggestion is:\n</string>
+    <string name="editaccount_header">Edit User for SmartBalanjika</string>
+    <string name="editaccount_content">I would like to edit my account details in SmartBalanjika. Can u please change my details.\nMy account details are\n</string>
     <string name="addaccount_header">New User for SmartBalanjika</string>
     <string name="addaccount_content">I would like to add my account details in SmartBalanjika. Can u please add my details.\nMy account details are\n</string>
     <string name="removeaccount_header">Delete Matrimony for SmartBalanjika</string>
@@ -231,7 +241,7 @@
         <item>New Born Baby</item>
         <item>Baby Namming Function</item>
         <item>Baby Shower</item>
-        <item>Marrriage</item>
+        <item>Marriage</item>
         <item>Anniversary</item>
         <item>Housewarming Function</item>
         <item>Condolence</item>
