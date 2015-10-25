@@ -90,12 +90,7 @@ public class NewKDEvents  extends ActionBarActivity {
                     List<String> toEmailList = Arrays.asList(toEmails.split("\\s*,\\s*"));
                     if(checkInternet.isOnline(getApplicationContext())) {
 
-                        addVenue.setText("");
-                        addDate.setText("");
-                        addTime.setText("");
-                        addContact.setText("");
-                        addSpecification.setText("");
-                        addothers.setText("");
+
                     new SendMailTask(NewKDEvents.this).execute(sharpref.getTempMailUsername(),
                             sharpref.getTempMailPassword(), toEmailList,
                             getResources().getString(R.string.KDaccount_content) + " " +
@@ -106,6 +101,12 @@ public class NewKDEvents  extends ActionBarActivity {
                                     addContact.getText().toString() + "\n" +
                                     addSpecification.getText().toString() + "\n" +
                                     addothers.getText().toString() );
+                        addVenue.setText("");
+                        addDate.setText("");
+                        addTime.setText("");
+                        addContact.setText("");
+                        addSpecification.setText("");
+                        addothers.setText("");
                     } else {
                         Toast.makeText(NewKDEvents.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
                     }

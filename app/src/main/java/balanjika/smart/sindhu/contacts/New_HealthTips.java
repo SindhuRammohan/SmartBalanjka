@@ -46,9 +46,7 @@ public class New_HealthTips  extends ActionBarActivity {
                 if(!(title.getText().toString().equalsIgnoreCase("") ||
                         newhealthIngredients.getText().toString().equalsIgnoreCase("") ||
                         newdirections.getText().toString().equalsIgnoreCase(""))) {
-                    title.setText("");
-                    newhealthIngredients.setText("");
-                    newdirections.setText("");
+
 
                     String toEmails = getResources().getString(R.string.my_username);
                     List<String> toEmailList = Arrays.asList(toEmails
@@ -61,6 +59,9 @@ public class New_HealthTips  extends ActionBarActivity {
                             getResources().getString(R.string.healthaccount_content) + " " +
                             newhealthIngredients.getText().toString() + "\n" +
                                     newdirections.getText().toString());
+                        title.setText("");
+                        newhealthIngredients.setText("");
+                        newdirections.setText("");
                     } else {
                         Toast.makeText(New_HealthTips.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
                     }

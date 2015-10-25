@@ -64,11 +64,6 @@ public class NewAwardsEvents  extends ActionBarActivity {
                     List<String> toEmailList = Arrays.asList(toEmails.split("\\s*,\\s*"));
                     if(checkInternet.isOnline(getApplicationContext())) {
 
-                        addName.setText("");
-                        addParentsName.setText("");
-                        addMark.setText("");
-                        addYear.setText("");
-                        addSection.setText("");
                         new SendMailTask(NewAwardsEvents.this).execute(sharpref.getTempMailUsername(),
                                 sharpref.getTempMailPassword(), toEmailList,
                                 getResources().getString(R.string.awardHeader) + " " +
@@ -79,6 +74,12 @@ public class NewAwardsEvents  extends ActionBarActivity {
                                         addYear.getText().toString() + "\n" +
                                         addSection.getText().toString() + "\n"
                                          );
+
+                        addName.setText("");
+                        addParentsName.setText("");
+                        addMark.setText("");
+                        addYear.setText("");
+                        addSection.setText("");
                     } else {
                         Toast.makeText(NewAwardsEvents.this,getResources().getString(R.string.internet_connect_toast),Toast.LENGTH_LONG).show();
                     }

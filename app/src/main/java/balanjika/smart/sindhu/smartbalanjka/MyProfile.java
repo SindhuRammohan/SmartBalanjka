@@ -185,22 +185,22 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
                             gmail_password_text, toEmailList,
                             getResources().getString(R.string.addaccount_header),
                             getResources().getString(R.string.addaccount_content) + " " +
-                            sharpref.getUsername()+
-                            gender.getText().toString() +
+                            sharpref.getUsername()+ ",\n"+
+                            gender.getText().toString() + ",\n"+
                             address.getText().toString()
-                            +City.getText().toString()
-                            +District.getText().toString()
-                            +Country.getText().toString()
-                            +phone.getText().toString()
-                            +textview_blood.getText().toString()
-                            +dob.getText().toString()
-                            +status.getText().toString()
-                            +statusdate.getText().toString()
-                            + Mail.getText().toString()
-                            +About.getText().toString()
-                            +question.getText().toString()
-                            + answer.getText().toString()
-                            + type);
+                            +",\n"+City.getText().toString()
+                            +",\n"+District.getText().toString()
+                            +",\n"+Country.getText().toString()
+                            +",\n"+phone.getText().toString()
+                            +",\n"+textview_blood.getText().toString()
+                            +",\n"+dob.getText().toString()
+                            +",\n"+status.getText().toString()
+                            +",\n"+statusdate.getText().toString()
+                            +",\n"+ Mail.getText().toString()
+                            +",\n"+About.getText().toString()
+                            +",\n"+question.getText().toString()
+                            +",\n"+ answer.getText().toString()
+                            +",\n"+ type);
                             Intent in = new Intent(MyProfile.this, LogIn.class);
                             startActivity(in);
                     } else {
@@ -273,28 +273,28 @@ public class MyProfile extends ActionBarActivity implements View.OnClickListener
                         gmail_password_text, toEmailList,
                         getResources().getString(R.string.addaccount_header),
                         getResources().getString(R.string.addaccount_content) + " " +
-                        sharpref.getUsername()+
-                        gender.getText().toString() +
+                        sharpref.getUsername()+",\n"+
+                        gender.getText().toString() +",\n"+
                         address.getText().toString()
-                        +City.getText().toString()
-                        +District.getText().toString()
-                        +Country.getText().toString()
-                        +phone.getText().toString()
-                        +textview_blood.getText().toString()
-                        +dob.getText().toString()
-                        +status.getText().toString()
-                        + Mail.getText().toString()
-                        +About.getText().toString()
-                        +question.getText().toString()
-                        + answer.getText().toString()
-                        + Rashi.getText().toString()
-                        +Nakthara.getText().toString()
-                        +Qualification.getText().toString()
-                        + Work.getText().toString()
-                        +Height.getText().toString()
-                        + Weight.getText().toString()
-                        + Notes.getText().toString()
-                        + type);
+                        +",\n"+City.getText().toString()
+                        +",\n"+District.getText().toString()
+                        +",\n"+Country.getText().toString()
+                        +",\n"+phone.getText().toString()
+                        +",\n"+textview_blood.getText().toString()
+                        +",\n"+dob.getText().toString()
+                        +",\n"+status.getText().toString()
+                        +",\n"+ Mail.getText().toString()
+                        +",\n"+About.getText().toString()
+                        +",\n"+question.getText().toString()
+                        +",\n"+ answer.getText().toString()
+                        +",\n"+ Rashi.getText().toString()
+                        +",\n"+Nakthara.getText().toString()
+                        +",\n"+Qualification.getText().toString()
+                        +",\n"+ Work.getText().toString()
+                        +",\n"+Height.getText().toString()
+                        +",\n"+ Weight.getText().toString()
+                        +",\n"+ Notes.getText().toString()
+                        +",\n"+ type);
                     Intent in = new Intent(MyProfile.this, LogIn.class);
                     startActivity(in);
                     } else {
