@@ -230,3 +230,4 @@ http://www.androidhive.info/2014/06/android-streaming-live-camera-video-to-web-p
 http://stackoverflow.com/questions/11898643/stream-live-video-to-android
 http://www.truiton.com/2013/08/android-videoview-example-with-youtube-playback/
 http://www.truiton.com/2015/03/stream-rtmp-live-android/
+https://github.com/Kickflip/kickflip-android-sdk
