@@ -178,6 +178,8 @@ img resize
 2.db correct data
 
 1.password store encrypt
+ref : http://aesencryption.net/
+http://www.java2s.com/Code/Android/Security/AESEncryption.htm
 2.password send
 3.wrong login number of times
 
